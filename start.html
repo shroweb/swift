@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Swift7 — Your Website. Live in 7 Days. £500 All-In.</title>
+  <meta name="description"
+    content="Professional websites for UK small businesses. £500 flat, live in 7 days. Content written for you. Split payment — £250 now, £250 when you're happy." />
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
+    as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet" />
+  </noscript>
+
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --amber: #A8C94A;
+      --amber-dark: #7A9E35;
+      --bg: #1B3528;
+      --bg-raised: #234432;
+      --bg-card: #2A5040;
+      --text: #F0F0EC;
+      --muted: #8A9E90;
+      --radius: 12px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── LAYOUT ── */
+    .wrap {
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    section {
+      padding: 56px 0;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      padding: 72px 0 56px;
+      text-align: center;
+    }
+
+    .hero-eyebrow {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(36px, 9vw, 52px);
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -1.5px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: var(--amber);
+    }
+
+    .hero-sub {
+      font-size: 17px;
+      font-weight: 400;
+      color: var(--muted);
+      line-height: 1.6;
+      max-width: 360px;
+      margin: 0 auto 36px;
+    }
+
+    .hero-cta {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    /* ── PROBLEM LINE ── */
+    .problem {
+      background: var(--bg-raised);
+      padding: 40px 0;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .problem p {
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--muted);
+      text-align: center;
+      line-height: 1.7;
+    }
+
+    .problem p strong {
+      color: var(--text);
+    }
+
+    /* ── WHAT YOU GET ── */
+    .features h2 {
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .feature-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      background: var(--bg-card);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius);
+      padding: 20px;
+    }
+
+    .feature-icon {
+      font-size: 28px;
+      line-height: 1;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .feature-text strong {
+      display: block;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+
+    .feature-text span {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* ── GUARANTEE ── */
+    .guarantee {
+      background: var(--bg-raised);
+      border-top: 1px solid rgba(255,255,255,0.08);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .guarantee-inner {
+      text-align: center;
+    }
+
+    .guarantee-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: var(--amber);
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .guarantee h2 {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 14px;
+    }
+
+    .guarantee p {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.7;
+      max-width: 380px;
+      margin: 0 auto;
+    }
+
+    .guarantee p strong {
+      color: var(--text);
+    }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials h2 {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .testimonial-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .testimonial {
+      background: var(--bg-card);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius);
+      padding: 24px 20px;
+    }
+
+    .stars {
+      color: var(--amber);
+      font-size: 14px;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+
+    .testimonial blockquote {
+      font-size: 15px;
+      font-weight: 400;
+      color: var(--text);
+      line-height: 1.7;
+      font-style: italic;
+      margin-bottom: 16px;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .author-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--amber);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 800;
+      color: #1A1A1A;
+      flex-shrink: 0;
+    }
+
+    .author-info strong {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .author-info span {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    /* ── CTA ── */
+    .cta-section {
+      padding: 56px 0 48px;
+      text-align: center;
+    }
+
+    .cta-section h2 {
+      font-size: 26px;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+
+    .cta-section p {
+      font-size: 15px;
+      color: var(--muted);
+      margin-bottom: 28px;
+      line-height: 1.6;
+    }
+
+    /* ── BUTTONS ── */
+    .btn-whatsapp {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 18px 24px;
+      background: var(--amber);
+      color: #1A1A1A;
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      font-weight: 800;
+      text-decoration: none;
+      border-radius: var(--radius);
+      letter-spacing: -0.2px;
+      transition: background 0.15s ease, transform 0.1s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .btn-whatsapp:active {
+      background: var(--amber-dark);
+      transform: scale(0.98);
+    }
+
+    .btn-whatsapp svg {
+      width: 22px;
+      height: 22px;
+      flex-shrink: 0;
+    }
+
+    .btn-note {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 12px;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      padding: 24px 0 32px;
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    footer p {
+      font-size: 12px;
+      color: #6A8A78;
+    }
+
+    footer a {
+      color: #7A9A88;
+      text-decoration: none;
+    }
+
+    /* ── DESKTOP CENTERING ── */
+    @media (min-width: 600px) {
+      .btn-whatsapp {
+        max-width: 420px;
+        margin: 0 auto;
+      }
+    }
+  </style>
+  <!-- Google tag (gtag.js) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    function loadSwift7Analytics() {
+      if (window.__swift7AnalyticsLoaded) return;
+      window.__swift7AnalyticsLoaded = true;
+      var script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-FYDNT2RZV6';
+      document.head.appendChild(script);
+      gtag('js', new Date());
+      gtag('config', 'G-FYDNT2RZV6');
+    }
+    ['pointerdown', 'keydown', 'scroll', 'touchstart'].forEach(function (eventName) {
+      window.addEventListener(eventName, loadSwift7Analytics, { once: true, passive: true });
+    });
+    window.addEventListener('load', function () { setTimeout(loadSwift7Analytics, 8000); }, { once: true });
+  </script>
+</head>
+
+<body>
+
+  <!-- ── HERO ── -->
+  <section class="hero">
+    <div class="wrap">
+      <span class="hero-eyebrow">Swift7 Web Design</span>
+      <h1>Your website.<br><span>Live in 7 days.</span></h1>
+      <p class="hero-sub">Built for small businesses who are invisible on Google.</p>
+      <div class="hero-cta">
+        <a class="btn-whatsapp"
+          href="https://wa.me/447380218301?text=Hi%20Callum%2C%20I%27m%20interested%20in%20getting%20a%20website%20with%20Swift7."
+          target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+          </svg>
+          Message me on WhatsApp
+        </a>
+        <p class="btn-note">No commitment. Just a quick chat.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROBLEM LINE ── -->
+  <div class="problem">
+    <div class="wrap">
+      <p><strong>No website means every Google search sends customers to someone else.</strong><br>You're losing work to
+        competitors — and most of them have worse businesses than yours.</p>
+    </div>
+  </div>
+
+  <!-- ── WHAT YOU GET ── -->
+  <section class="features">
+    <div class="wrap">
+      <h2>Everything included. One price.</h2>
+      <div class="feature-list">
+
+        <div class="feature-item">
+          <div class="feature-icon">⚡</div>
+          <div class="feature-text">
+            <strong>Website live in 7 days</strong>
+            <span>From brief to published in a week — not months. You review before it goes live.</span>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">✍️</div>
+          <div class="feature-text">
+            <strong>Every word written for you</strong>
+            <span>No staring at a blank page. I write your copy, headlines, and calls to action.</span>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">🔍</div>
+          <div class="feature-text">
+            <strong>Ready to rank from day one</strong>
+            <span>Built for local SEO with your Google Business Profile set up and optimised.</span>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">💷</div>
+          <div class="feature-text">
+            <strong>£250 now. £250 when you're happy.</strong>
+            <span>Split payment so you only pay the second half once the site is exactly right.</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── GUARANTEE ── -->
+  <div class="guarantee">
+    <section>
+      <div class="wrap">
+        <div class="guarantee-inner">
+          <div class="guarantee-badge">🛡️</div>
+          <h2>You don't pay the rest until you're happy</h2>
+          <p>Your second £250 is only due <strong>after you've seen the finished site</strong> and given the green
+            light. If it's not right, I fix it. Simple as that.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ── TESTIMONIALS ── -->
+  <section class="testimonials">
+    <div class="wrap">
+      <h2>What clients say</h2>
+      <div class="testimonial-list">
+
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <blockquote>"Callum built our site in less than a week. We were getting enquiries through it within the first
+            month. Dead easy to deal with."</blockquote>
+          <div class="testimonial-author">
+            <div class="author-avatar">M</div>
+            <div class="author-info">
+              <strong>Marie</strong>
+              <span>Hull Cleaning Co.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <blockquote>"Professional job. Knew exactly what we needed without us having to explain much. Site looks
+            better than firms twice our size."</blockquote>
+          <div class="testimonial-author">
+            <div class="author-avatar">S</div>
+            <div class="author-info">
+              <strong>Steve</strong>
+              <span>Elland Road Roofing</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <blockquote>"We needed something fast and credible. Swift7 delivered exactly that — clean, well-written, and
+            live before we even expected it."</blockquote>
+          <div class="testimonial-author">
+            <div class="author-avatar">I</div>
+            <div class="author-info">
+              <strong>Isabelle</strong>
+              <span>UseForge</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FINAL CTA ── -->
+  <section class="cta-section">
+    <div class="wrap">
+      <h2>Ready to be found on Google?</h2>
+      <p>Send me a message and I'll come back to you today. No pushy calls, no long process.</p>
+      <a class="btn-whatsapp"
+        href="https://wa.me/447380218301?text=Hi%20Callum%2C%20I%27m%20interested%20in%20getting%20a%20website%20with%20Swift7."
+        target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path
+            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+        Get your website — £500 flat
+      </a>
+      <p class="btn-note">£250 now · £250 when you're happy · Live in 7 days</p>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <p><a href="https://swift7.co.uk">swift7.co.uk</a></p>
+  </footer>
+
+</body>
+
+</html>

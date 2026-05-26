@@ -1,0 +1,19 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: uap_user
+      POSTGRES_PASSWORD: uap_pass
+      POSTGRES_DB: uap_db
+    ports:
+      - "5434:5432"
+    volumes:
+      - uap_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U uap_user -d uap_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  uap_data:

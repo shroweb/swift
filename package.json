@@ -1,0 +1,16 @@
+{
+  "name": "uaptr",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install --prefix server && npm install --prefix client",
+    "dev": "concurrently --names \"API,WEB\" --prefix-colors \"yellow,cyan\" \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "outreach:audit": "node tools/outreach-auditor/server.mjs",
+    "db:up": "docker compose up -d",
+    "db:down": "docker compose down",
+    "setup": "npm run db:up && sleep 3 && npm run install:all"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

@@ -1,0 +1,26 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Separate app (not Swift7 website)
+client/
+server/uploads/
+
+# Claude project files
+.claude/
+
+# Outreach tool secrets
+tools/outreach-auditor/.env
+
+# Node
+node_modules/
+
+# Random screenshots / social media exports
+screenshot_*.png
+device-mockup_*.png
+media_*.png
+media_*.webp
+
+# Personal files
+daily-plan.html
+server/.env

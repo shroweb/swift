@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | Swift7 Web Design</title>
+  <meta name="description"
+    content="See real websites built by Swift7 for UK small businesses. Every site is mobile-friendly, built to rank on Google, and delivered in 7 days." />
+  <link rel="canonical" href="https://swift7.co.uk/portfolio" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://swift7.co.uk/portfolio" />
+  <meta property="og:site_name" content="Swift7" />
+  <meta property="og:title" content="Portfolio — Swift7 Web Design" />
+  <meta property="og:description"
+    content="Real websites built for UK small businesses. Mobile-friendly, built to rank on Google, delivered in 7 days." />
+  <meta property="og:image"
+    content="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-28596/1777713662238_swift7.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Google tag (gtag.js) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    function loadSwift7Analytics() {
+      if (window.__swift7AnalyticsLoaded) return;
+      window.__swift7AnalyticsLoaded = true;
+      var script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-FYDNT2RZV6';
+      document.head.appendChild(script);
+      gtag('js', new Date());
+      gtag('config', 'G-FYDNT2RZV6');
+    }
+    ['pointerdown', 'keydown', 'scroll', 'touchstart'].forEach(function (eventName) {
+      window.addEventListener(eventName, loadSwift7Analytics, { once: true, passive: true });
+    });
+    window.addEventListener('load', function () { setTimeout(loadSwift7Analytics, 8000); }, { once: true });
+  </script>
+
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload"
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap"
+    as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap"
+      rel="stylesheet" />
+  </noscript>
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="192x192" href="/favicon.png" />
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --amber: #A8C94A;
+      --black: #F0F0EC;
+      --off-white: #1B3528;
+      --mid: #C8DACC;
+      --border: rgba(255,255,255,0.10);
+      --radius: 4px;
+    }
+
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--off-white);
+      color: var(--black);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #0F2219;
+      border-bottom: none;
+    }
+
+    .nav-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 40px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .nav-link {
+      font-size: 14px;
+      font-weight: 700;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .nav-link:hover { color: rgba(240,240,236,0.88); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 10px 20px;
+      border-radius: var(--radius);
+      text-decoration: none;
+      transition: opacity 0.15s;
+      white-space: nowrap;
+    }
+
+    .btn:hover { opacity: 0.85; }
+
+    .btn-dark { background: #A8C94A; color: #1A1A1A; }
+    .btn-orange { background: #A8C94A; color: #1A1A1A; }
+
+    .btn-outline {
+      background: transparent;
+      color: #A8C94A;
+      border: 1.5px solid rgba(168,201,74,0.5);
+    }
+
+    .btn-outline:hover {
+      border-color: #A8C94A;
+      opacity: 1;
+      background: rgba(168,201,74,0.06);
+    }
+
+    .btn-nav {
+      background: #A8C94A;
+      color: #0F2219;
+      font-weight: 800;
+    }
+
+    /* ── SECTIONS ── */
+    section {
+      padding: 96px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1), transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .fade-in-up.visible { opacity: 1; transform: translateY(0); }
+
+    .scale-in {
+      opacity: 0;
+      transform: scale(0.94);
+      transition: opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1), transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .scale-in.visible { opacity: 1; transform: scale(1); }
+
+    [data-delay="1"] { transition-delay: 0.08s; }
+    [data-delay="2"] { transition-delay: 0.16s; }
+    [data-delay="3"] { transition-delay: 0.24s; }
+    [data-delay="4"] { transition-delay: 0.32s; }
+    [data-delay="5"] { transition-delay: 0.40s; }
+
+    .section-header { margin-bottom: 56px; }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #A8C94A;
+      margin-bottom: 14px;
+    }
+
+    h2 {
+      font-size: clamp(30px, 3.5vw, 46px);
+      font-weight: 800;
+      letter-spacing: -1.5px;
+      line-height: 1.1;
+    }
+
+    .section-sub {
+      margin-top: 14px;
+      font-size: 18px;
+      color: var(--mid);
+      line-height: 1.65;
+      max-width: 500px;
+    }
+
+    /* ── PORTFOLIO ── */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      margin-top: 56px;
+    }
+
+    .portfolio-item {
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.25s ease;
+    }
+
+    .portfolio-item:hover { transform: translateY(-3px); }
+
+    .portfolio-image {
+      aspect-ratio: 4/3;
+      background: var(--border);
+      border-radius: 6px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .portfolio-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .portfolio-item:hover .portfolio-image img { transform: scale(1.04); }
+    .portfolio-item:hover .portfolio-image { box-shadow: 0 12px 40px rgba(0,0,0,0.35); }
+
+    .portfolio-num {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #A8C94A;
+      margin-bottom: 8px;
+    }
+
+    .portfolio-info h3 {
+      font-size: 19px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 6px;
+      color: var(--black);
+    }
+
+    .portfolio-info p {
+      font-size: 14px;
+      color: var(--mid);
+      line-height: 1.55;
+      margin-bottom: 12px;
+    }
+
+    .portfolio-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .portfolio-tag {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      background: rgba(168,201,74,0.10);
+      color: #A8C94A;
+      border-radius: 2px;
+    }
+
+    .portfolio-image-link {
+      display: block;
+      text-decoration: none;
+    }
+
+    .portfolio-image-link::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+    }
+
+    .portfolio-links {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .portfolio-link-label {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--black);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      opacity: 0.45;
+      transition: opacity 0.2s, gap 0.2s;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .portfolio-item:hover .portfolio-link-label {
+      opacity: 1;
+      gap: 8px;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #0F2219;
+      border-top: 2px solid #A8C94A;
+    }
+
+    .footer-top {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 48px 40px;
+      display: grid;
+      grid-template-columns: 1fr auto auto auto auto;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .footer-tagline {
+      font-size: 14px;
+      color: rgba(240,240,236,0.88);
+      margin-top: 8px;
+      line-height: 1.5;
+    }
+
+    .footer-col-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(240,240,236,0.88);
+      margin-bottom: 16px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-links a {
+      font-size: 14px;
+      color: rgba(240,240,236,0.88);
+      text-decoration: none;
+      line-height: 1;
+      transition: color 0.15s, padding-left 0.15s;
+    }
+
+    .footer-links a:hover { color: #fff; padding-left: 6px; }
+
+    .footer-bottom {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 20px 40px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .footer-bottom p {
+      font-size: 12px;
+      color: rgba(240,240,236,0.88);
+    }
+
+    /* ── MODAL ── */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(12, 12, 12, 0.7);
+      backdrop-filter: blur(4px);
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+
+    .modal-overlay.open {
+      display: flex;
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal {
+      background: var(--off-white);
+      border-radius: 12px;
+      width: 100%;
+      max-width: 480px;
+      padding: 48px;
+      position: relative;
+      transform: translateY(12px);
+      transition: transform 0.2s ease;
+    }
+
+    .modal-overlay.open .modal { transform: translateY(0); }
+
+    .modal-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.15);
+      background: #2A5040;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      color: var(--mid);
+      line-height: 1;
+    }
+
+    .modal-close:hover { background: var(--border); }
+
+    .modal-eyebrow {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: #A8C94A;
+      margin-bottom: 10px;
+    }
+
+    .modal h3 {
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: -0.8px;
+      margin-bottom: 6px;
+    }
+
+    .modal-sub {
+      font-size: 14px;
+      color: var(--mid);
+      margin-bottom: 32px;
+      line-height: 1.5;
+    }
+
+    .form-field { margin-bottom: 16px; }
+
+    .form-field label {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--mid);
+      margin-bottom: 6px;
+    }
+
+    .form-field input,
+    .form-field select {
+      width: 100%;
+      padding: 13px 16px;
+      font-size: 15px;
+      font-family: 'Poppins', sans-serif;
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: var(--radius);
+      background: #2A5040;
+      color: var(--black);
+      outline: none;
+      transition: border-color 0.15s;
+    }
+
+    .form-field select {
+      appearance: none;
+      -webkit-appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236B6B6B' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+    }
+
+    .form-field input:focus,
+    .form-field select:focus { border-color: var(--black); }
+
+    .form-field input::placeholder { color: #B0ADA6; }
+    .form-field input.error { border-color: #C0392B; }
+
+    .modal-submit {
+      width: 100%;
+      margin-top: 8px;
+      padding: 15px;
+      background: #234432;
+      color: #fff;
+      font-size: 15px;
+      font-weight: 700;
+      font-family: 'Poppins', sans-serif;
+      border: none;
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: opacity 0.15s;
+    }
+
+    .modal-submit:hover { opacity: 0.88; }
+    .modal-submit:disabled { opacity: 0.5; cursor: not-allowed; }
+
+    .modal-guarantee {
+      text-align: center;
+      font-size: 12px;
+      color: var(--mid);
+      margin-top: 14px;
+    }
+
+    .modal-success { display: none; text-align: center; padding: 16px 0; }
+
+    .success-icon {
+      width: 56px;
+      height: 56px;
+      background: #234432;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 24px;
+      color: #fff;
+    }
+
+    .modal-success h3 { font-size: 22px; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 10px; }
+    .modal-success p { font-size: 15px; color: var(--mid); line-height: 1.6; }
+
+    /* ── WHATSAPP STICKY ── */
+    .wa-sticky {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: #25D366;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.45);
+      z-index: 88;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .wa-sticky:hover { transform: scale(1.08); box-shadow: 0 6px 28px rgba(37,211,102,0.55); }
+
+    /* ── MOBILE CTA BAR ── */
+    .mobile-cta-bar {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #0F2219;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding: 9px 16px;
+      z-index: 90;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .mobile-cta-text .mcta-price {
+      font-size: 16px;
+      color: #fff;
+      font-weight: 800;
+      letter-spacing: -0.3px;
+    }
+
+    .mobile-cta-bar .btn { font-size: 13px; padding: 10px 16px; flex-shrink: 0; }
+
+    /* ── HAMBURGER / MOBILE NAV ── */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px 4px;
+      flex-shrink: 0;
+    }
+
+    .nav-hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: #fff;
+      border-radius: 2px;
+      transition: transform 0.25s, opacity 0.25s;
+    }
+
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    nav.scrolled { box-shadow: 0 2px 24px rgba(0,0,0,0.4); border-bottom: 1px solid rgba(255,255,255,0.06); }
+
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      top: 60px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #0F2219;
+      z-index: 99;
+      padding: 28px 24px 40px;
+      flex-direction: column;
+      overflow-y: auto;
+    }
+
+    .mobile-nav.open { display: flex; }
+
+    .mobile-nav a {
+      font-size: 17px;
+      font-weight: 600;
+      color: rgba(240,240,236,0.88);
+      text-decoration: none;
+      padding: 15px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      display: block;
+    }
+
+    .mobile-nav a:hover, .mobile-nav a:active { color: #fff; }
+
+    .mobile-nav-cta {
+      margin-top: 24px;
+      background: #A8C94A !important;
+      color: #0F2219 !important;
+      text-align: center;
+      border-radius: 4px;
+      border-bottom: none !important;
+      font-weight: 700 !important;
+      padding: 16px !important;
+    }
+
+    .mobile-nav-wa {
+      margin-top: 10px;
+      background: #25D366 !important;
+      color: #fff !important;
+      text-align: center;
+      border-radius: 4px;
+      border-bottom: none !important;
+      font-weight: 600 !important;
+      padding: 14px !important;
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    /* ── COOKIE NOTICE ── */
+    .cookie-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #111;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      z-index: 200;
+      flex-wrap: wrap;
+    }
+
+    .cookie-bar p { font-size: 13px; color: rgba(240,240,236,0.88); margin: 0; line-height: 1.5; }
+    .cookie-bar p a { color: rgba(240,240,236,0.88); text-decoration: underline; }
+    .cookie-bar p a:hover { color: #fff; }
+
+    .cookie-accept {
+      background: #234432;
+      color: #fff;
+      border: none;
+      padding: 9px 22px;
+      border-radius: 4px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+      font-family: 'Poppins', sans-serif;
+      flex-shrink: 0;
+    }
+
+    .cookie-accept:hover { opacity: 0.85; }
+    .cookie-bar.hidden { display: none; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .portfolio-grid { grid-template-columns: 1fr 1fr; }
+      .footer-top { grid-template-columns: 1fr; gap: 40px; }
+      .nav-right .nav-link { display: none; }
+      .nav-hamburger { display: flex; }
+      .nav-right { display: none !important; }
+      .wa-sticky { bottom: 90px; right: 16px; width: 50px; height: 50px; }
+    }
+
+    @media (max-width: 600px) {
+      body { padding-bottom: 80px; }
+      .mobile-cta-bar { display: flex; }
+      .wa-sticky { display: none; }
+      .nav-inner { height: auto; min-height: 60px; padding: 10px 20px; gap: 16px; }
+      section { padding: 72px 0; }
+      .portfolio-grid { grid-template-columns: 1fr; gap: 40px; }
+      .footer-top { padding: 40px 20px; }
+      .footer-bottom { padding: 20px; }
+      .modal { padding: 36px 24px 28px; }
+      .container { padding: 0 20px; }
+      .cookie-bar { bottom: 70px; padding: 12px 16px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- MOBILE CTA BAR -->
+  <div class="mobile-cta-bar" id="mobileCta">
+    <div class="mobile-cta-text">
+      <p class="mcta-price">10-page website · £500</p>
+    </div>
+    <a href="#" class="btn btn-orange" onclick="openModal(event)">Get a free audit →</a>
+  </div>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal">
+      <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+
+      <div id="modalForm">
+        <p class="modal-eyebrow">Free website audit</p>
+        <h3 id="modalTitle">Get a free website audit.</h3>
+        <p class="modal-sub">Leave your details and we'll send a written website audit and specific recommendation within 24 hours — no call needed, no commitment.</p>
+
+        <form id="contactForm" novalidate>
+          <input type="hidden" name="access_key" value="b60f1b0d-3064-49a8-bce4-f12cca5ce919" />
+          <div class="form-field">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Jane Smith" autocomplete="name" />
+          </div>
+          <div class="form-field">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="jane@yourbusiness.com" autocomplete="email" />
+          </div>
+          <div class="form-field">
+            <label for="fphone">Phone Number <span style="font-weight:500;color:#767370;text-transform:none;letter-spacing:0">optional</span></label>
+            <input type="tel" id="fphone" name="phone" placeholder="+44 7700 900000" autocomplete="tel" />
+          </div>
+          <div class="form-field">
+            <label for="fbiz">Type of Business <span style="font-weight:400;color:#767370;text-transform:none;letter-spacing:0">optional</span></label>
+            <select id="fbiz" name="business_type">
+              <option value="">Select one...</option>
+              <option>Tradesperson (plumber, electrician, builder, etc.)</option>
+              <option>Local service business (cleaning, landscaping, etc.)</option>
+              <option>Professional services (accountant, solicitor, etc.)</option>
+              <option>Health &amp; wellness (PT, physio, dentist, etc.)</option>
+              <option>Retailer or e-commerce</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="fpackage">Which package are you interested in?</label>
+            <select id="fpackage" name="package_interest">
+              <option value="">Select one...</option>
+              <option>Swift7 Launch (£500)</option>
+              <option>Swift7 Trust (£995)</option>
+              <option>Swift7 Plus (from £1,495)</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <button type="submit" class="modal-submit" id="submitBtn">Get my free audit →</button>
+          <p class="modal-guarantee">No calls. No commitment. No spam. Prefer WhatsApp? <a href="https://wa.me/447380218301" target="_blank" rel="noopener">Message us here</a>.</p>
+        </form>
+      </div>
+
+      <div class="modal-success" id="modalSuccess">
+        <div class="success-icon">✓</div>
+        <h4>You're on the list.</h4>
+        <p>Your free audit is on its way — check your inbox within 24 hours.</p>
+      </div>
+    </div>
+  </div>
+
+    <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="logo" aria-label="Swift7 home">
+        <img src="/logo.png" alt="Swift7" style="height:24px;width:auto;display:block;" /></a>
+      <div class="nav-right">
+        <a href="/portfolio" class="nav-link">Portfolio</a>
+        <a href="/whats-included" class="nav-link">What&#39;s Included</a>
+        <a href="/how-it-works" class="nav-link">How It Works</a>
+        <a href="/pricing" class="nav-link">Pricing</a>
+        <a href="/faq" class="nav-link">FAQ</a>
+        <a href="/swift7-plus" class="nav-link" style="color:#A8C94A;">Swift7 Plus</a>
+        <a href="#" class="btn btn-nav" onclick="openModal(event)">Get a free audit &#8594;</a>
+      </div>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+    <!-- MOBILE NAV -->
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <a href="/portfolio">Portfolio</a>
+    <a href="/whats-included">What&#39;s Included</a>
+    <a href="/how-it-works">How It Works</a>
+    <a href="/pricing">Pricing</a>
+    <a href="/faq">FAQ</a>
+    <a href="/swift7-plus" style="color:#A8C94A;font-weight:700;">Swift7 Plus</a>
+    <a href="#" class="mobile-nav-cta" onclick="openModal(event)">Get a free audit &#8594;</a>
+    <a href="https://wa.me/447380218301" class="mobile-nav-wa" target="_blank" rel="noopener">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+        <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.528 5.845L.057 23.882l6.19-1.623A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.366l-.36-.214-3.722.976.993-3.625-.235-.372A9.818 9.818 0 1112 21.818z" />
+      </svg>
+      WhatsApp Us
+    </a>
+  </div>
+
+  <!-- WHATSAPP STICKY -->
+  <a href="https://wa.me/447380218301" class="wa-sticky" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.528 5.845L.057 23.882l6.19-1.623A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.366l-.36-.214-3.722.976.993-3.625-.235-.372A9.818 9.818 0 1112 21.818z" />
+    </svg>
+  </a>
+
+  <main>
+    <!-- PORTFOLIO -->
+    <section id="portfolio">
+      <div class="container">
+        <div class="section-header fade-in-up">
+          <p class="section-label">Recent Work</p>
+          <h1>Websites that<br />actually work.</h1>
+          <p class="section-sub">Not mock-ups. Real sites, for real businesses — live and already earning enquiries.</p>
+        </div>
+
+        <div class="portfolio-grid">
+          <div class="portfolio-item scale-in">
+            <a href="/case-studies/jt-accountancy" class="portfolio-image-link">
+              <div class="portfolio-image">
+                <img src="/device-mockup_1.5x_postspark_2026-05-14_15-37-45.webp"
+                  alt="JT Accountancy — Swift7 client website" loading="lazy" decoding="async" width="800"
+                  height="800" />
+              </div>
+            </a>
+            <p class="portfolio-num">01</p>
+            <div class="portfolio-info">
+              <h3>JT Accountancy</h3>
+              <p>Professional site for a Hull accountancy practice — built to attract limited companies, sole traders
+                and personal tax clients across Hull and East Yorkshire.</p>
+              <div class="portfolio-row">
+                <span class="portfolio-tag">Static Site</span>
+                <a href="/case-studies/jt-accountancy" class="portfolio-link-label">Case study →</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-item scale-in">
+            <a href="/case-studies/hull-cleaning" class="portfolio-image-link">
+              <div class="portfolio-image">
+                <picture>
+                  <source srcset="/device-mockup_1.5x_postspark_2026-04-23_20-37-48.webp" type="image/webp" />
+                  <img src="/device-mockup_1.5x_postspark_2026-04-23_20-37-48.webp"
+                    alt="Hull Cleaning — Swift7 client website on mobile" loading="lazy" decoding="async" width="800"
+                    height="800" />
+                </picture>
+              </div>
+            </a>
+            <p class="portfolio-num">02</p>
+            <div class="portfolio-info">
+              <h3>Hull Cleaning</h3>
+              <p>Mobile-friendly site for a local cleaning business — with service pages, enquiry forms, and Google
+                Business Profile to drive local leads.</p>
+              <div class="portfolio-row">
+                <span class="portfolio-tag">Static Site</span>
+                <a href="/case-studies/hull-cleaning" class="portfolio-link-label">Case study →</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-item scale-in">
+            <a href="/case-studies/elland-road-roofing" class="portfolio-image-link">
+              <div class="portfolio-image">
+                <picture>
+                  <source srcset="/ellandroad.webp" type="image/webp" />
+                  <img src="/ellandroad.webp" alt="Elland Road Roofing — Swift7 client website on mobile" loading="lazy"
+                    decoding="async" width="800" height="800" />
+                </picture>
+              </div>
+            </a>
+            <p class="portfolio-num">03</p>
+            <div class="portfolio-info">
+              <h3>Elland Road Roofing</h3>
+              <p>WordPress site for a Yorkshire roofer — ranking on Google for local search terms and generating quote
+                requests directly through the site.</p>
+              <div class="portfolio-row">
+                <span class="portfolio-tag">WordPress</span>
+                <a href="/case-studies/elland-road-roofing" class="portfolio-link-label">Case study →</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-item scale-in">
+            <a href="/case-studies/useforge" class="portfolio-image-link">
+              <div class="portfolio-image">
+                <picture>
+                  <source srcset="/device-mockup_1.5x_postspark_2026-04-23_20-37-03.webp" type="image/webp" />
+                  <img src="/device-mockup_1.5x_postspark_2026-04-23_20-37-03.webp"
+                    alt="UseForge — Swift7 client website on mobile" loading="lazy" decoding="async" width="800"
+                    height="800" />
+                </picture>
+              </div>
+            </a>
+            <p class="portfolio-num">04</p>
+            <div class="portfolio-info">
+              <h3>UseForge</h3>
+              <p>Fast, clean app landing page built for conversions — driving app store downloads with a clear
+                mobile-first layout.</p>
+              <div class="portfolio-row">
+                <span class="portfolio-tag">Static Site</span>
+                <a href="/case-studies/useforge" class="portfolio-link-label">Case study →</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-item scale-in">
+            <a href="/case-studies/apex-strength" class="portfolio-image-link">
+              <div class="portfolio-image">
+                <picture>
+                  <source srcset="/hull-gym.webp" type="image/webp" />
+                  <img src="/hull-gym.png" alt="Apex Strength — concept gym website by Swift7" loading="lazy"
+                    decoding="async" width="800" height="800" />
+                </picture>
+              </div>
+            </a>
+            <p class="portfolio-num">05</p>
+            <div class="portfolio-info">
+              <h3>Apex Strength</h3>
+              <p>Concept site for a Hull-based gym — bold design built to drive memberships, with class timetables,
+                pricing, and a strong mobile-first layout.</p>
+              <div class="portfolio-row">
+                <span class="portfolio-tag">Concept</span>
+                <a href="/case-studies/apex-strength" class="portfolio-link-label">Case study →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section style="background:#0F2219;border-bottom:none;padding:96px 0;text-align:center;position:relative;overflow:hidden;">
+      <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(168,201,74,0.15) 0%,transparent 65%);pointer-events:none;"></div>
+      <div class="container" style="position:relative;z-index:1;">
+        <p style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#A8C94A;margin-bottom:24px;">Ready when you are</p>
+        <h2 style="font-size:clamp(40px,7vw,80px);font-weight:900;letter-spacing:-3px;color:#fff;line-height:0.95;margin-bottom:28px;">Get your website<br />sorted this week.</h2>
+        <p style="font-size:18px;color: rgba(240,240,236,0.88);line-height:1.65;max-width:420px;margin:0 auto 40px;">Fill in your details and we'll send you a written audit and recommendation within 24 hours.</p>
+        <div style="display:flex;flex-direction:row;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;">
+          <a href="#" class="btn btn-orange" onclick="openModal(event)" style="font-size:16px;padding:18px 48px;">Get a free audit →</a>
+          <p style="font-size:13px;color: rgba(240,240,236,0.88);">Or email <a href="mailto:hello@swift7.co.uk" style="color:rgba(255,255,255,0.85);text-decoration:underline;">hello@swift7.co.uk</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" class="logo">
+          <img src="/logo.png" alt="Swift7" style="height:24px;width:auto;display:block;" /></a>
+        <p class="footer-tagline">Your business website,<br />live in 7 days.</p>
+      </div>
+      <div>
+        <p class="footer-col-label">Pages</p>
+        <div class="footer-links">
+          <a href="/whats-included">What's Included</a>
+          <a href="/how-it-works">How It Works</a>
+          <a href="/pricing">Pricing</a>
+          <a href="/faq">FAQ</a>
+          <a href="/portfolio">Our Work</a>
+          <a href="/freelance-web-design-hull">Freelance Designer</a>
+          <a href="/white-label-web-design-hull">White Label</a>
+        </div>
+      </div>
+      <div>
+        <p class="footer-col-label">Locations</p>
+        <div class="footer-links">
+          <a href="/web-design-hull">Hull</a>
+          <a href="/web-design-leeds">Leeds</a>
+          <a href="/web-design-sheffield">Sheffield</a>
+          <a href="/web-design-york">York</a>
+          <a href="/web-design-manchester">Manchester</a>
+          <a href="/web-design-newcastle">Newcastle</a>
+          <a href="/locations">View all locations →</a>
+        </div>
+      </div>
+      <div>
+        <p class="footer-col-label">Industries</p>
+        <div class="footer-links">
+          <a href="/web-design-for-plumbers">Plumbers</a>
+          <a href="/web-design-for-electricians">Electricians</a>
+          <a href="/web-design-for-builders">Builders</a>
+          <a href="/web-design-for-accountants">Accountants</a>
+          <a href="/web-design-for-estate-agents">Estate Agents</a>
+          <a href="/industries">View all industries →</a>
+        </div>
+      </div>
+      <div>
+        <p class="footer-col-label">Contact</p>
+        <div class="footer-links">
+          <a href="mailto:hello@swift7.co.uk">hello@swift7.co.uk</a>
+          <a href="tel:+447380218301">07380 218301</a>
+          <a href="https://wa.me/447380218301" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="#" onclick="openModal(event)">Get a Quote</a>
+          <a href="/privacy-policy">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Swift7. All rights reserved.</p>
+      <p>Designed and built by Swift7.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:32px;left:32px;width:44px;height:44px;border-radius:50%;background:#A8C94A;color:#0F2219;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;opacity:0;transform:translateY(8px);transition:opacity 0.25s ease,transform 0.25s ease;z-index:80;text-decoration:none;line-height:1;">↑</button>
+
+  <!-- COOKIE NOTICE -->
+  <div class="cookie-bar hidden" id="cookieBar">
+    <p>We use Google Analytics to understand how visitors use our site. <a href="/privacy-policy">Privacy Policy →</a></p>
+    <button class="cookie-accept" id="cookieAccept">Got it</button>
+  </div>
+
+  <script>
+    const overlay = document.getElementById('modalOverlay');
+    const closeBtn = document.getElementById('modalClose');
+    const form = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const modalForm = document.getElementById('modalForm');
+    const modalSuccess = document.getElementById('modalSuccess');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    document.querySelectorAll('.fade-in-up, .scale-in, .fade-in-left, .fade-in-right').forEach(el => observer.observe(el));
+
+    function openModal(e) {
+      if (e) e.preventDefault();
+      overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      setTimeout(() => document.getElementById('name').focus(), 100);
+    }
+
+    function closeModal() {
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', (e) => { if (e.target === overlay) closeModal(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+
+    // Hamburger nav
+    const hamburger = document.getElementById('navHamburger');
+    const mobileNav = document.getElementById('mobileNav');
+    if (hamburger && mobileNav) {
+      hamburger.addEventListener('click', () => {
+        const isOpen = hamburger.classList.toggle('open');
+        mobileNav.classList.toggle('open', isOpen);
+        hamburger.setAttribute('aria-expanded', isOpen);
+        mobileNav.setAttribute('aria-hidden', !isOpen);
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+      });
+      mobileNav.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          hamburger.classList.remove('open');
+          mobileNav.classList.remove('open');
+          hamburger.setAttribute('aria-expanded', 'false');
+          mobileNav.setAttribute('aria-hidden', 'true');
+          document.body.style.overflow = '';
+        });
+      });
+    }
+
+    // Nav scroll state
+    (function() {
+      var nav = document.querySelector('nav');
+      window.addEventListener('scroll', function() {
+        nav.classList.toggle('scrolled', window.scrollY > 40);
+      }, { passive: true });
+    })();
+
+    // Back to top
+    (function() {
+      var btn = document.getElementById('backToTop');
+      if (btn) {
+        window.addEventListener('scroll', function() {
+          btn.style.opacity = window.scrollY > 600 ? '1' : '0';
+          btn.style.transform = window.scrollY > 600 ? 'translateY(0)' : 'translateY(8px)';
+        }, { passive: true });
+      }
+    })();
+
+    // Form submission
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const name = document.getElementById('name');
+      const email = document.getElementById('email');
+      let valid = true;
+      [name, email].forEach(f => f.classList.remove('error'));
+      if (!name.value.trim()) { name.classList.add('error'); valid = false; }
+      if (!email.value.trim() || !email.value.includes('@')) { email.classList.add('error'); valid = false; }
+      if (!valid) return;
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending…';
+      try {
+        const formData = new FormData(form);
+        formData.set('access_key', 'b60f1b0d-3064-49a8-bce4-f12cca5ce919');
+        formData.set('subject', 'New Swift7 Enquiry — ' + name.value.trim() + ' — ' + document.title);
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: formData
+        });
+        const result = await res.json().catch(() => ({}));
+        if (res.ok && result.success !== false) {
+          modalForm.style.display = 'none';
+          modalSuccess.style.display = 'block';
+        } else { throw new Error('Server error'); }
+      } catch {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send me a recommendation →';
+        let errorMsg = document.getElementById('modalError');
+        if (!errorMsg) { errorMsg = document.createElement('p'); errorMsg.id = 'modalError'; errorMsg.style.cssText = 'margin-top:12px;color:#C0392B;font-size:13px;line-height:1.4;font-weight:600;'; submitBtn.insertAdjacentElement('afterend', errorMsg); }
+        errorMsg.innerHTML = 'Could not send just now. Please <a href="mailto:hello@swift7.co.uk">email hello@swift7.co.uk</a> or use the WhatsApp link below.';
+      }
+    });
+
+    // Cookie notice
+    (function () {
+      var bar = document.getElementById('cookieBar');
+      if (!bar) return;
+      if (localStorage.getItem('sw7_cookies') === '1') return;
+      bar.classList.remove('hidden');
+      document.getElementById('cookieAccept').addEventListener('click', function () {
+        localStorage.setItem('sw7_cookies', '1');
+        bar.classList.add('hidden');
+      });
+    })();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Swift7 Plus | Premium Web Design | From £1,495</title>
+  <meta name="description"
+    content="Swift7 Plus: a growth-focused website package for UK businesses needing more enquiries and better Google rankings. From £1,495, ready in 10–14 days." />
+  <link rel="canonical" href="https://swift7.co.uk/swift7-plus" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://swift7.co.uk/swift7-plus" />
+  <meta property="og:site_name" content="Swift7" />
+  <meta property="og:title" content="Swift7 Plus — Growth-Focused Web Design | From £1,495" />
+  <meta property="og:description"
+    content="For businesses serious about generating leads. Premium design, advanced SEO, conversion-focused layouts. From £1,495." />
+  <meta property="og:image"
+    content="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-28596/1777713662238_swift7.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Google tag (gtag.js) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    function loadSwift7Analytics() {
+      if (window.__swift7AnalyticsLoaded) return;
+      window.__swift7AnalyticsLoaded = true;
+      var script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-FYDNT2RZV6';
+      document.head.appendChild(script);
+      gtag('js', new Date());
+      gtag('config', 'G-FYDNT2RZV6');
+    }
+    ['pointerdown', 'keydown', 'scroll', 'touchstart'].forEach(function (eventName) {
+      window.addEventListener(eventName, loadSwift7Analytics, { once: true, passive: true });
+    });
+    window.addEventListener('load', function () { setTimeout(loadSwift7Analytics, 8000); }, { once: true });
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload"
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap"
+    as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap"
+      rel="stylesheet" />
+  </noscript>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="192x192" href="/favicon.png" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --amber: #A8C94A;
+      --black: #F0F0EC;
+      --off-white: #1B3528;
+      --mid: #C8DACC;
+      --border: rgba(255,255,255,0.10);
+      --radius: 4px;
+    }
+
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--off-white);
+      color: var(--black);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container { max-width: 1120px; margin: 0 auto; padding: 0 40px; }
+
+    /* NAV */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: #0F2219; border-bottom: none;
+    }
+    .nav-inner {
+      max-width: 1120px; margin: 0 auto; padding: 0 40px;
+      height: 60px; display: flex; align-items: center; justify-content: space-between;
+    }
+    .logo {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 20px; font-weight: 800; letter-spacing: -0.5px;
+      color: #fff; text-decoration: none;
+    }
+    .logo-mark {
+      width: 32px; height: 32px; background: #fff; border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; font-weight: 900; color: var(--amber);
+      flex-shrink: 0; line-height: 1; letter-spacing: -1px;
+      font-family: 'Poppins', sans-serif; padding-top: 1px;
+    }
+    .nav-right { display: flex; align-items: center; gap: 32px; }
+    .nav-link { font-size: 14px; font-weight: 700; color: #fff; text-decoration: none; }
+    .nav-link:hover { color: rgba(240,240,236,0.88); }
+    .btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 14px; font-weight: 600; padding: 10px 20px;
+      border-radius: var(--radius); text-decoration: none;
+      transition: opacity 0.15s; white-space: nowrap; cursor: pointer;
+      border: none;
+    }
+    .btn:hover { opacity: 0.85; }
+    .btn-orange { background: #A8C94A; color: #1A1A1A; }
+    .btn-outline {
+      background: transparent; color: #A8C94A;
+      border: 1.5px solid rgba(168,201,74,0.5);
+    }
+    .btn-nav { background: #A8C94A; color: #1A1A1A; font-size: 13px; padding: 8px 16px; }
+
+    /* NAV HAMBURGER */
+    .nav-hamburger {
+      display: none; background: none; border: none;
+      cursor: pointer; padding: 6px; gap: 5px;
+      flex-direction: column; align-items: center; justify-content: center;
+    }
+    .nav-hamburger span {
+      display: block; width: 22px; height: 2px;
+      background: #fff; border-radius: 2px;
+      transition: transform 0.2s, opacity 0.2s;
+    }
+
+    /* MOBILE NAV */
+    .mobile-nav {
+      display: none; position: fixed; inset: 60px 0 0 0;
+      background: #0F2219; z-index: 99; flex-direction: column;
+      padding: 32px 24px; gap: 0; overflow-y: auto;
+    }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a {
+      color: #fff; text-decoration: none; font-size: 18px; font-weight: 700;
+      padding: 14px 0; border-bottom: 1px solid var(--border);
+    }
+    .mobile-nav-cta {
+      background: #A8C94A; color: #1A1A1A !important;
+      border-radius: 4px; text-align: center;
+      margin-top: 20px; padding: 14px 0 !important;
+      border-bottom: none !important;
+    }
+
+    /* WA STICKY */
+    .wa-sticky {
+      position: fixed; bottom: 24px; right: 24px; z-index: 98;
+      width: 52px; height: 52px; border-radius: 50%;
+      background: #25D366; display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3); color: #fff; text-decoration: none;
+    }
+
+    /* SECTIONS */
+    section { padding: 96px 0; border-bottom: 1px solid var(--border); }
+
+    .section-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; color: #A8C94A; margin-bottom: 14px;
+    }
+    h2 {
+      font-size: clamp(30px, 3.5vw, 46px);
+      font-weight: 800; letter-spacing: -1.5px; line-height: 1.1;
+    }
+    h3 { font-size: clamp(20px, 2vw, 26px); font-weight: 800; letter-spacing: -0.5px; line-height: 1.2; }
+    .section-sub {
+      margin-top: 14px; font-size: 18px; color: var(--mid);
+      line-height: 1.65; max-width: 500px;
+    }
+    .section-header { margin-bottom: 56px; }
+
+    /* FADE ANIMATIONS */
+    .fade-in-up {
+      opacity: 0; transform: translateY(28px);
+      transition: opacity 0.65s cubic-bezier(0.22,1,0.36,1), transform 0.65s cubic-bezier(0.22,1,0.36,1);
+    }
+    .fade-in-up.visible { opacity: 1; transform: translateY(0); }
+    .fade-in-left {
+      opacity: 0; transform: translateX(-28px);
+      transition: opacity 0.65s cubic-bezier(0.22,1,0.36,1), transform 0.65s cubic-bezier(0.22,1,0.36,1);
+    }
+    .fade-in-left.visible { opacity: 1; transform: translateX(0); }
+    .fade-in-right {
+      opacity: 0; transform: translateX(28px);
+      transition: opacity 0.65s cubic-bezier(0.22,1,0.36,1), transform 0.65s cubic-bezier(0.22,1,0.36,1);
+    }
+    .fade-in-right.visible { opacity: 1; transform: translateX(0); }
+    [data-delay="1"] { transition-delay: 0.08s; }
+    [data-delay="2"] { transition-delay: 0.16s; }
+    [data-delay="3"] { transition-delay: 0.24s; }
+    [data-delay="4"] { transition-delay: 0.32s; }
+
+    /* HERO */
+    .hero {
+      padding: 96px 0 80px; border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #0F2219 0%, #1B3528 100%);
+    }
+    .hero-inner {
+      max-width: 1120px; margin: 0 auto; padding: 0 40px;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(168,201,74,0.12); border: 1px solid rgba(168,201,74,0.3);
+      border-radius: 100px; padding: 6px 14px;
+      font-size: 12px; font-weight: 700; color: #A8C94A;
+      letter-spacing: 0.04em; text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: clamp(36px, 5vw, 60px);
+      font-weight: 900; letter-spacing: -2px; line-height: 1.05;
+      margin-bottom: 20px;
+    }
+    .accent { color: #A8C94A; }
+    .hero-sub { font-size: 18px; color: var(--mid); line-height: 1.65; margin-bottom: 36px; max-width: 480px; }
+    .hero-actions { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+
+    .hero-card {
+      background: rgba(168,201,74,0.07);
+      border: 1px solid rgba(168,201,74,0.25);
+      border-radius: 10px; padding: 36px;
+    }
+    .hero-card-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; color: #A8C94A; margin-bottom: 12px;
+    }
+    .hero-price {
+      font-size: 52px; font-weight: 900; letter-spacing: -2px; line-height: 1;
+      margin-bottom: 6px;
+    }
+    .hero-price sup { font-size: 24px; font-weight: 700; vertical-align: super; letter-spacing: 0; }
+    .hero-price-note { font-size: 13px; color: var(--mid); margin-bottom: 28px; line-height: 1.5; }
+    .hero-checks { display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
+    .hero-check { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; font-weight: 500; }
+    .check-icon { color: #A8C94A; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+    .hero-guarantee {
+      font-size: 12px; color: var(--mid); padding-top: 20px;
+      border-top: 1px solid var(--border); line-height: 1.6;
+    }
+
+    /* WHAT'S IN PLUS */
+    .plus-features-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 2px; border: 1px solid var(--border); border-radius: 8px; overflow: hidden;
+    }
+    .plus-feature {
+      background: rgba(255,255,255,0.02); padding: 28px 24px;
+      border-right: 1px solid var(--border); border-bottom: 1px solid var(--border);
+    }
+    .plus-feature:nth-child(3n) { border-right: none; }
+    .plus-feature:nth-last-child(-n+3) { border-bottom: none; }
+    .plus-feature-num {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.06em;
+      color: #A8C94A; margin-bottom: 10px;
+    }
+    .plus-feature h3 {
+      font-size: 16px; font-weight: 700; letter-spacing: -0.3px;
+      margin-bottom: 8px; color: var(--black);
+    }
+    .plus-feature p { font-size: 14px; color: var(--mid); line-height: 1.6; }
+    .plus-feature.highlight { background: rgba(168,201,74,0.05); }
+
+    /* WHO IT'S FOR */
+    .who-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .who-card {
+      background: rgba(255,255,255,0.03); border: 1px solid var(--border);
+      border-radius: 8px; padding: 32px;
+    }
+    .who-card h3 { font-size: 18px; font-weight: 800; margin-bottom: 16px; letter-spacing: -0.3px; }
+    .who-card ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+    .who-card ul li {
+      font-size: 15px; color: var(--mid); display: flex; align-items: center; gap: 10px;
+    }
+    .who-card ul li::before { content: '→'; color: #A8C94A; font-weight: 700; flex-shrink: 0; }
+
+    /* COMPARE TABLE */
+    .compare-wrap {
+      overflow-x: auto; border-radius: 8px;
+      border: 1px solid var(--border); margin-bottom: 0;
+    }
+    .compare-table { width: 100%; border-collapse: collapse; font-size: 15px; }
+    .compare-table th, .compare-table td {
+      padding: 16px 24px; text-align: left; border-bottom: 1px solid var(--border);
+    }
+    .compare-table thead th {
+      font-size: 13px; font-weight: 700; letter-spacing: 0.04em;
+      text-transform: uppercase; color: var(--mid); background: rgba(0,0,0,0.15);
+    }
+    .compare-table thead th.plus-col { color: #A8C94A; background: rgba(168,201,74,0.07); }
+    .compare-table td.plus-col { background: rgba(168,201,74,0.05); color: var(--black); font-weight: 600; }
+    .compare-table tbody tr:last-child td { border-bottom: none; }
+    .compare-table .feature-col { color: var(--mid); font-size: 14px; }
+    .compare-tick { color: #A8C94A; font-weight: 700; }
+    .compare-dash { color: rgba(255,255,255,0.2); }
+
+    /* PRICING */
+    .pricing-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+    .pricing-box {
+      background: rgba(168,201,74,0.07); border: 1px solid rgba(168,201,74,0.25);
+      border-radius: 10px; padding: 40px;
+    }
+    .pricing-box-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; color: #A8C94A; margin-bottom: 16px;
+    }
+    .price-display {
+      font-size: 64px; font-weight: 900; letter-spacing: -2px; line-height: 1;
+      margin-bottom: 6px;
+    }
+    .price-display sup { font-size: 28px; font-weight: 700; vertical-align: super; letter-spacing: 0; }
+    .price-note { font-size: 13px; color: var(--mid); margin-bottom: 28px; line-height: 1.5; }
+    .pricing-checks { display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
+    .pricing-check { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; font-weight: 500; }
+    .pcheck-icon { color: #A8C94A; font-weight: 700; flex-shrink: 0; }
+    .pricing-guarantee {
+      display: flex; align-items: flex-start; gap: 8px;
+      font-size: 12px; color: var(--mid); margin-top: 16px; line-height: 1.6;
+    }
+    .pricing-left { padding-top: 8px; }
+    .pricing-left h2 { margin-bottom: 16px; }
+    .pricing-bullets { list-style: none; padding: 0; margin: 20px 0 36px; display: flex; flex-direction: column; gap: 12px; }
+    .pricing-bullets li {
+      font-size: 15px; color: var(--mid);
+      display: flex; align-items: flex-start; gap: 10px;
+    }
+    .pricing-bullets li::before { content: '✓'; color: #A8C94A; font-weight: 700; flex-shrink: 0; }
+
+    /* TESTIMONIALS */
+    .testimonial-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .testimonial-card {
+      background: rgba(255,255,255,0.03); border: 1px solid var(--border);
+      border-radius: 8px; padding: 28px;
+    }
+    .testimonial-stars { color: #A8C94A; font-size: 13px; margin-bottom: 14px; letter-spacing: 2px; }
+    .testimonial-card p { font-size: 15px; color: var(--mid); line-height: 1.65; margin-bottom: 20px; }
+    .testimonial-author { font-size: 13px; font-weight: 700; color: var(--black); }
+
+    /* CTA */
+    .cta-section {
+      text-align: center; padding: 96px 0; border-bottom: none;
+      background: linear-gradient(180deg, #1B3528 0%, #0F2219 100%);
+    }
+    .cta-section h2 { margin-bottom: 16px; }
+    .cta-section p { font-size: 18px; color: var(--mid); margin-bottom: 36px; }
+    .cta-actions { display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; }
+
+    /* MODAL */
+    .modal-overlay {
+      display: none; position: fixed; inset: 0; z-index: 200;
+      background: rgba(0,0,0,0.7); align-items: center; justify-content: center; padding: 20px;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal {
+      background: #0F2219; border-radius: 10px; padding: 40px;
+      max-width: 480px; width: 100%; position: relative;
+      max-height: 90vh; overflow-y: auto;
+    }
+    .modal-close {
+      position: absolute; top: 16px; right: 16px; background: none;
+      border: none; color: var(--mid); font-size: 20px; cursor: pointer; line-height: 1;
+    }
+    .modal-eyebrow {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; color: #A8C94A; margin-bottom: 10px;
+    }
+    .modal h3 { font-size: 22px; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 8px; }
+    .modal-sub { font-size: 14px; color: var(--mid); margin-bottom: 24px; line-height: 1.6; }
+    .form-field { margin-bottom: 16px; }
+    .form-field label {
+      display: block; font-size: 12px; font-weight: 700;
+      letter-spacing: 0.05em; text-transform: uppercase; color: var(--mid);
+      margin-bottom: 6px;
+    }
+    .form-field input, .form-field select {
+      width: 100%; background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border); border-radius: var(--radius);
+      color: var(--black); font-family: 'Poppins', sans-serif;
+      font-size: 15px; padding: 12px 14px; outline: none;
+      transition: border-color 0.15s;
+    }
+    .form-field input:focus, .form-field select:focus { border-color: rgba(168,201,74,0.5); }
+    .form-field select option { background: #0F2219; color: var(--black); }
+    .modal-submit {
+      width: 100%; background: #A8C94A; color: #1A1A1A;
+      border: none; border-radius: var(--radius);
+      font-family: 'Poppins', sans-serif; font-size: 15px; font-weight: 700;
+      padding: 14px; cursor: pointer; margin-top: 8px; transition: opacity 0.15s;
+    }
+    .modal-submit:hover { opacity: 0.85; }
+    .modal-guarantee {
+      font-size: 12px; color: var(--mid); text-align: center;
+      margin-top: 12px; line-height: 1.6;
+    }
+    .modal-guarantee a { color: #A8C94A; text-decoration: none; }
+    .modal-success { display: none; text-align: center; padding: 20px 0; }
+    .modal-success.visible { display: block; }
+    .success-icon {
+      width: 48px; height: 48px; border-radius: 50%; background: rgba(168,201,74,0.15);
+      color: #A8C94A; font-size: 22px; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 20px;
+    }
+    .modal-success h4 { font-size: 20px; font-weight: 800; margin-bottom: 10px; }
+    .modal-success p { font-size: 15px; color: var(--mid); line-height: 1.65; }
+
+    /* FOOTER */
+    footer { background: #0F2219; padding: 0; }
+    .footer-top {
+      max-width: 1120px; margin: 0 auto; padding: 64px 40px 48px;
+      display: grid; grid-template-columns: 1.5fr repeat(4, 1fr); gap: 40px;
+    }
+    .footer-brand .logo { color: #fff; margin-bottom: 12px; display: inline-flex; }
+    .footer-tagline { font-size: 14px; color: var(--mid); line-height: 1.6; margin-top: 12px; }
+    .footer-col-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--mid); margin-bottom: 16px;
+    }
+    .footer-links { display: flex; flex-direction: column; gap: 10px; }
+    .footer-links a { font-size: 14px; color: var(--black); text-decoration: none; opacity: 0.7; }
+    .footer-links a:hover { opacity: 1; }
+    .footer-bottom {
+      max-width: 1120px; margin: 0 auto; padding: 20px 40px;
+      border-top: 1px solid var(--border);
+      display: flex; justify-content: space-between;
+      font-size: 12px; color: var(--mid);
+    }
+
+    /* BACK TO TOP */
+    .back-to-top {
+      position: fixed; bottom: 88px; right: 24px; z-index: 90;
+      width: 40px; height: 40px; border-radius: 50%;
+      background: rgba(255,255,255,0.1); border: 1px solid var(--border);
+      color: var(--black); font-size: 16px; cursor: pointer;
+      display: none; align-items: center; justify-content: center;
+      transition: opacity 0.2s;
+    }
+    .back-to-top.visible { display: flex; }
+    .back-to-top:hover { opacity: 0.7; }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+      .pricing-layout { grid-template-columns: 1fr; gap: 40px; }
+      .testimonial-grid { grid-template-columns: 1fr; }
+      .who-grid { grid-template-columns: 1fr; }
+      .plus-features-grid { grid-template-columns: repeat(2, 1fr); }
+      .plus-feature:nth-child(3n) { border-right: 1px solid var(--border); }
+      .plus-feature:nth-child(2n) { border-right: none; }
+      .plus-feature:nth-last-child(-n+3) { border-bottom: 1px solid var(--border); }
+      .plus-feature:nth-last-child(-n+2) { border-bottom: none; }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }
+    }
+
+    @media (max-width: 600px) {
+      .container { padding: 0 20px; }
+      section { padding: 64px 0; }
+      .hero { padding: 64px 0 56px; }
+      .hero-inner { padding: 0 20px; }
+      .nav-right .nav-link { display: none; }
+      .nav-hamburger { display: flex; }
+      .plus-features-grid { grid-template-columns: 1fr; }
+      .plus-feature:nth-child(n) { border-right: none; border-bottom: 1px solid var(--border); }
+      .plus-feature:last-child { border-bottom: none; }
+      .footer-top { grid-template-columns: 1fr; padding: 40px 20px 32px; }
+      .footer-bottom { flex-direction: column; gap: 6px; padding: 16px 20px; }
+      .compare-table th, .compare-table td { padding: 12px 14px; font-size: 13px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal">
+      <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+
+      <div id="modalForm">
+        <p class="modal-eyebrow">Swift7 Plus enquiry</p>
+        <h3 id="modalTitle">Get a free website audit.</h3>
+        <p class="modal-sub">Leave your details and we'll call you within 24 hours to discuss what's right for your business.</p>
+
+        <form id="contactForm" novalidate>
+          <input type="hidden" name="access_key" value="b60f1b0d-3064-49a8-bce4-f12cca5ce919" />
+          <input type="hidden" name="subject" value="Swift7 Plus Enquiry" />
+          <div class="form-field">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Jane Smith" autocomplete="name" />
+          </div>
+          <div class="form-field">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="jane@yourbusiness.com" autocomplete="email" />
+          </div>
+          <div class="form-field">
+            <label for="fphone">Phone Number <span style="font-weight:500;color:#767370;text-transform:none;letter-spacing:0">optional</span></label>
+            <input type="tel" id="fphone" name="phone" placeholder="+44 7700 900000" autocomplete="tel" />
+          </div>
+          <div class="form-field">
+            <label for="fbiz">Type of Business</label>
+            <select id="fbiz" name="business_type">
+              <option value="">Select one...</option>
+              <option>Clinic / healthcare</option>
+              <option>Accountant / financial services</option>
+              <option>Estate agent</option>
+              <option>Restaurant / hospitality</option>
+              <option>Professional services (solicitor, consultant, etc.)</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="fpackage">Package interest</label>
+            <select id="fpackage" name="package_interest">
+              <option value="Swift7 Plus (from £1,495)">Swift7 Plus (from £1,495)</option>
+              <option value="Swift7 Trust (£995)">Swift7 Trust (£995)</option>
+              <option value="Swift7 Launch (£500)">Swift7 Launch (£500)</option>
+              <option value="Not sure yet">Not sure yet</option>
+            </select>
+          </div>
+          <button type="submit" class="modal-submit" id="submitBtn">Get my free audit →</button>
+          <p class="modal-guarantee">No commitment. No spam. Prefer WhatsApp? <a href="https://wa.me/447380218301" target="_blank" rel="noopener">Message us here</a>.</p>
+        </form>
+      </div>
+
+      <div class="modal-success" id="modalSuccess">
+        <div class="success-icon">✓</div>
+        <h4>You're on the list.</h4>
+        <p>We'll call you within 24 hours to discuss your project. Keep an eye on your email too.</p>
+      </div>
+    </div>
+  </div>
+
+    <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="logo" aria-label="Swift7 home">
+        <img src="/logo.png" alt="Swift7" style="height:24px;width:auto;display:block;" /></a>
+      <div class="nav-right">
+        <a href="/portfolio" class="nav-link">Portfolio</a>
+        <a href="/whats-included" class="nav-link">What&#39;s Included</a>
+        <a href="/how-it-works" class="nav-link">How It Works</a>
+        <a href="/pricing" class="nav-link">Pricing</a>
+        <a href="/faq" class="nav-link">FAQ</a>
+        <a href="/swift7-plus" class="nav-link" style="color:#A8C94A;">Swift7 Plus</a>
+        <a href="#" class="btn btn-nav" onclick="openModal(event)">Get a free audit &#8594;</a>
+      </div>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+    <!-- MOBILE NAV -->
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <a href="/portfolio">Portfolio</a>
+    <a href="/whats-included">What&#39;s Included</a>
+    <a href="/how-it-works">How It Works</a>
+    <a href="/pricing">Pricing</a>
+    <a href="/faq">FAQ</a>
+    <a href="/swift7-plus" style="color:#A8C94A;font-weight:700;">Swift7 Plus</a>
+    <a href="#" class="mobile-nav-cta" onclick="openModal(event)">Get a free audit &#8594;</a>
+    <a href="https://wa.me/447380218301" class="mobile-nav-wa" target="_blank" rel="noopener">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+        <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.528 5.845L.057 23.882l6.19-1.623A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.366l-.36-.214-3.722.976.993-3.625-.235-.372A9.818 9.818 0 1112 21.818z" />
+      </svg>
+      WhatsApp Us
+    </a>
+  </div>
+
+  <!-- WHATSAPP STICKY -->
+  <a href="https://wa.me/447380218301" class="wa-sticky" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.528 5.845L.057 23.882l6.19-1.623A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.366l-.36-.214-3.722.976.993-3.625-.235-.372A9.818 9.818 0 1112 21.818z" />
+    </svg>
+  </a>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-left fade-in-up">
+          <div class="hero-badge">Swift7 Plus</div>
+          <h1>For businesses<br /><span class="accent">serious about growth.</span></h1>
+          <p class="hero-sub">When your website needs to generate real enquiries — not just look the part. Premium design, advanced SEO, and conversion-focused builds for businesses where results matter.</p>
+          <div class="hero-actions">
+            <a href="#" class="btn btn-orange" onclick="openModal(event)">Get in touch →</a>
+            <a href="#whats-included" class="btn btn-outline">What's included ↓</a>
+          </div>
+        </div>
+        <div class="hero-right fade-in-right" data-delay="1">
+          <div class="hero-card">
+            <p class="hero-card-label">Swift7 Plus</p>
+            <div class="hero-price"><sup>£</sup>1,495<span style="font-size:20px;font-weight:600;letter-spacing:0;">+</span></div>
+            <p class="hero-price-note">From £1,495 · 10–14 day build · 50% deposit · 50% on completion</p>
+            <div class="hero-checks">
+              <div class="hero-check"><span class="check-icon">✓</span>Premium, conversion-focused design</div>
+              <div class="hero-check"><span class="check-icon">✓</span>Advanced SEO foundations</div>
+              <div class="hero-check"><span class="check-icon">✓</span>Conversion-optimised copywriting</div>
+              <div class="hero-check"><span class="check-icon">✓</span>Advanced booking &amp; lead-capture features</div>
+              <div class="hero-check"><span class="check-icon">✓</span>Google Business Profile setup &amp; optimisation</div>
+              <div class="hero-check"><span class="check-icon">✓</span>Domain, hosting, SSL + business emails</div>
+            </div>
+            <a href="#" class="btn btn-orange" style="width:100%;justify-content:center;margin-bottom:12px;" onclick="openModal(event)">Get in touch →</a>
+            <p class="hero-guarantee">Not ready to commit? <a href="https://wa.me/447380218301" target="_blank" rel="noopener" style="color:#A8C94A;font-weight:600;">Message us on WhatsApp</a> — no pressure, just a conversation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT'S INCLUDED -->
+    <section id="whats-included">
+      <div class="container">
+        <div class="section-header fade-in-up">
+          <p class="section-label">What's Included</p>
+          <h2>Everything in the Starter,<br />plus everything that drives growth.</h2>
+          <p class="section-sub">Built for businesses where more enquiries, better rankings and stronger branding genuinely matter.</p>
+        </div>
+
+        <div class="plus-features-grid">
+          <div class="plus-feature highlight fade-in-up">
+            <p class="plus-feature-num">01</p>
+            <h3>Premium Design</h3>
+            <p>Fully bespoke layouts built around your brand — not templates. Polished, premium and built to make visitors trust you immediately.</p>
+          </div>
+          <div class="plus-feature highlight fade-in-up" data-delay="1">
+            <p class="plus-feature-num">02</p>
+            <h3>Conversion-Focused Copy</h3>
+            <p>Every word written to turn visitors into enquiries. Structured around your ideal customer, your strongest offer and your best proof points.</p>
+          </div>
+          <div class="plus-feature highlight fade-in-up" data-delay="2">
+            <p class="plus-feature-num">03</p>
+            <h3>Advanced SEO Foundations</h3>
+            <p>In-depth keyword research, structured data, technical SEO, internal linking strategy and a content plan built around the terms your customers actually search.</p>
+          </div>
+          <div class="plus-feature fade-in-up">
+            <p class="plus-feature-num">04</p>
+            <h3>Conversion Optimisation</h3>
+            <p>Strategic layout decisions — CTA placement, trust signals, social proof — designed to maximise the number of visitors who contact you.</p>
+          </div>
+          <div class="plus-feature fade-in-up" data-delay="1">
+            <p class="plus-feature-num">05</p>
+            <h3>Advanced Lead &amp; Booking Features</h3>
+            <p>Online booking systems, multi-step enquiry forms, quote calculators — whatever converts best for your specific business type.</p>
+          </div>
+          <div class="plus-feature fade-in-up" data-delay="2">
+            <p class="plus-feature-num">06</p>
+            <h3>10 SEO Articles</h3>
+            <p>Double the Starter. Ten pieces of targeted content designed to rank for the terms your ideal customers search for — driving traffic from day one.</p>
+          </div>
+          <div class="plus-feature fade-in-up">
+            <p class="plus-feature-num">07</p>
+            <h3>Brand &amp; Visual Direction</h3>
+            <p>Colour palette, typography and imagery guidance so your website feels cohesive, credible and premium throughout.</p>
+          </div>
+          <div class="plus-feature fade-in-up" data-delay="1">
+            <p class="plus-feature-num">08</p>
+            <h3>Google Business Profile</h3>
+            <p>Full setup and optimisation so you appear prominently on Google Maps and local search — with categories, photos and service descriptions done properly.</p>
+          </div>
+          <div class="plus-feature fade-in-up" data-delay="2">
+            <p class="plus-feature-num">09</p>
+            <h3>Domain, Hosting, SSL &amp; Emails</h3>
+            <p>Everything to go live and look the part — all included. Renews at £70/year after your first year.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHO IT'S FOR -->
+    <section id="who">
+      <div class="container">
+        <div class="section-header fade-in-up">
+          <p class="section-label">Who It's For</p>
+          <h2>Swift7 Plus is the right choice<br />when growth is the goal.</h2>
+        </div>
+
+        <div class="who-grid">
+          <div class="who-card fade-in-left">
+            <h3>Perfect if your business relies on trust</h3>
+            <ul>
+              <li>Clinics, dentists &amp; healthcare providers</li>
+              <li>Accountants &amp; financial advisors</li>
+              <li>Solicitors &amp; legal professionals</li>
+              <li>Consultants where credibility drives decisions</li>
+            </ul>
+          </div>
+          <div class="who-card fade-in-right">
+            <h3>Perfect if leads &amp; Google traffic matter</h3>
+            <ul>
+              <li>Estate agents wanting more valuation requests</li>
+              <li>Restaurants &amp; venues needing more bookings</li>
+              <li>Businesses in competitive local markets</li>
+              <li>Anyone serious about growing through Google</li>
+            </ul>
+          </div>
+          <div class="who-card fade-in-left">
+            <h3>Perfect if branding is a competitive advantage</h3>
+            <ul>
+              <li>Premium trades &amp; home services</li>
+              <li>Architects, designers &amp; creative businesses</li>
+              <li>Businesses charging a premium price</li>
+              <li>Anyone where looking the part wins more work</li>
+            </ul>
+          </div>
+          <div class="who-card fade-in-right">
+            <h3>Perfect if your website is important to revenue</h3>
+            <ul>
+              <li>Businesses where the website drives a significant share of new enquiries</li>
+              <li>Businesses replacing a weak website that isn't converting</li>
+              <li>Businesses investing in long-term SEO growth</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPARE -->
+    <section id="compare">
+      <div class="container">
+        <div class="section-header fade-in-up">
+          <p class="section-label">Comparison</p>
+          <h2>Starter vs Plus —<br />which is right for you?</h2>
+          <p class="section-sub">Both are great websites. Plus is for when you need more than great.</p>
+        </div>
+
+        <div class="compare-wrap fade-in-up" data-delay="1">
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Swift7 Starter</th>
+                <th class="plus-col">Swift7 Plus</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="feature-col">Price</td>
+                <td>£500</td>
+                <td class="plus-col">From £1,495</td>
+              </tr>
+              <tr>
+                <td class="feature-col">Turnaround</td>
+                <td>7 days</td>
+                <td class="plus-col">10–14 days</td>
+              </tr>
+              <tr>
+                <td class="feature-col">Mobile Optimised</td>
+                <td><span class="compare-tick">✓</span></td>
+                <td class="plus-col"><span class="compare-tick">✓</span></td>
+              </tr>
+              <tr>
+                <td class="feature-col">Domain, Hosting &amp; SSL</td>
+                <td><span class="compare-tick">✓</span></td>
+                <td class="plus-col"><span class="compare-tick">✓</span></td>
+              </tr>
+              <tr>
+                <td class="feature-col">SEO Setup</td>
+                <td>Basic</td>
+                <td class="plus-col">Advanced</td>
+              </tr>
+              <tr>
+                <td class="feature-col">Copywriting</td>
+                <td>Included</td>
+                <td class="plus-col">Conversion-focused</td>
+              </tr>
+              <tr>
+                <td class="feature-col">SEO Articles</td>
+                <td>5</td>
+                <td class="plus-col">10</td>
+              </tr>
+              <tr>
+                <td class="feature-col">Conversion Optimisation</td>
+                <td><span class="compare-dash">—</span></td>
+                <td class="plus-col"><span class="compare-tick">✓</span></td>
+              </tr>
+              <tr>
+                <td class="feature-col">Booking / Lead Features</td>
+                <td>Basic</td>
+                <td class="plus-col">Advanced</td>
+              </tr>
+              <tr>
+                <td class="feature-col">Premium Design</td>
+                <td><span class="compare-dash">—</span></td>
+                <td class="plus-col"><span class="compare-tick">✓</span></td>
+              </tr>
+              <tr>
+                <td class="feature-col">Brand &amp; Visual Direction</td>
+                <td><span class="compare-dash">—</span></td>
+                <td class="plus-col"><span class="compare-tick">✓</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p style="margin-top:24px;font-size:14px;color:var(--mid);text-align:center;">
+          Not sure which is right for you? <a href="https://wa.me/447380218301" target="_blank" rel="noopener" style="color:#A8C94A;font-weight:600;">Message us on WhatsApp</a> — we'll tell you honestly.
+        </p>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing">
+      <div class="container">
+        <div class="pricing-layout">
+          <div class="pricing-left fade-in-left">
+            <p class="section-label">Pricing</p>
+            <h2>Transparent.<br />No surprises.</h2>
+            <p class="section-sub">A fixed price for a premium website that genuinely works for your business.</p>
+
+            <ul class="pricing-bullets">
+              <li>Conversion-focused copy written for you</li>
+              <li>Premium design, not a template</li>
+              <li>Advanced SEO to drive Google traffic</li>
+              <li>Domain, hosting, SSL + emails all in</li>
+              <li>50% deposit to start · 50% on completion</li>
+            </ul>
+
+            <p style="font-size:14px;color:var(--mid);line-height:1.7;">Want something simpler and faster? The <a href="/" style="color:#A8C94A;font-weight:600;">Swift7 Starter at £500</a> might be a better fit — a great professional website, live in 7 days.</p>
+          </div>
+
+          <div class="pricing-box fade-in-right">
+            <p class="pricing-box-label">Swift7 Plus</p>
+            <div class="price-display"><sup>£</sup>1,495<span style="font-size:20px;font-weight:600;letter-spacing:0;">+</span></div>
+            <p class="price-note">From £1,495 · exact price depends on scope · 10–14 day build · £70/yr after year one</p>
+
+            <div class="pricing-checks">
+              <div class="pricing-check"><span class="pcheck-icon">✓</span>Premium conversion-focused design</div>
+              <div class="pricing-check"><span class="pcheck-icon">✓</span>Advanced SEO &amp; 10 articles</div>
+              <div class="pricing-check"><span class="pcheck-icon">✓</span>Conversion-optimised copywriting</div>
+              <div class="pricing-check"><span class="pcheck-icon">✓</span>Advanced booking &amp; lead features</div>
+              <div class="pricing-check"><span class="pcheck-icon">✓</span>Brand direction &amp; visual guidance</div>
+              <div class="pricing-check"><span class="pcheck-icon">✓</span>Domain, hosting, SSL + emails</div>
+            </div>
+
+            <a href="#" class="btn btn-orange" style="width:100%;justify-content:center;" onclick="openModal(event)">Get in touch →</a>
+
+            <div class="pricing-guarantee" style="margin-top:20px;">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+              <span>Not happy with the result? We'll fix it — no quibbles.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials">
+      <div class="container">
+        <div class="section-header fade-in-up">
+          <p class="section-label">Reviews</p>
+          <h2>What our clients say.</h2>
+        </div>
+
+        <div class="testimonial-grid">
+          <div class="testimonial-card fade-in-up">
+            <div class="testimonial-stars">★★★★★</div>
+            <p>"Honestly didn't have to do much at all. Filled in a form, Callum wrote everything, and it was live within the week. Already had people contact us through it."</p>
+            <p class="testimonial-author">Marie M.</p>
+          </div>
+          <div class="testimonial-card fade-in-up" data-delay="1">
+            <div class="testimonial-stars">★★★★★</div>
+            <p>"Thought the 7 days thing was a gimmick. Callum had it done in 6. Had a couple of people get in touch through the site not long after it went live."</p>
+            <p class="testimonial-author">Steve D.</p>
+          </div>
+          <div class="testimonial-card fade-in-up" data-delay="2">
+            <div class="testimonial-stars">★★★★★</div>
+            <p>"I just answered some questions about the business and that was pretty much it. Callum sorted the domain, emails, everything. Good value for what you get."</p>
+            <p class="testimonial-author">Isabelle B.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="container">
+        <p class="section-label" style="text-align:center;">Ready?</p>
+        <h2>Let's talk about<br />what you need.</h2>
+        <p>No commitment. Just a quick call to see if Swift7 Plus is the right fit — and if it's not, we'll say so.</p>
+        <div class="cta-actions">
+          <a href="#" class="btn btn-orange" onclick="openModal(event)">Get in touch →</a>
+          <a href="https://wa.me/447380218301" class="btn btn-outline" target="_blank" rel="noopener">Message on WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" class="logo">
+          <img src="logo.png" alt="Swift7" width="42" height="24" style="height:24px;width:auto;display:block;" />
+        </a>
+        <p class="footer-tagline">Growth-focused websites<br />for businesses that mean it.</p>
+      </div>
+      <div>
+        <p class="footer-col-label">Pages</p>
+        <div class="footer-links">
+          <a href="/">Swift7 Starter — £500</a>
+          <a href="/swift7-plus">Swift7 Plus</a>
+          <a href="/pricing">Pricing</a>
+          <a href="/faq">FAQ</a>
+          <a href="/#portfolio">Our Work</a>
+          <a href="/freelance-web-design-hull">Freelance Designer</a>
+          <a href="/white-label-web-design-hull">White Label</a>
+        </div>
+      </div>
+      <div>
+        <p class="footer-col-label">Locations</p>
+        <div class="footer-links">
+          <a href="/web-design-hull">Hull</a>
+          <a href="/web-design-leeds">Leeds</a>
+          <a href="/web-design-sheffield">Sheffield</a>
+          <a href="/web-design-york">York</a>
+          <a href="/web-design-manchester">Manchester</a>
+          <a href="/web-design-newcastle">Newcastle</a>
+        </div>
+      </div>
+      <div>
+        <p class="footer-col-label">Industries</p>
+        <div class="footer-links">
+          <a href="/web-design-for-dentists">Dentists</a>
+          <a href="/web-design-for-solicitors">Solicitors</a>
+          <a href="/web-design-for-estate-agents">Estate Agents</a>
+          <a href="/web-design-for-physiotherapists">Physiotherapists</a>
+          <a href="/web-design-for-financial-advisors">Financial Advisors</a>
+        </div>
+      </div>
+      <div>
+        <p class="footer-col-label">Contact</p>
+        <div class="footer-links">
+          <a href="mailto:hello@swift7.co.uk">hello@swift7.co.uk</a>
+          <a href="tel:+447380218301">07380 218301</a>
+          <a href="https://wa.me/447380218301" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="#" onclick="openModal(event)">Get a Quote</a>
+          <a href="/privacy-policy">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Swift7. All rights reserved.</p>
+      <p>Designed and built by Swift7.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+  <script>
+    // Modal
+    function openModal(e) {
+      if (e) { e.preventDefault(); }
+      document.getElementById('modalOverlay').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    document.getElementById('modalClose').addEventListener('click', function () {
+      document.getElementById('modalOverlay').classList.remove('open');
+      document.body.style.overflow = '';
+    });
+    document.getElementById('modalOverlay').addEventListener('click', function (e) {
+      if (e.target === this) {
+        this.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    });
+
+    // Form submit (Web3Forms)
+    document.getElementById('contactForm').addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const btn = document.getElementById('submitBtn');
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
+      const data = new FormData(this);
+      try {
+        const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: data });
+        if (res.ok) {
+          document.getElementById('modalForm').style.display = 'none';
+          document.getElementById('modalSuccess').classList.add('visible');
+        } else {
+          btn.textContent = 'Something went wrong — try again';
+          btn.disabled = false;
+        }
+      } catch {
+        btn.textContent = 'Something went wrong — try again';
+        btn.disabled = false;
+      }
+    });
+
+    // Mobile nav
+    document.getElementById('navHamburger').addEventListener('click', function () {
+      document.getElementById('mobileNav').classList.toggle('open');
+    });
+
+    // Scroll animations
+    const observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right').forEach(function (el) {
+      observer.observe(el);
+    });
+
+    // Back to top
+    window.addEventListener('scroll', function () {
+      const btn = document.getElementById('backToTop');
+      if (window.scrollY > 600) btn.classList.add('visible');
+      else btn.classList.remove('visible');
+    });
+  </script>
+
+</body>
+</html>

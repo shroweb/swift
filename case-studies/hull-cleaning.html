@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hull Cleaning Case Study | Swift7</title>
+  <meta name="description"
+    content="Hull Cleaning had no website — just word of mouth. Swift7 built them a new site in 7 days. Phone calls doubled within the first few weeks. Here's how." />
+  <link rel="canonical" href="https://swift7.co.uk/case-studies/hull-cleaning" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://swift7.co.uk/case-studies/hull-cleaning" />
+  <meta property="og:site_name" content="Swift7" />
+  <meta property="og:title" content="Hull Cleaning Case Study | Swift7" />
+  <meta property="og:description"
+    content="No website to phone calls doubled in weeks. Here's how Swift7 built Hull Cleaning's site in 7 days." />
+  <meta property="og:image"
+    content="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-28596/1777713662238_swift7.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    function loadSwift7Analytics() {
+      if (window.__swift7AnalyticsLoaded) return;
+      window.__swift7AnalyticsLoaded = true;
+      var script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-FYDNT2RZV6';
+      document.head.appendChild(script);
+      gtag('js', new Date());
+      gtag('config', 'G-FYDNT2RZV6');
+    }
+    ['pointerdown', 'keydown', 'scroll', 'touchstart'].forEach(function (e) {
+      window.addEventListener(e, loadSwift7Analytics, { once: true, passive: true });
+    });
+    window.addEventListener('load', function () { setTimeout(loadSwift7Analytics, 8000); }, { once: true });
+  </script>
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap"
+    rel="stylesheet" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="192x192" href="/favicon.png" />
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --orange: #A8C94A;
+      --black: #F0F0EC;
+      --off-white: #1B3528;
+      --mid: #C8DACC;
+      --border: rgba(255,255,255,0.10);
+      --radius: 4px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--off-white);
+      color: var(--black);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #0F2219;
+    }
+
+    .nav-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 40px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: #1A1A1A;
+      text-decoration: none;
+    }
+
+    .logo-mark {
+      width: 32px;
+      height: 32px;
+      background: #fff;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 900;
+      color: var(--orange);
+      flex-shrink: 0;
+      line-height: 1;
+      letter-spacing: -1px;
+      padding-top: 1px;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .nav-link {
+      font-size: 14px;
+      font-weight: 700;
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    .nav-link:hover {
+      color: rgba(240,240,236,0.88);
+    }
+
+
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 10px 20px;
+      border-radius: var(--radius);
+      text-decoration: none;
+      transition: opacity 0.15s;
+      white-space: nowrap;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn:hover {
+      opacity: 0.85;
+    }
+
+    .btn-nav {
+      background: #A8C94A;
+      color: #0F2219;
+      font-weight: 800;
+    }
+
+    .btn-orange {
+      background: var(--orange);
+      color: #fff;
+    }
+
+    .btn-white {
+      background: #2A5040;
+      color: var(--orange);
+      font-weight: 700;
+    }
+
+    /* HAMBURGER */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: #fff;
+      border-radius: 2px;
+      transition: all 0.2s;
+    }
+
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      inset: 60px 0 0;
+      background: #0F2219;
+      z-index: 99;
+      padding: 32px 24px;
+      flex-direction: column;
+      gap: 8px;
+      overflow-y: auto;
+    }
+
+    .mobile-nav.open {
+      display: flex;
+    }
+
+    .mobile-nav a {
+      font-size: 17px;
+      font-weight: 600;
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .mobile-nav .btn-orange {
+      border-bottom: none;
+      border-radius: var(--radius);
+      padding: 14px 20px;
+      margin-top: 8px;
+      justify-content: center;
+    }
+
+    /* HERO */
+    .cs-hero {
+      background: #0F2219;
+      padding: 60px 0 0;
+    }
+
+    .cs-hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 400px;
+      gap: 60px;
+      align-items: flex-start;
+    }
+
+    .cs-hero-left {
+      padding-bottom: 60px;
+    }
+
+    .cs-hero-img {
+      align-self: flex-end;
+    }
+
+    .cs-hero-img img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px 12px 0 0;
+      box-shadow: 0 -8px 60px rgba(0,0,0,0.4);
+    }
+
+    @media (max-width: 860px) {
+      .cs-hero-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .cs-hero-img {
+        display: none;
+      }
+
+      .cs-hero-left {
+        padding-bottom: 60px;
+      }
+    }
+
+    .cs-breadcrumb {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.35);
+      margin-bottom: 32px;
+    }
+
+    .cs-breadcrumb a {
+      color: rgba(255, 255, 255, 0.35);
+      text-decoration: none;
+    }
+
+    .cs-breadcrumb a:hover {
+      color: rgba(240,240,236,0.88);
+    }
+
+    .cs-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #A8C94A;
+      margin-bottom: 20px;
+    }
+
+    .cs-hero h1 {
+      font-size: clamp(40px, 5vw, 68px);
+      font-weight: 900;
+      letter-spacing: -3px;
+      line-height: 1.0;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    .cs-hero h1 .accent {
+      color: var(--orange);
+    }
+
+    .cs-hero-sub {
+      font-size: 18px;
+      color: rgba(240,240,236,0.88);
+      line-height: 1.65;
+      max-width: 560px;
+      margin-bottom: 48px;
+    }
+
+    .cs-meta-row {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+
+    .cs-meta {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.35);
+    }
+
+    .cs-meta strong {
+      color: rgba(240,240,236,0.88);
+      font-weight: 600;
+      display: block;
+      font-size: 14px;
+    }
+
+    /* STATS BAR */
+    .cs-stats {
+      background: #2A5040;
+      border-bottom: 1px solid rgba(255,255,255,0.10);
+    }
+    .cs-stats-inner {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+    .cs-stat {
+      padding: 40px;
+      border-right: 1px solid rgba(255,255,255,0.10);
+      text-align: center;
+    }
+    .cs-stat:last-child { border-right: none; }
+    .cs-stat-num {
+      font-size: clamp(32px, 4vw, 48px);
+      font-weight: 900;
+      letter-spacing: -2px;
+      color: #A8C94A;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .cs-stat-label {
+      font-size: 14px;
+      color: #8A9E90;
+      line-height: 1.4;
+    }
+
+    section {
+      padding: 96px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.10);
+    }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: #A8C94A;
+      margin-bottom: 14px;
+    }
+
+    h2 {
+      font-size: clamp(30px, 3.5vw, 46px);
+      font-weight: 800;
+      letter-spacing: -1.5px;
+      line-height: 1.1;
+    }
+
+    .section-sub {
+      margin-top: 14px;
+      font-size: 17px;
+      color: #8A9E90;
+      line-height: 1.65;
+      max-width: 560px;
+    }
+
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-in-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    #overview { background: #1B3528; }
+    .overview-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 8px;
+      overflow: hidden;
+      margin-top: 48px;
+    }
+    .overview-block {
+      padding: 40px;
+      background: #2A5040;
+    }
+    .overview-block:nth-child(2) { background: #0F2219; }
+    .overview-block h3 {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #A8C94A;
+      margin-bottom: 16px;
+    }
+    .overview-block p {
+      font-size: 15px;
+      color: #8A9E90;
+      line-height: 1.75;
+    }
+    .overview-block p+p { margin-top: 14px; }
+
+    #built { background: #1B3528; }
+    .built-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 8px;
+      overflow: hidden;
+      margin-top: 48px;
+    }
+    .built-item {
+      padding: 32px;
+      border-right: 1px solid rgba(255,255,255,0.10);
+      border-bottom: 1px solid rgba(255,255,255,0.10);
+      background: #2A5040;
+    }
+    .built-item:nth-child(even) { background: #0F2219; }
+    .built-item:nth-child(3n) { border-right: none; }
+    .built-item:nth-child(n+4) { border-bottom: none; }
+    .built-num {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: #A8C94A;
+      margin-bottom: 12px;
+    }
+    .built-item h3 {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      letter-spacing: -0.3px;
+    }
+    .built-item p {
+      font-size: 13px;
+      color: #8A9E90;
+      line-height: 1.6;
+    }
+
+    #result {
+      background: #0F2219;
+      padding: 96px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.10);
+    }
+    #result .section-label { color: rgba(240,240,236,0.88); }
+    .result-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .result-stat {
+      font-size: clamp(64px, 10vw, 120px);
+      font-weight: 900;
+      letter-spacing: -6px;
+      line-height: 1;
+      color: #A8C94A;
+      margin: 16px 0 24px;
+    }
+    .result-desc {
+      font-size: 18px;
+      color: rgba(240,240,236,0.88);
+      line-height: 1.65;
+      max-width: 480px;
+      margin: 0 auto 40px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .btn-white {
+      background: #2A5040;
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.2);
+      font-size: 14px;
+      font-weight: 700;
+      padding: 13px 28px;
+    }
+    .btn-white:hover { background: #3a6050; }
+
+    #cta {
+      background: #2A5040;
+      padding: 96px 0;
+      text-align: center;
+      border-bottom: none;
+    }
+    .cta-inner {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+    #cta .section-label { color: rgba(240,240,236,0.88); }
+    #cta h2 {
+      font-size: clamp(32px, 4vw, 52px);
+      font-weight: 900;
+      letter-spacing: -2px;
+      color: #fff;
+      line-height: 1.05;
+      margin-bottom: 16px;
+    }
+    #cta p {
+      font-size: 16px;
+      color: rgba(240,240,236,0.88);
+      margin-bottom: 36px;
+    }
+    .cta-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .cta-actions .btn {
+      padding: 15px 32px;
+      font-size: 15px;
+      font-weight: 700;
+      min-width: 200px;
+      justify-content: center;
+    }
+    .btn-white-lg {
+      background: #A8C94A;
+      color: #0F2219;
+      font-weight: 800;
+      font-size: 15px;
+      padding: 15px 32px;
+    }
+
+    @media (max-width: 900px) {
+      .overview-grid { grid-template-columns: 1fr; }
+      .built-grid { grid-template-columns: 1fr 1fr; }
+      .built-item:nth-child(3n) { border-right: 1px solid rgba(255,255,255,0.10); }
+      .built-item:nth-child(2n) { border-right: none; }
+      .built-item:nth-child(n+4) { border-bottom: 1px solid rgba(255,255,255,0.10); }
+      .built-item:last-child { border-bottom: none; }
+      .cs-stats-inner { grid-template-columns: 1fr; }
+      .cs-stat { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.10); }
+      .cs-stat:last-child { border-bottom: none; }
+
+      .footer-top {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+      }
+    }
+
+    footer {
+      background: #0F2219;
+      color: rgba(240,240,236,0.88);
+    }
+
+    .footer-top {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 64px 40px 48px;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+      gap: 40px;
+    }
+
+    .footer-brand .logo {
+      margin-bottom: 16px;
+      display: inline-flex;
+    }
+
+    .footer-tagline {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.3);
+      line-height: 1.6;
+      margin-top: 12px;
+    }
+
+    .footer-col-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.25);
+      margin-bottom: 16px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-links a {
+      font-size: 13px;
+      color: rgba(240,240,236,0.88);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    .footer-links a:hover {
+      color: #fff;
+    }
+
+    .footer-bottom {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 20px 40px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+    }
+
+    /* COOKIE */
+    .cookie-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #0F2219;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      z-index: 200;
+      font-size: 13px;
+      color: rgba(240,240,236,0.88);
+    }
+
+    .cookie-bar.hidden {
+      display: none;
+    }
+
+    .cookie-bar a {
+      color: rgba(240,240,236,0.88);
+    }
+
+    .cookie-accept {
+      background: var(--orange);
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      padding: 8px 18px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    /* MODAL */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 300;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .modal-overlay.open {
+      display: flex;
+    }
+
+    .modal {
+      background: var(--off-white);
+      border-radius: 8px;
+      padding: 40px;
+      max-width: 480px;
+      width: 100%;
+      position: relative;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: rgba(0, 0, 0, 0.07);
+      border: none;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      font-size: 18px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--black);
+    }
+
+    .modal-eyebrow {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: #A8C94A;
+      margin-bottom: 10px;
+    }
+
+    .modal h2 {
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: -1px;
+      margin-bottom: 8px;
+    }
+
+    .modal-sub {
+      font-size: 14px;
+      color: var(--mid);
+      margin-bottom: 28px;
+      line-height: 1.55;
+    }
+
+    .form-field {
+      margin-bottom: 16px;
+    }
+
+    .form-label {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--mid);
+      margin-bottom: 6px;
+    }
+
+    .form-label-opt {
+      font-size: 10px;
+      font-weight: 400;
+      color: rgba(107, 107, 107, 0.6);
+    }
+
+    .form-field input,
+    .form-field select {
+      width: 100%;
+      padding: 13px 16px;
+      font-size: 15px;
+      font-family: 'Poppins', sans-serif;
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: var(--radius);
+      background: #2A5040;
+      color: var(--black);
+      outline: none;
+      transition: border-color 0.15s;
+    }
+
+    .form-field input:focus,
+    .form-field select:focus {
+      border-color: var(--orange);
+    }
+
+    .form-field input.error {
+      border-color: #C0392B;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 16px;
+      font-size: 15px;
+      font-weight: 700;
+      background: var(--orange);
+      color: #fff;
+      border: none;
+      border-radius: var(--radius);
+      cursor: pointer;
+      margin-top: 8px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .submit-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    .modal-reassure {
+      font-size: 12px;
+      color: var(--mid);
+      margin-top: 14px;
+      text-align: center;
+    }
+
+    .modal-reassure a {
+      color: var(--orange);
+    }
+
+    .modal-success {
+      display: none;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .modal-success h3 {
+      font-size: 22px;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .modal-success p {
+      font-size: 15px;
+      color: var(--mid);
+    }
+
+    @media (max-width: 900px) {
+      .overview-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+      }
+
+      .built-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .built-item:nth-child(3n) {
+        border-right: 1px solid var(--border);
+      }
+
+      .built-item:nth-child(2n) {
+        border-right: none;
+      }
+
+      .built-item:nth-child(n+4) {
+        border-bottom: 1px solid var(--border);
+      }
+
+      .built-item:last-child {
+        border-bottom: none;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 0 20px;
+      }
+
+      .nav-inner {
+        padding: 0 20px;
+      }
+
+      .nav-right {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .cs-stats-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .cs-stat {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .cs-stat:last-child {
+        border-bottom: none;
+      }
+
+      .built-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .built-item {
+        border-right: none !important;
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .cta-actions {
+        flex-direction: column;
+        align-items: center;
+      }
+
+    .cta-actions .btn {
+      padding: 15px 32px;
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+      .btn-white-lg {
+        text-align: center;
+        justify-content: center;
+      }
+
+      #result {
+        padding: 72px 0;
+      }
+
+      .result-stat {
+        letter-spacing: -4px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+      <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="logo" aria-label="Swift7 home">
+        <img src="/logo.png" alt="Swift7" style="height:24px;width:auto;display:block;" /></a>
+      <div class="nav-right">
+        <a href="/portfolio" class="nav-link">Portfolio</a>
+        <a href="/whats-included" class="nav-link">What&#39;s Included</a>
+        <a href="/how-it-works" class="nav-link">How It Works</a>
+        <a href="/pricing" class="nav-link">Pricing</a>
+        <a href="/faq" class="nav-link">FAQ</a>
+        <a href="/swift7-plus" class="nav-link" style="color:#A8C94A;">Swift7 Plus</a>
+        <a href="#" class="btn btn-nav" onclick="openModal(event)">Get a free audit &#8594;</a>
+      </div>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+      <!-- MOBILE NAV -->
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <a href="/portfolio">Portfolio</a>
+    <a href="/whats-included">What&#39;s Included</a>
+    <a href="/how-it-works">How It Works</a>
+    <a href="/pricing">Pricing</a>
+    <a href="/faq">FAQ</a>
+    <a href="/swift7-plus" style="color:#A8C94A;font-weight:700;">Swift7 Plus</a>
+    <a href="#" class="mobile-nav-cta" onclick="openModal(event)">Get a free audit &#8594;</a>
+    <a href="https://wa.me/447380218301" class="mobile-nav-wa" target="_blank" rel="noopener">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+        <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.528 5.845L.057 23.882l6.19-1.623A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.366l-.36-.214-3.722.976.993-3.625-.235-.372A9.818 9.818 0 1112 21.818z" />
+      </svg>
+      WhatsApp Us
+    </a>
+  </div>
+
+  <!-- HERO -->
+  <div class="cs-hero">
+    <div class="container">
+      <div class="cs-hero-inner">
+        <div class="cs-hero-left">
+      <p class="cs-breadcrumb"><a href="/">Swift7</a> / <a href="/#portfolio">Our Work</a> / Hull Cleaning</p>
+      <p class="cs-eyebrow">Case Study</p>
+      <h1>Hull <span class="accent">Cleaning.</span></h1>
+      <p class="cs-hero-sub">No website. No online presence. Just word of mouth — and a business ready to grow. Here's
+        what happened when we built them a site in 7 days.</p>
+      <div class="cs-meta-row">
+        <div class="cs-meta"><strong>Hull Cleaning</strong>Cleaning services, Hull</div>
+        <div class="cs-meta"><strong>Static Site</strong>Type</div>
+        <div class="cs-meta"><strong>7 days</strong>Time to launch</div>
+        <div class="cs-meta"><strong><a href="https://hullcleaning.co.uk" target="_blank" rel="noopener"
+              style="color: rgba(240,240,236,0.88);text-decoration:none;">hullcleaning.co.uk ↗</a></strong>Live site</div>
+      </div>
+    </div>
+        <div class="cs-hero-img">
+          <img src="../cleaning-hull-4.webp" alt="Hull Cleaning website screenshot — built by Swift7" loading="eager"
+        decoding="async" width="1749" height="1080" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <div class="cs-stats">
+    <div class="container">
+      <div class="cs-stats-inner">
+        <div class="cs-stat">
+          <div class="cs-stat-num">2×</div>
+          <div class="cs-stat-label">Phone calls within a few weeks of launch</div>
+        </div>
+        <div class="cs-stat">
+          <div class="cs-stat-num">7</div>
+          <div class="cs-stat-label">Days from brief to live site</div>
+        </div>
+        <div class="cs-stat">
+          <div class="cs-stat-num">£500</div>
+          <div class="cs-stat-label">Fixed price, everything included</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OVERVIEW -->
+  <section id="overview">
+    <div class="container">
+      <div class="fade-in-up">
+        <p class="section-label">Overview</p>
+        <h2>Word of mouth only gets you so far.</h2>
+      </div>
+      <div class="overview-grid">
+        <div class="overview-block fade-in-up">
+          <h3>The situation</h3>
+          <p>Hull Cleaning were doing good work and getting customers — but entirely through word of mouth. No website,
+            no Google presence, nothing for a potential customer to find when they searched online.</p>
+          <p>Any customer who wasn't referred by someone they already knew was lost before the conversation even
+            started.</p>
+        </div>
+        <div class="overview-block fade-in-up">
+          <h3>What needed to happen</h3>
+          <p>A fast, professional website that would show up when local customers searched for cleaning services in Hull
+            — and convert those visitors into phone calls.</p>
+          <p>No fluff. No bloated agency build. Just a site that works, live in a week.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT WAS BUILT -->
+  <section id="built">
+    <div class="container">
+      <div class="fade-in-up">
+        <p class="section-label">What Was Built</p>
+        <h2>Everything they needed.<br />Nothing they didn't.</h2>
+        <p class="section-sub">A focused static site built to rank locally and turn visitors into enquiries.</p>
+      </div>
+      <div class="built-grid">
+        <div class="built-item fade-in-up">
+          <p class="built-num">01</p>
+          <h3>Service Pages</h3>
+          <p>Individual pages for each cleaning service — written to rank on Google for the searches that matter
+            locally.</p>
+        </div>
+        <div class="built-item fade-in-up">
+          <p class="built-num">02</p>
+          <h3>Enquiry Forms</h3>
+          <p>Simple, friction-free contact forms that make it easy for customers to get in touch from any device.</p>
+        </div>
+        <div class="built-item fade-in-up">
+          <p class="built-num">03</p>
+          <h3>Google Business Profile</h3>
+          <p>Set up and optimised from day one — so the business appears on Google Maps when local customers search.</p>
+        </div>
+        <div class="built-item fade-in-up">
+          <p class="built-num">04</p>
+          <h3>Mobile-First Design</h3>
+          <p>Built for how customers actually browse — fast and clean on a phone, professional on desktop.</p>
+        </div>
+        <div class="built-item fade-in-up">
+          <p class="built-num">05</p>
+          <h3>On-Page SEO</h3>
+          <p>Meta titles, descriptions, heading structure and local signals all written and optimised before launch.</p>
+        </div>
+        <div class="built-item fade-in-up">
+          <p class="built-num">06</p>
+          <h3>Content Written For Them</h3>
+          <p>Every word on the site — written by Swift7. The client provided the brief; we handled the rest.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULT -->
+  <section id="result">
+    <div class="container">
+      <div class="result-inner fade-in-up">
+        <p class="section-label">The Result</p>
+        <div class="result-stat">2×</div>
+        <p class="result-desc">Phone calls doubled within the first few weeks of the site going live. For a local
+          cleaning business, more calls means more bookings. Simple as that.</p>
+        <a href="/" class="btn btn-white" onclick="event.preventDefault(); openModal(event);">Get the same for your
+          business →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta">
+    <div class="cta-inner fade-in-up">
+      <p class="section-label">Ready?</p>
+      <h2>Your site.<br />Live in 7 days.</h2>
+      <p>£500 all-in. No hidden costs. No waiting around.</p>
+      <div class="cta-actions">
+        <button class="btn btn-white-lg" onclick="openModal(event)">Start Your Website</button>
+        <a href="/#portfolio" class="btn" style="background:rgba(255,255,255,0.08);color: rgba(240,240,236,0.88);">See
+          more work</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" class="logo"><img src="../logo.png" alt="Swift7"
+            style="height:24px;width:auto;display:block;" /></a>
+        <p class="footer-tagline">Your business website,<br />live in 7 days.</p>
+      </div>
+      <div>
+        <p class="footer-col-label">Pages</p>
+        <div class="footer-links">
+          <a href="/whats-included">What's Included</a>
+          <a href="/how-it-works">How It Works</a>
+          <a href="/pricing">Pricing</a>
+          <a href="/about">About Callum</a>
+        </div>
+      </div>
+      <div>
+        <p class="footer-col-label">Locations</p>
+        <div class="footer-links">
+          <a href="/web-design-hull">Hull</a>
+          <a href="/web-design-leeds">Leeds</a>
+          <a href="/web-design-sheffield">Sheffield</a>
+          <a href="/web-design-york">York</a>
+          <a href="/locations">View all →</a>
+        </div>
+      </div>
+      <div>
+        <p class="footer-col-label">Industries</p>
+        <div class="footer-links">
+          <a href="/web-design-for-plumbers">Plumbers</a>
+          <a href="/web-design-for-electricians">Electricians</a>
+          <a href="/web-design-for-builders">Builders</a>
+          <a href="/industries">View all →</a>
+        </div>
+      </div>
+      <div>
+        <p class="footer-col-label">Contact</p>
+        <div class="footer-links">
+          <a href="mailto:hello@swift7.co.uk">hello@swift7.co.uk</a>
+          <a href="tel:+447380218301">07380 218301</a>
+          <a href="/privacy-policy">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Swift7. All rights reserved.</p>
+      <p>Designed and built by Swift7.</p>
+    </div>
+  </footer>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal">
+      <button class="modal-close" id="modalClose" aria-label="Close">×</button>
+      <div id="modalForm">
+        <p class="modal-eyebrow">Get a free audit →</p>
+        <h2 id="modalTitle">Let's get your website live.</h2>
+        <p class="modal-sub">Leave your details and we'll send a written website audit and specific recommendation within 24 hours — no call needed, no commitment.</p>
+        <form id="contactForm" novalidate>
+          <input type="hidden" name="access_key" value="b60f1b0d-3064-49a8-bce4-f12cca5ce919" />
+          <div class="form-field">
+            <label class="form-label" for="fname">Full Name</label>
+            <input type="text" id="fname" name="name" placeholder="Jane Smith" autocomplete="name" />
+          </div>
+          <div class="form-field">
+            <label class="form-label" for="femail">Email Address</label>
+            <input type="email" id="femail" name="email" placeholder="jane@yourbusiness.co.uk" autocomplete="email" />
+          </div>
+          <div class="form-field">
+            <label class="form-label" for="fphone">Phone Number <span class="form-label-opt">optional</span></label>
+            <input type="tel" id="fphone" name="phone" placeholder="+44..." autocomplete="tel" />
+          </div>
+          <button type="submit" class="submit-btn" id="submitBtn">Get my free audit →</button>
+        </form>
+        <p class="modal-reassure">No commitment. No spam. Prefer WhatsApp? <a href="https://wa.me/447380218301"
+            target="_blank" rel="noopener">Message us here</a>.</p>
+      </div>
+      <div class="modal-success" id="modalSuccess">
+        <h3>We'll be in touch shortly.</h3>
+        <p>We'll send you a recommendation by email within 24 hours.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cookie-bar hidden" id="cookieBar">
+    <p>We use Google Analytics to understand how visitors use our site. <a href="/privacy-policy">Privacy Policy →</a>
+    </p>
+    <button class="cookie-accept" id="cookieAccept">Got it</button>
+  </div>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+
+    const overlay = document.getElementById('modalOverlay');
+    const closeBtn = document.getElementById('modalClose');
+    const form = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const modalForm = document.getElementById('modalForm');
+    const modalSuccess = document.getElementById('modalSuccess');
+
+    function openModal(e) { if (e) e.preventDefault(); overlay.classList.add('open'); document.body.style.overflow = 'hidden'; setTimeout(() => document.getElementById('fname').focus(), 100); }
+    function closeModal() { overlay.classList.remove('open'); document.body.style.overflow = ''; }
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', (e) => { if (e.target === overlay) closeModal(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const name = document.getElementById('fname');
+      const email = document.getElementById('femail');
+      let valid = true;
+      [name, email].forEach(f => f.classList.remove('error'));
+      if (!name.value.trim()) { name.classList.add('error'); valid = false; }
+      if (!email.value.trim() || !email.value.includes('@')) { email.classList.add('error'); valid = false; }
+      if (!valid) return;
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending…';
+      try {
+        const formData = new FormData(form);
+        formData.set('access_key', 'b60f1b0d-3064-49a8-bce4-f12cca5ce919');
+        formData.set('subject', 'New Swift7 Enquiry — ' + name.value.trim() + ' — Case Study: Hull Cleaning');
+        const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', headers: { 'Accept': 'application/json' }, body: formData });
+        const result = await res.json().catch(() => ({}));
+        if (res.ok && result.success !== false) { modalForm.style.display = 'none'; modalSuccess.style.display = 'block'; }
+        else { throw new Error(); }
+      } catch { submitBtn.disabled = false; submitBtn.textContent = 'We\'ll Call You Within 24 Hours'; let err = document.getElementById('modalError'); if (!err) { err = document.createElement('p'); err.id = 'modalError'; err.style.cssText = 'margin-top:12px;color:#C0392B;font-size:13px;font-weight:600;'; submitBtn.insertAdjacentElement('afterend', err); } err.innerHTML = 'Could not send. Please <a href="mailto:hello@swift7.co.uk">email hello@swift7.co.uk</a>.'; }
+    });
+
+    (function () {
+      var hamburger = document.getElementById('navHamburger');
+      var mobileNav = document.getElementById('mobileNav');
+      if (!hamburger || !mobileNav) return;
+      hamburger.addEventListener('click', function () {
+        var isOpen = hamburger.classList.toggle('open');
+        mobileNav.classList.toggle('open', isOpen);
+        hamburger.setAttribute('aria-expanded', isOpen);
+        mobileNav.setAttribute('aria-hidden', !isOpen);
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+      });
+    })();
+
+    (function () {
+      var bar = document.getElementById('cookieBar');
+      if (!bar || localStorage.getItem('sw7_cookies') === '1') return;
+      bar.classList.remove('hidden');
+      document.getElementById('cookieAccept').addEventListener('click', function () {
+        localStorage.setItem('sw7_cookies', '1'); bar.classList.add('hidden');
+      });
+    })();
+  </script>
+</body>
+
+</html>
