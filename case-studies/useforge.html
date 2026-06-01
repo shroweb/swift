@@ -31,9 +31,8 @@
   <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap"
-    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet" /></noscript>
   <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png" />
   <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png" />
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -920,10 +919,94 @@
         justify-content: center;
       }
     }
+  
+
+    /* UX polish */
+    .skip-link { position: fixed; left: 16px; top: -64px; z-index: 3000; background: #fff; color: #0C0C0C; border: 2px solid currentColor; border-radius: 4px; padding: 10px 14px; font-size: 14px; font-weight: 800; text-decoration: none; transition: top 0.15s ease; }
+    .skip-link:focus { top: 12px; }
+    :focus-visible { outline: 3px solid rgba(232,68,10,0.45); outline-offset: 3px; }
+    .modal { max-height: calc(100vh - 32px); overflow-y: auto; -webkit-overflow-scrolling: touch; }
+    .modal-close { min-width: 44px; min-height: 44px; }
+    .modal-submit:disabled { cursor: wait; }
+    .modal-status { margin-top: 12px; color: #C0392B; font-size: 13px; line-height: 1.4; font-weight: 600; }
+    body.modal-open .mobile-cta-bar { transform: translateY(100%) !important; }
+    .portfolio-image.image-missing, .cs-hero-img.image-missing { min-height: 260px; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); }
+    .portfolio-image.image-missing::after, .cs-hero-img.image-missing::after { content: 'Case study image unavailable'; color: rgba(255,255,255,0.72); font-size: 13px; font-weight: 700; }
+    .portfolio-image.image-missing img, .cs-hero-img.image-missing img { display: none; }
+    @media (max-width: 600px) { .modal-overlay { align-items: flex-end; padding: 12px; } .modal { width: 100%; max-height: calc(100vh - 24px); border-radius: 16px 16px 0 0; padding: 28px 20px 24px; } .modal-close { top: 10px; right: 10px; } }
   </style>
+  <script type="application/ld+json" id="swift7-org-schema">
+  {
+    "@context": "https://schema.org",
+    "@type": [
+      "Organization",
+      "ProfessionalService"
+    ],
+    "@id": "https://swift7.co.uk/#organization",
+    "name": "Swift7",
+    "url": "https://swift7.co.uk/",
+    "logo": "https://swift7.co.uk/logo.png",
+    "email": "hello@swift7.co.uk",
+    "telephone": "+447380218301",
+    "priceRange": "£500",
+    "founder": {
+      "@type": "Person",
+      "name": "Callum MacInnes",
+      "jobTitle": "Web Designer & Founder"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "United Kingdom"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+447380218301",
+      "email": "hello@swift7.co.uk",
+      "contactType": "sales",
+      "areaServed": "GB",
+      "availableLanguage": "English"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Hull",
+      "addressRegion": "East Yorkshire",
+      "addressCountry": "GB"
+    }
+  }
+  </script>
+  <script type="application/ld+json" id="case-study-schema">
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "headline": "Use Forge.",
+    "name": "UseForge Case Study | Swift7",
+    "description": "UseForge are launching a fitness app and needed a site ready for the moment it goes live. Built in 7 days. Over 1,000 newsletter signups and counting.",
+    "url": "https://swift7.co.uk/case-studies/useforge",
+    "image": "https://swift7.co.uk/use-forge-3.webp",
+    "creator": {
+      "@id": "https://swift7.co.uk/#organization"
+    },
+    "publisher": {
+      "@id": "https://swift7.co.uk/#organization"
+    },
+    "about": "Website design case study"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://swift7.co.uk/"},
+      {"@type": "ListItem", "position": 2, "name": "Useforge", "item": "https://swift7.co.uk/useforge"}
+    ]
+  }
+  </script>
 </head>
 
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <span id="main" class="skip-target" tabindex="-1"></span>
 
       <!-- NAV -->
   <nav>
@@ -976,13 +1059,12 @@
         <div class="cs-meta"><strong>UseForge</strong>Fitness app</div>
         <div class="cs-meta"><strong>Static Site</strong>Type</div>
         <div class="cs-meta"><strong>7 days</strong>Time to launch</div>
-        <div class="cs-meta"><strong><a href="https://useforge.fit" target="_blank" rel="noopener"
-              style="color: rgba(240,240,236,0.88);text-decoration:none;">useforge.fit ↗</a></strong>Live site</div>
+        <div class="cs-meta"><strong>Client website</strong>Live project</div>
       </div>
     </div>
         <div class="cs-hero-img">
-          <img src="../use-forge-3.png" alt="UseForge website screenshot — built by Swift7" loading="eager" decoding="async"
-        width="1749" height="1080" />
+          <img src="../use-forge-3.webp" alt="UseForge website screenshot — built by Swift7" loading="eager" decoding="async"
+        width="1749" height="1080" / onerror="this.closest('.portfolio-image,.cs-hero-img')?.classList.add('image-missing');">
         </div>
       </div>
     </div>
@@ -1145,17 +1227,15 @@
 
   <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="modal">
-      <button class="modal-close" id="modalClose" aria-label="Close">×</button>
+      <button type="button" class="modal-close" id="modalClose" aria-label="Close">×</button>
       <div id="modalForm">
         <p class="modal-eyebrow">Get a free audit →</p>
         <h2 id="modalTitle">Let's get your website live.</h2>
         <p class="modal-sub">Leave your details and we'll send a written website audit and specific recommendation within 24 hours — no call needed, no commitment.</p>
-        <form id="contactForm" novalidate>
+        <form id="contactForm" aria-describedby="modalTitle" novalidate>
           <input type="hidden" name="access_key" value="b60f1b0d-3064-49a8-bce4-f12cca5ce919" />
-          <div class="form-field"><label class="form-label" for="fname">Full Name</label><input type="text" id="fname"
-              name="name" placeholder="Jane Smith" autocomplete="name" /></div>
-          <div class="form-field"><label class="form-label" for="femail">Email Address</label><input type="email"
-              id="femail" name="email" placeholder="jane@yourbusiness.co.uk" autocomplete="email" /></div>
+          <div class="form-field"><label class="form-label" for="fname">Full Name</label><input type="text" id="fname" name="name" required aria-required="true" placeholder="Jane Smith" autocomplete="name" /></div>
+          <div class="form-field"><label class="form-label" for="femail">Email Address</label><input type="email" id="femail" name="email" required aria-required="true" placeholder="jane@yourbusiness.co.uk" autocomplete="email" /></div>
           <div class="form-field"><label class="form-label" for="fphone">Phone Number <span
                 class="form-label-opt">optional</span></label><input type="tel" id="fphone" name="phone"
               placeholder="+44..." autocomplete="tel" /></div>
@@ -1164,7 +1244,7 @@
         <p class="modal-reassure">No commitment. No spam. Prefer WhatsApp? <a href="https://wa.me/447380218301"
             target="_blank" rel="noopener">Message us here</a>.</p>
       </div>
-      <div class="modal-success" id="modalSuccess">
+      <div class="modal-success" id="modalSuccess" role="status" aria-live="polite">
         <h3>We'll be in touch shortly.</h3>
         <p>We'll send you a recommendation by email within 24 hours.</p>
       </div>
@@ -1181,16 +1261,18 @@
     const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } }); }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
     document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
     const overlay = document.getElementById('modalOverlay'); const closeBtn = document.getElementById('modalClose'); const form = document.getElementById('contactForm'); const submitBtn = document.getElementById('submitBtn'); const modalForm = document.getElementById('modalForm'); const modalSuccess = document.getElementById('modalSuccess');
-    function openModal(e) { if (e) e.preventDefault(); overlay.classList.add('open'); document.body.style.overflow = 'hidden'; setTimeout(() => document.getElementById('fname').focus(), 100); }
-    function closeModal() { overlay.classList.remove('open'); document.body.style.overflow = ''; }
+    function openModal(e) { if (e) e.preventDefault(); overlay.classList.add('open'); document.body.classList.add('modal-open'); document.body.style.overflow = 'hidden'; const modalError = document.getElementById('modalError'); if (modalError) modalError.remove(); if (form) form.setAttribute('aria-busy', 'false'); setTimeout(() => document.getElementById('fname').focus(), 100); }
+    function closeModal() { overlay.classList.remove('open'); document.body.classList.remove('modal-open'); document.body.style.overflow = ''; }
     closeBtn.addEventListener('click', closeModal); overlay.addEventListener('click', (e) => { if (e.target === overlay) closeModal(); }); document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
     form.addEventListener('submit', async function (e) {
       e.preventDefault(); const name = document.getElementById('fname'); const email = document.getElementById('femail'); let valid = true;
       [name, email].forEach(f => f.classList.remove('error'));
       if (!name.value.trim()) { name.classList.add('error'); valid = false; } if (!email.value.trim() || !email.value.includes('@')) { email.classList.add('error'); valid = false; }
-      if (!valid) return; submitBtn.disabled = true; submitBtn.textContent = 'Sending…';
-      try { const fd = new FormData(form); fd.set('access_key', 'b60f1b0d-3064-49a8-bce4-f12cca5ce919'); fd.set('subject', 'New Swift7 Enquiry — ' + name.value.trim() + ' — Case Study: UseForge'); const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', headers: { 'Accept': 'application/json' }, body: fd }); const result = await res.json().catch(() => ({})); if (res.ok && result.success !== false) { modalForm.style.display = 'none'; modalSuccess.style.display = 'block'; } else { throw new Error(); } }
-      catch { submitBtn.disabled = false; submitBtn.textContent = 'We\'ll Call You Within 24 Hours'; let err = document.getElementById('modalError'); if (!err) { err = document.createElement('p'); err.id = 'modalError'; err.style.cssText = 'margin-top:12px;color:#C0392B;font-size:13px;font-weight:600;'; submitBtn.insertAdjacentElement('afterend', err); } err.innerHTML = 'Could not send. Please <a href="mailto:hello@swift7.co.uk">email hello@swift7.co.uk</a>.'; }
+      if (!valid) return; submitBtn.disabled = true;
+      form.setAttribute('aria-busy', 'true');
+      submitBtn.textContent = 'Sending…';
+      try { const fd = new FormData(form); fd.set('access_key', 'b60f1b0d-3064-49a8-bce4-f12cca5ce919'); fd.set('subject', 'New Swift7 Enquiry — ' + name.value.trim() + ' — Case Study: UseForge'); const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', headers: { 'Accept': 'application/json' }, body: fd }); const result = await res.json().catch(() => ({})); if (res.ok && result.success !== false) { form.setAttribute('aria-busy', 'false'); modalForm.style.display = 'none'; modalSuccess.style.display = 'block'; } else { throw new Error(); } }
+      catch { submitBtn.disabled = false; form.setAttribute('aria-busy', 'false'); submitBtn.textContent = 'We\'ll Call You Within 24 Hours'; let err = document.getElementById('modalError'); if (!err) { err = document.createElement('p'); err.id = 'modalError'; err.style.cssText = 'margin-top:12px;color:#C0392B;font-size:13px;font-weight:600;'; submitBtn.insertAdjacentElement('afterend', err); } err.innerHTML = 'Could not send. Please <a href="mailto:hello@swift7.co.uk">email hello@swift7.co.uk</a>.'; }
     });
     (function () { var h = document.getElementById('navHamburger'); var m = document.getElementById('mobileNav'); if (!h || !m) return; h.addEventListener('click', function () { var o = h.classList.toggle('open'); m.classList.toggle('open', o); h.setAttribute('aria-expanded', o); m.setAttribute('aria-hidden', !o); document.body.style.overflow = o ? 'hidden' : ''; }); })();
     (function () { var bar = document.getElementById('cookieBar'); if (!bar || localStorage.getItem('sw7_cookies') === '1') return; bar.classList.remove('hidden'); document.getElementById('cookieAccept').addEventListener('click', function () { localStorage.setItem('sw7_cookies', '1'); bar.classList.add('hidden'); }); })();

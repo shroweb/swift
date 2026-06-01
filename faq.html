@@ -62,7 +62,8 @@
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap"
     as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet" /></noscript>
   </noscript>
   <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png" />
   <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png" />
@@ -265,10 +266,75 @@
       .container { padding: 0 20px; }
       .cookie-bar { bottom: 70px; padding: 12px 16px; }
     }
+  
+
+    /* UX polish */
+    .skip-link { position: fixed; left: 16px; top: -64px; z-index: 3000; background: #fff; color: #0C0C0C; border: 2px solid currentColor; border-radius: 4px; padding: 10px 14px; font-size: 14px; font-weight: 800; text-decoration: none; transition: top 0.15s ease; }
+    .skip-link:focus { top: 12px; }
+    :focus-visible { outline: 3px solid rgba(232,68,10,0.45); outline-offset: 3px; }
+    .modal { max-height: calc(100vh - 32px); overflow-y: auto; -webkit-overflow-scrolling: touch; }
+    .modal-close { min-width: 44px; min-height: 44px; }
+    .modal-submit:disabled { cursor: wait; }
+    .modal-status { margin-top: 12px; color: #C0392B; font-size: 13px; line-height: 1.4; font-weight: 600; }
+    body.modal-open .mobile-cta-bar { transform: translateY(100%) !important; }
+    .portfolio-image.image-missing, .cs-hero-img.image-missing { min-height: 260px; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); }
+    .portfolio-image.image-missing::after, .cs-hero-img.image-missing::after { content: 'Case study image unavailable'; color: rgba(255,255,255,0.72); font-size: 13px; font-weight: 700; }
+    .portfolio-image.image-missing img, .cs-hero-img.image-missing img { display: none; }
+    @media (max-width: 600px) { .modal-overlay { align-items: flex-end; padding: 12px; } .modal { width: 100%; max-height: calc(100vh - 24px); border-radius: 16px 16px 0 0; padding: 28px 20px 24px; } .modal-close { top: 10px; right: 10px; } }
   </style>
+  <script type="application/ld+json" id="swift7-org-schema">
+  {
+    "@context": "https://schema.org",
+    "@type": [
+      "Organization",
+      "ProfessionalService"
+    ],
+    "@id": "https://swift7.co.uk/#organization",
+    "name": "Swift7",
+    "url": "https://swift7.co.uk/",
+    "logo": "https://swift7.co.uk/logo.png",
+    "email": "hello@swift7.co.uk",
+    "telephone": "+447380218301",
+    "priceRange": "£500",
+    "founder": {
+      "@type": "Person",
+      "name": "Callum MacInnes",
+      "jobTitle": "Web Designer & Founder"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "United Kingdom"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+447380218301",
+      "email": "hello@swift7.co.uk",
+      "contactType": "sales",
+      "areaServed": "GB",
+      "availableLanguage": "English"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Hull",
+      "addressRegion": "East Yorkshire",
+      "addressCountry": "GB"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://swift7.co.uk/"},
+      {"@type": "ListItem", "position": 2, "name": "FAQ", "item": "https://swift7.co.uk/faq"}
+    ]
+  }
+  </script>
 </head>
 
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
   <!-- MOBILE CTA BAR -->
   <div class="mobile-cta-bar" id="mobileCta">
@@ -279,20 +345,20 @@
   <!-- MODAL -->
   <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="modal">
-      <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+      <button type="button" class="modal-close" id="modalClose" aria-label="Close">✕</button>
       <div id="modalForm">
         <p class="modal-eyebrow">Free website audit</p>
         <h3 id="modalTitle">Get a free website audit.</h3>
         <p class="modal-sub">Leave your details and we'll send a written website audit and specific recommendation within 24 hours — no call needed, no commitment.</p>
-        <form id="contactForm" novalidate>
+        <form id="contactForm" aria-describedby="modalTitle" novalidate>
           <input type="hidden" name="access_key" value="b60f1b0d-3064-49a8-bce4-f12cca5ce919" />
           <div class="form-field">
             <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" placeholder="Jane Smith" autocomplete="name" />
+            <input type="text" id="name" name="name" required aria-required="true" placeholder="Jane Smith" autocomplete="name" />
           </div>
           <div class="form-field">
             <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="jane@yourbusiness.com" autocomplete="email" />
+            <input type="email" id="email" name="email" required aria-required="true" placeholder="jane@yourbusiness.com" autocomplete="email" />
           </div>
           <div class="form-field">
             <label for="fphone">Phone Number <span style="font-weight:500;color:#767370;text-transform:none;letter-spacing:0">optional</span></label>
@@ -324,7 +390,7 @@
           <p class="modal-guarantee">No calls. No commitment. No spam. Prefer WhatsApp? <a href="https://wa.me/447380218301" target="_blank" rel="noopener">Message us here</a>.</p>
         </form>
       </div>
-      <div class="modal-success" id="modalSuccess">
+      <div class="modal-success" id="modalSuccess" role="status" aria-live="polite">
         <div class="success-icon">✓</div>
         <h4>You're on the list.</h4>
         <p>Your free audit is on its way — check your inbox within 24 hours.</p>
@@ -378,7 +444,7 @@
     </svg>
   </a>
 
-  <main>
+  <main id="main">
     <!-- FAQ -->
     <section id="faq">
       <div class="container">
@@ -605,8 +671,8 @@
     }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
     document.querySelectorAll('.fade-in-up, .scale-in, .fade-in-left, .fade-in-right').forEach(el => observer.observe(el));
 
-    function openModal(e) { if (e) e.preventDefault(); overlay.classList.add('open'); document.body.style.overflow = 'hidden'; setTimeout(() => document.getElementById('name').focus(), 100); }
-    function closeModal() { overlay.classList.remove('open'); document.body.style.overflow = ''; }
+    function openModal(e) { if (e) e.preventDefault(); overlay.classList.add('open'); document.body.classList.add('modal-open'); document.body.style.overflow = 'hidden'; const modalError = document.getElementById('modalError'); if (modalError) modalError.remove(); if (form) form.setAttribute('aria-busy', 'false'); setTimeout(() => document.getElementById('name').focus(), 100); }
+    function closeModal() { overlay.classList.remove('open'); document.body.classList.remove('modal-open'); document.body.style.overflow = ''; }
 
     closeBtn.addEventListener('click', closeModal);
     overlay.addEventListener('click', (e) => { if (e.target === overlay) closeModal(); });
@@ -656,19 +722,21 @@
       if (!name.value.trim()) { name.classList.add('error'); valid = false; }
       if (!email.value.trim() || !email.value.includes('@')) { email.classList.add('error'); valid = false; }
       if (!valid) return;
-      submitBtn.disabled = true; submitBtn.textContent = 'Sending…';
+      submitBtn.disabled = true;
+      form.setAttribute('aria-busy', 'true');
+      submitBtn.textContent = 'Sending…';
       try {
         const formData = new FormData(form);
         formData.set('access_key', 'b60f1b0d-3064-49a8-bce4-f12cca5ce919');
         formData.set('subject', 'New Swift7 Enquiry — ' + name.value.trim() + ' — ' + document.title);
         const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', headers: { 'Accept': 'application/json' }, body: formData });
         const result = await res.json().catch(() => ({}));
-        if (res.ok && result.success !== false) { modalForm.style.display = 'none'; modalSuccess.style.display = 'block'; }
+        if (res.ok && result.success !== false) { form.setAttribute('aria-busy', 'false'); modalForm.style.display = 'none'; modalSuccess.style.display = 'block'; }
         else { throw new Error('Server error'); }
       } catch {
-        submitBtn.disabled = false; submitBtn.textContent = 'Send me a recommendation →';
+        submitBtn.disabled = false; form.setAttribute('aria-busy', 'false'); submitBtn.textContent = 'Send me a recommendation →';
         let errorMsg = document.getElementById('modalError');
-        if (!errorMsg) { errorMsg = document.createElement('p'); errorMsg.id = 'modalError'; errorMsg.style.cssText = 'margin-top:12px;color:#C0392B;font-size:13px;line-height:1.4;font-weight:600;'; submitBtn.insertAdjacentElement('afterend', errorMsg); }
+        if (!errorMsg) { errorMsg = document.createElement('p'); errorMsg.id = 'modalError'; errorMsg.className = 'modal-status'; errorMsg.setAttribute('role', 'status'); errorMsg.setAttribute('aria-live', 'polite'); submitBtn.insertAdjacentElement('afterend', errorMsg); }
         errorMsg.innerHTML = 'Could not send just now. Please <a href="mailto:hello@swift7.co.uk">email hello@swift7.co.uk</a> or use the WhatsApp link below.';
       }
     });

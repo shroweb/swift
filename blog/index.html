@@ -829,10 +829,66 @@
         padding: 36px 24px;
       }
     }
+  
+
+    /* UX polish */
+    .skip-link { position: fixed; left: 16px; top: -64px; z-index: 3000; background: #fff; color: #0C0C0C; border: 2px solid currentColor; border-radius: 4px; padding: 10px 14px; font-size: 14px; font-weight: 800; text-decoration: none; transition: top 0.15s ease; }
+    .skip-link:focus { top: 12px; }
+    :focus-visible { outline: 3px solid rgba(232,68,10,0.45); outline-offset: 3px; }
+    .modal { max-height: calc(100vh - 32px); overflow-y: auto; -webkit-overflow-scrolling: touch; }
+    .modal-close { min-width: 44px; min-height: 44px; }
+    .modal-submit:disabled { cursor: wait; }
+    .modal-status { margin-top: 12px; color: #C0392B; font-size: 13px; line-height: 1.4; font-weight: 600; }
+    body.modal-open .mobile-cta-bar { transform: translateY(100%) !important; }
+    .portfolio-image.image-missing, .cs-hero-img.image-missing { min-height: 260px; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); }
+    .portfolio-image.image-missing::after, .cs-hero-img.image-missing::after { content: 'Case study image unavailable'; color: rgba(255,255,255,0.72); font-size: 13px; font-weight: 700; }
+    .portfolio-image.image-missing img, .cs-hero-img.image-missing img { display: none; }
+    @media (max-width: 600px) { .modal-overlay { align-items: flex-end; padding: 12px; } .modal { width: 100%; max-height: calc(100vh - 24px); border-radius: 16px 16px 0 0; padding: 28px 20px 24px; } .modal-close { top: 10px; right: 10px; } }
   </style>
+  <script type="application/ld+json" id="swift7-org-schema">
+  {
+    "@context": "https://schema.org",
+    "@type": [
+      "Organization",
+      "ProfessionalService"
+    ],
+    "@id": "https://swift7.co.uk/#organization",
+    "name": "Swift7",
+    "url": "https://swift7.co.uk/",
+    "logo": "https://swift7.co.uk/logo.png",
+    "email": "hello@swift7.co.uk",
+    "telephone": "+447380218301",
+    "priceRange": "£500",
+    "founder": {
+      "@type": "Person",
+      "name": "Callum MacInnes",
+      "jobTitle": "Web Designer & Founder"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "United Kingdom"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+447380218301",
+      "email": "hello@swift7.co.uk",
+      "contactType": "sales",
+      "areaServed": "GB",
+      "availableLanguage": "English"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Hull",
+      "addressRegion": "East Yorkshire",
+      "addressCountry": "GB"
+    }
+  }
+  </script>
 </head>
 
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <span id="main" class="skip-target" tabindex="-1"></span>
 
     <!-- NAV -->
   <nav>
@@ -1084,12 +1140,12 @@
 
   <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="modal">
-      <button class="modal-close" id="modalClose" aria-label="Close form">×</button>
+      <button type="button" class="modal-close" id="modalClose" aria-label="Close form">×</button>
       <div id="modalForm">
         <p class="modal-eyebrow">Get a free audit →</p>
         <h3 id="modalTitle">Get a free website audit.</h3>
         <p class="modal-sub">Leave your details and we'll send a written website audit and specific recommendation within 24 hours — no call needed, no commitment.</p>
-        <form id="contactForm" novalidate>
+        <form id="contactForm" aria-describedby="modalTitle" novalidate>
           <div class="form-field"><label for="fname">Name</label><input type="text" id="fname" name="name"
               placeholder="Your name" autocomplete="name" required /></div>
           <div class="form-field"><label for="femail">Email</label><input type="email" id="femail" name="email"
@@ -1102,7 +1158,7 @@
               target="_blank" rel="noopener">Message us here</a>.</p>
         </form>
       </div>
-      <div class="modal-success" id="modalSuccess">
+      <div class="modal-success" id="modalSuccess" role="status" aria-live="polite">
         <div class="success-icon">✓</div>
         <h3>Thanks. We'll be in touch.</h3>
         <p>We'll send you a recommendation by email within 24 hours.</p>
@@ -1122,14 +1178,14 @@
 
       window.openModal = function (e) {
         if (e) e.preventDefault();
-        overlay.classList.add('open');
-        document.body.style.overflow = 'hidden';
+        overlay.classList.add('open'); document.body.classList.add('modal-open');
+        document.body.style.overflow = 'hidden'; const modalError = document.getElementById('modalError'); if (modalError) modalError.remove(); if (form) form.setAttribute('aria-busy', 'false');
         const first = document.getElementById('fname');
         if (first) setTimeout(() => first.focus(), 100);
       };
 
       function closeModal() {
-        overlay.classList.remove('open');
+        overlay.classList.remove('open'); document.body.classList.remove('modal-open');
         document.body.style.overflow = '';
       }
 
@@ -1148,7 +1204,8 @@
         if (!email || !email.value.trim() || !email.value.includes('@')) { if (email) email.classList.add('error'); valid = false; }
         if (!valid) return;
         submitBtn.disabled = true;
-        submitBtn.textContent = 'Sending…';
+      form.setAttribute('aria-busy', 'true');
+      submitBtn.textContent = 'Sending…';
         try {
           const formData = new FormData(form);
           formData.set('access_key', 'b60f1b0d-3064-49a8-bce4-f12cca5ce919');
@@ -1159,12 +1216,11 @@
             body: formData
           });
           const result = await res.json().catch(() => ({}));
-          if (res.ok && result.success !== false) { modalForm.style.display = 'none'; modalSuccess.style.display = 'block'; }
+          if (res.ok && result.success !== false) { form.setAttribute('aria-busy', 'false'); modalForm.style.display = 'none'; modalSuccess.style.display = 'block'; }
           else { throw new Error('Server error'); }
         } catch {
-          submitBtn.disabled = false;
-          submitBtn.textContent = "Send me a recommendation →";
-          let errorMsg = document.getElementById('modalError'); if (!errorMsg) { errorMsg = document.createElement('p'); errorMsg.id = 'modalError'; errorMsg.style.cssText = 'margin-top:12px;color:#C0392B;font-size:13px;line-height:1.4;font-weight:600;'; submitBtn.insertAdjacentElement('afterend', errorMsg); } errorMsg.innerHTML = 'Could not send just now. Please <a href="mailto:hello@swift7.co.uk">email hello@swift7.co.uk</a> or use the WhatsApp link below.';
+          submitBtn.disabled = false; form.setAttribute('aria-busy', 'false'); submitBtn.textContent = "Send me a recommendation →";
+          let errorMsg = document.getElementById('modalError'); if (!errorMsg) { errorMsg = document.createElement('p'); errorMsg.id = 'modalError'; errorMsg.className = 'modal-status'; errorMsg.setAttribute('role', 'status'); errorMsg.setAttribute('aria-live', 'polite'); submitBtn.insertAdjacentElement('afterend', errorMsg); } errorMsg.innerHTML = 'Could not send just now. Please <a href="mailto:hello@swift7.co.uk">email hello@swift7.co.uk</a> or use the WhatsApp link below.';
         }
       });
     })();
