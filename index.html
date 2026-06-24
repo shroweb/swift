@@ -107,7 +107,6 @@
       {"@type":"Question","name":"Do I have to write the content myself?","acceptedAnswer":{"@type":"Answer","text":"No. We write the website copy for you, including page content, calls to action, SEO titles, descriptions, and five starter articles."}},
       {"@type":"Question","name":"How many pages are included?","acceptedAnswer":{"@type":"Answer","text":"The Swift7 Launch includes up to 10 pages, usually covering home, about, services, service detail pages, blog/articles, and contact."}},
       {"@type":"Question","name":"Is hosting included?","acceptedAnswer":{"@type":"Answer","text":"Yes. Your first year of domain, hosting, and SSL is included. After that, renewal is £70 per year for domain and hosting."}},
-      {"@type":"Question","name":"Can I choose WordPress?","acceptedAnswer":{"@type":"Answer","text":"Yes. You can choose a static website or WordPress for the same £500 price and 7-day timeline."}},
       {"@type":"Question","name":"What if I need changes?","acceptedAnswer":{"@type":"Answer","text":"You review a preview before launch. We handle sensible revisions quickly so the site still goes live on schedule."}},
       {"@type":"Question","name":"How does payment work?","acceptedAnswer":{"@type":"Answer","text":"Payment is split 50% upfront and 50% on completion, so you only pay the final balance when the website is ready to launch."}},
       {"@type":"Question","name":"Will the website work on mobile?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every site is designed mobile-first, then refined for tablets and desktops so it feels clean and fast everywhere."}},
@@ -284,6 +283,21 @@
       filter: grayscale(0.12);
     }
 
+    .founder-mark {
+      width: 108px;
+      height: 108px;
+      border-radius: 8px;
+      background: #A8C94A;
+      color: #0F2219;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 34px;
+      font-weight: 900;
+      letter-spacing: -2px;
+      line-height: 1;
+    }
+
     .founder-card h3,
     .clarity-card h3,
     .fit-card h3,
@@ -307,11 +321,11 @@
     }
 
     .human-note {
-      font-size: clamp(28px, 4vw, 50px);
+      font-size: clamp(30px, 3.4vw, 46px);
       font-weight: 900;
       line-height: 1.05;
-      letter-spacing: -1.8px;
-      max-width: 680px;
+      letter-spacing: -1.3px;
+      max-width: 560px;
     }
 
     .clarity-grid,
@@ -364,36 +378,6 @@
       opacity: 0.78;
     }
 
-    .process-shot {
-      margin-top: 40px;
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 28px;
-      align-items: stretch;
-    }
-
-    .process-shot figure {
-      background: #0F2219;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      overflow: hidden;
-    }
-
-    .process-shot img {
-      width: 100%;
-      height: 100%;
-      min-height: 300px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .process-shot figcaption {
-      padding: 18px 20px;
-      color: var(--mid);
-      font-size: 13px;
-      line-height: 1.55;
-    }
-
     .walk-feature {
       display: grid;
       grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
@@ -416,11 +400,25 @@
       text-transform: none;
     }
 
+    #cta h2 {
+      font-size: clamp(46px, 8vw, 104px) !important;
+      line-height: 0.96;
+      letter-spacing: -3px;
+      max-width: 980px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #cta .cta-sub {
+      max-width: 620px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
     @media (max-width: 900px) {
       .search-proof-inner,
       .human-proof-grid,
-      .walk-feature,
-      .process-shot {
+      .walk-feature {
         grid-template-columns: 1fr;
       }
 
@@ -481,6 +479,11 @@
       .process-proof-card,
       .walk-card {
         min-height: auto;
+      }
+
+      #cta h2 {
+        font-size: clamp(42px, 14vw, 58px) !important;
+        letter-spacing: -2px;
       }
     }
   </style>
@@ -663,7 +666,7 @@
         <span class="ticker-item">15+ years building websites <span class="ticker-dot"></span></span>
         <span class="ticker-item">No hidden costs <span class="ticker-dot"></span></span>
         <span class="ticker-item">50% upfront · 50% on completion <span class="ticker-dot"></span></span>
-        <span class="ticker-item">Static or WordPress <span class="ticker-dot"></span></span>
+        <span class="ticker-item">Built for local enquiries <span class="ticker-dot"></span></span>
         <span class="ticker-item">7-day delivery guarantee <span class="ticker-dot"></span></span>
         <span class="ticker-item">£500 all-in, no extras <span class="ticker-dot"></span></span>
         <span class="ticker-item">All content written for you <span class="ticker-dot"></span></span>
@@ -673,7 +676,7 @@
         <span class="ticker-item">15+ years building websites <span class="ticker-dot"></span></span>
         <span class="ticker-item">No hidden costs <span class="ticker-dot"></span></span>
         <span class="ticker-item">50% upfront · 50% on completion <span class="ticker-dot"></span></span>
-        <span class="ticker-item">Static or WordPress <span class="ticker-dot"></span></span>
+        <span class="ticker-item">Built for local enquiries <span class="ticker-dot"></span></span>
       </div>
     </div>
 
@@ -698,15 +701,15 @@
     </section>
 
     <section class="human-proof">
-      <div class="container human-proof-grid">
-        <div class="founder-card fade-in-up">
-          <img src="/callum.png" alt="Callum from Swift7" width="216" height="216" loading="lazy" decoding="async" />
-          <div>
-            <h3>Built by Callum, not a faceless agency.</h3>
-            <p>You deal directly with the person planning, writing and launching the site. Clear brief, clear price, no agency fog.</p>
-          </div>
-        </div>
-        <p class="human-note fade-in-up" data-delay="1">Most small business websites fail because nobody says anything clearly. We write the words, structure the pages and make the next step obvious.</p>
+	      <div class="container human-proof-grid">
+	        <div class="founder-card fade-in-up">
+	          <div class="founder-mark" aria-hidden="true">S7</div>
+	          <div>
+	            <h3>Built by Callum, not a faceless agency.</h3>
+	            <p>You speak to the person planning, writing and launching the site.</p>
+	          </div>
+	        </div>
+	        <p class="human-note fade-in-up" data-delay="1">Clear words. Clear pages. Clear next step.</p>
       </div>
     </section>
 
@@ -746,28 +749,28 @@
       <div class="container">
         <div class="section-header fade-in-up">
           <p class="section-label is-soft">Who this is for</p>
-          <h2>Best for businesses that need enquiries, not a six-month project.</h2>
+	          <h2>For businesses that need enquiries, not a long project.</h2>
         </div>
         <div class="fit-grid">
           <div class="fit-card good fade-in-up">
             <span class="plain-num">GOOD FIT</span>
             <h3>Local trades and services</h3>
-            <p>You need people nearby to find you, trust you and make contact quickly.</p>
+	            <p>Get found locally and make contact easy.</p>
           </div>
           <div class="fit-card good fade-in-up" data-delay="1">
             <span class="plain-num">GOOD FIT</span>
             <h3>Professional firms</h3>
-            <p>Accountants, consultants, clinics and small firms where credibility matters.</p>
+	            <p>Look credible before the first conversation.</p>
           </div>
           <div class="fit-card bad fade-in-up" data-delay="2">
             <span class="plain-num">NOT IDEAL</span>
             <h3>Big custom web apps</h3>
-            <p>If you need logins, dashboards or complex software, this is not the right package.</p>
+	            <p>Logins, dashboards or complex software need a different build.</p>
           </div>
           <div class="fit-card bad fade-in-up" data-delay="3">
             <span class="plain-num">NOT IDEAL</span>
             <h3>Endless design rounds</h3>
-            <p>This is a fast, guided build. We keep it moving and make the important calls.</p>
+	            <p>This is a guided 7-day build, not an open-ended design project.</p>
           </div>
         </div>
       </div>
@@ -777,29 +780,29 @@
       <div class="container">
         <div class="section-header fade-in-up">
           <p class="section-label is-soft">What you do not have to do</p>
-          <h2>No blank-page panic.</h2>
-          <p class="section-sub">You answer a short brief. We turn it into a working site.</p>
+	          <h2>No blank-page panic.</h2>
+	          <p class="section-sub">You answer the brief. We do the heavy lifting.</p>
         </div>
         <div class="dont-do-grid">
           <div class="dont-do-card fade-in-up">
             <span class="plain-num">01</span>
-            <h3>Write the website copy</h3>
-            <p>We write it in plain English, based on what your customers need to know.</p>
+	            <h3>Write the copy</h3>
+	            <p>We turn your answers into clear website text.</p>
           </div>
           <div class="dont-do-card fade-in-up" data-delay="1">
             <span class="plain-num">02</span>
-            <h3>Choose a template</h3>
-            <p>We design around your offer, proof and services rather than dropping text into a theme.</p>
+	            <h3>Choose a template</h3>
+	            <p>We structure the page around your business.</p>
           </div>
           <div class="dont-do-card fade-in-up" data-delay="2">
             <span class="plain-num">03</span>
-            <h3>Fight with hosting</h3>
-            <p>Domain, hosting, SSL, forms and analytics are handled for you.</p>
+	            <h3>Fight with hosting</h3>
+	            <p>Domain, SSL, forms and analytics are handled.</p>
           </div>
           <div class="dont-do-card fade-in-up" data-delay="3">
             <span class="plain-num">04</span>
-            <h3>Guess what matters</h3>
-            <p>We structure the site around trust, search visibility and enquiries.</p>
+	            <h3>Guess what matters</h3>
+	            <p>The site is built around trust and enquiries.</p>
           </div>
         </div>
       </div>
@@ -813,8 +816,8 @@
           <div class="offer-teaser-left">
             <p class="section-label">What's Included</p>
             <h2>Everything done<br />for you. £500.</h2>
-            <p class="section-sub">Design, copy, SEO, hosting, domain, emails, Google Business Profile — all in. No extras, no calls.</p>
-            <a href="/whats-included" class="btn btn-orange" style="margin-top:8px;">See everything that's included →</a>
+	            <p class="section-sub">Design, copy, SEO, hosting, domain, email and Google setup. One fixed price.</p>
+	            <a href="/whats-included" class="btn btn-orange" style="margin-top:8px;">See what's included →</a>
           </div>
           <div class="offer-teaser-items">
             <div class="offer-teaser-item"><span class="offer-teaser-check">✓</span><span>All content written for you</span></div>
@@ -899,10 +902,10 @@
             <p class="portfolio-num">03</p>
             <div class="portfolio-info">
               <h3>Elland Road Roofing</h3>
-              <p>WordPress site for a Yorkshire roofer — ranking on Google for local search terms and generating quote
+              <p>Website for a Yorkshire roofer — ranking on Google for local search terms and generating quote
                 requests directly through the site.</p>
               <div class="portfolio-row">
-                <span class="portfolio-tag">WordPress</span>
+                <span class="portfolio-tag">Local SEO</span>
                 <a href="/case-studies/elland-road-roofing" class="portfolio-link-label">Case study →</a>
               </div>
             </div>
@@ -1002,43 +1005,33 @@
       <div class="container">
         <div class="section-header fade-in-up">
           <p class="section-label is-soft">What happens after you enquire</p>
-          <h2>A fast build still needs a proper process.</h2>
-          <p class="section-sub">You are not left wondering where the site is up to. The build is split into simple stages.</p>
+	          <h2>From brief to live in 7 days.</h2>
+	          <p class="section-sub">Simple stages. Clear updates. No chasing.</p>
         </div>
         <div class="process-proof-grid">
           <div class="process-proof-card fade-in-up">
             <span class="plain-num">DAY 1</span>
             <h3>Quick brief</h3>
-            <p>You answer a short set of questions about the business, services and areas you cover.</p>
+	            <p>Answer a short brief about the business.</p>
           </div>
           <div class="process-proof-card fade-in-up" data-delay="1">
             <span class="plain-num">DAYS 2-5</span>
             <h3>Write and build</h3>
-            <p>We write the copy, design the structure and build the site around your best enquiry routes.</p>
+	            <p>We write, design and build the first version.</p>
           </div>
           <div class="process-proof-card fade-in-up" data-delay="2">
             <span class="plain-num">DAY 6</span>
             <h3>Review link</h3>
-            <p>You get a private preview link, send notes, and we make the final edits.</p>
+	            <p>You get a private link and send final notes.</p>
           </div>
           <div class="process-proof-card fade-in-up" data-delay="3">
             <span class="plain-num">DAY 7</span>
             <h3>Go live</h3>
-            <p>Domain, hosting, forms, analytics and launch checks are handled before the site goes live.</p>
-          </div>
-        </div>
-        <div class="process-shot fade-in-up">
-          <figure>
-            <img src="/screenshot_1.5x_postspark_2026-05-15_16-28-13.png" alt="Swift7 website build preview screenshot" loading="lazy" decoding="async" />
-            <figcaption>Preview links and real page reviews keep the build practical, not theoretical.</figcaption>
-          </figure>
-          <figure>
-            <img src="/device-mockup_1.5x_postspark_2026-05-15_16-24-55.png" alt="Swift7 mobile website preview" loading="lazy" decoding="async" />
-            <figcaption>Every launch is checked on mobile because that is where most local enquiries start.</figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
+	            <p>We connect the domain, forms and analytics.</p>
+	          </div>
+	        </div>
+	      </div>
+	    </section>
 
     <!-- WHO WE BUILD FOR -->
     <div class="industries-strip">
@@ -1162,97 +1155,7 @@
     
 <!-- WHY SWIFT7 -->
 
-    <!-- WEBSITE TYPE -->
-    <section id="type">
-      <div class="container">
-        <div class="section-header fade-in-up">
-          <p class="section-label">Your Choice</p>
-          <h2>Static, WordPress or Shopify?</h2>
-          <p class="section-sub">Same price. Same timeline. We'll recommend the right one — or choose below.</p>
-        </div>
-
-        <div class="type-table fade-in-up" data-delay="1">
-
-          <!-- HEADER ROW -->
-          <div class="type-th" style="display:flex;align-items:flex-end;padding-bottom:28px;">
-            <p style="font-size:11px;font-weight:600;color:var(--mid);text-transform:uppercase;letter-spacing:0.06em;">Platform</p>
-          </div>
-          <div class="type-th rec">
-            <div class="type-th-badge rec">Recommended</div>
-            <h3>Static</h3>
-            <p class="type-th-sub">Service &amp; trade businesses</p>
-            <div class="type-th-price"><sup>£</sup>500<span style="font-size:14px;font-weight:600;letter-spacing:0;">+</span></div>
-            <p class="type-th-price-note">Live in 7 days</p>
-          </div>
-          <div class="type-th">
-            <div class="type-th-badge std">WordPress</div>
-            <h3>WordPress</h3>
-            <p class="type-th-sub">Content-driven sites</p>
-            <div class="type-th-price"><sup>£</sup>500<span style="font-size:14px;font-weight:600;letter-spacing:0;">+</span></div>
-            <p class="type-th-price-note">Live in 7 days</p>
-          </div>
-          <div class="type-th">
-            <div class="type-th-badge plus">Plus tier only</div>
-            <h3>Shopify</h3>
-            <p class="type-th-sub">Online stores</p>
-            <div class="type-th-price"><sup>£</sup>1,495<span style="font-size:14px;font-weight:600;letter-spacing:0;">+</span></div>
-            <p class="type-th-price-note">Live in 10–14 days</p>
-          </div>
-
-          <!-- EDIT YOURSELF -->
-          <div class="type-row-label"><span class="row-icon">Edit</span>Edit content yourself</div>
-          <div class="type-td rec"><span class="type-dash">—</span></div>
-          <div class="type-td"><div class="type-tick-wrap"><span class="type-tick">✓</span></div></div>
-          <div class="type-td"><div class="type-tick-wrap"><span class="type-tick">✓</span></div></div>
-
-          <!-- BLOG -->
-          <div class="type-row-label"><span class="row-icon">Blog</span>Blog &amp; publishing</div>
-          <div class="type-td rec"><span class="type-dash">—</span></div>
-          <div class="type-td"><div class="type-tick-wrap"><span class="type-tick">✓</span></div></div>
-          <div class="type-td"><div class="type-tick-wrap"><span class="type-tick">✓</span></div></div>
-
-          <!-- ECOMMERCE -->
-          <div class="type-row-label"><span class="row-icon">Shop</span>Online shop</div>
-          <div class="type-td rec"><span class="type-dash">—</span></div>
-          <div class="type-td"><span class="type-dash">—</span></div>
-          <div class="type-td"><div class="type-tick-wrap"><span class="type-tick">✓</span></div></div>
-
-          <!-- MAINTENANCE -->
-          <div class="type-row-label"><span class="row-icon">Care</span>Ongoing maintenance</div>
-          <div class="type-td rec"><span class="type-val" style="color:#A8C94A;font-weight:700;">None</span></div>
-          <div class="type-td"><span class="type-val muted">Monthly updates</span></div>
-          <div class="type-td"><span class="type-val muted">Minimal</span></div>
-
-          <!-- PERFORMANCE -->
-          <div class="type-row-label"><span class="row-icon">Fast</span>Load speed</div>
-          <div class="type-td rec"><span class="type-val" style="color:#A8C94A;font-weight:700;">Fastest</span></div>
-          <div class="type-td"><span class="type-val muted">Fast</span></div>
-          <div class="type-td"><span class="type-val muted">Fast</span></div>
-
-          <!-- BEST FOR -->
-          <div class="type-row-label"><span class="row-icon">Fit</span>Best for</div>
-          <div class="type-td rec"><span class="type-val">Trades, services, local businesses</span></div>
-          <div class="type-td"><span class="type-val muted">Growing businesses wanting control</span></div>
-          <div class="type-td"><span class="type-val muted">Businesses selling products online</span></div>
-
-          <!-- CTA ROW -->
-          <div class="type-cta-empty"></div>
-          <div class="type-td-cta rec">
-	            <a href="#" class="btn btn-orange" onclick="openModal(event)" style="width:100%;justify-content:center;font-size:13px;padding:11px 16px;">Start my website</a>
-          </div>
-          <div class="type-td-cta">
-	            <a href="#" class="btn btn-outline" onclick="openModal(event)" style="width:100%;justify-content:center;font-size:13px;padding:11px 16px;">Start my website</a>
-          </div>
-          <div class="type-td-cta">
-            <a href="/swift7-plus" class="btn btn-outline" style="width:100%;justify-content:center;font-size:13px;padding:11px 16px;">Find out more →</a>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    
-<!-- PRICING -->
+	<!-- PRICING -->
     <section id="pricing">
       <div class="container">
         <div class="section-header fade-in-up">
@@ -1624,8 +1527,8 @@
       <div id="cta">
         <div class="cta-inner">
           <p class="cta-eyebrow" style="display:none;">Ready when you are</p>
-	          <h2>Get the website sorted this week.</h2>
-	          <p class="cta-sub">If your website is the thing you keep putting off, this is the simple route: answer a short brief, approve the preview, go live.</p>
+		          <h2>Ready to get it sorted?</h2>
+		          <p class="cta-sub">Answer a short brief. Approve the preview. Go live in 7 days.</p>
 	          <div class="cta-buttons">
 	            <a href="#" class="btn btn-orange" onclick="openModal(event)">Start my website</a>
 	            <p class="cta-email">Or <a href="https://wa.me/447380218301" target="_blank" rel="noopener">message Callum on WhatsApp</a> to chat first.</p>
