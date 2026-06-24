@@ -259,43 +259,28 @@
 
     .human-proof-grid {
       display: grid;
-      grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.2fr);
-      gap: 48px;
+      grid-template-columns: 320px minmax(0, 1fr);
+      gap: 72px;
       align-items: center;
     }
 
     .founder-card {
       display: grid;
-      grid-template-columns: 108px 1fr;
-      gap: 22px;
+      grid-template-columns: 132px 1fr;
+      gap: 24px;
       align-items: center;
-      padding: 28px;
-      background: #0F2219;
-      border: 1px solid var(--border);
-      border-radius: 8px;
+      padding: 0;
+      background: transparent;
+      border: 0;
+      border-radius: 0;
     }
 
     .founder-card img {
-      width: 108px;
-      height: 108px;
+      width: 132px;
+      height: 132px;
       object-fit: cover;
-      border-radius: 8px;
-      filter: grayscale(0.12);
-    }
-
-    .founder-mark {
-      width: 108px;
-      height: 108px;
-      border-radius: 8px;
-      background: #A8C94A;
-      color: #0F2219;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 34px;
-      font-weight: 900;
-      letter-spacing: -2px;
-      line-height: 1;
+      border-radius: 50%;
+      display: block;
     }
 
     .founder-card h3,
@@ -335,11 +320,11 @@
     .walk-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 1px;
-      background: var(--border);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      overflow: hidden;
+      gap: 28px;
+      background: transparent;
+      border: 0;
+      border-radius: 0;
+      overflow: visible;
     }
 
     .clarity-card,
@@ -347,9 +332,10 @@
     .dont-do-card,
     .process-proof-card,
     .walk-card {
-      background: #0F2219;
-      padding: 28px;
-      min-height: 180px;
+      background: transparent;
+      padding: 0 0 22px;
+      min-height: 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.14);
     }
 
     .clarity-card strong {
@@ -371,7 +357,7 @@
     }
 
     .fit-card.good {
-      border-top: 3px solid var(--amber);
+      border-top: 0;
     }
 
     .fit-card.bad {
@@ -456,13 +442,12 @@
       }
 
       .founder-card {
-        grid-template-columns: 74px 1fr;
-        padding: 22px;
+        grid-template-columns: 82px 1fr;
       }
 
       .founder-card img {
-        width: 74px;
-        height: 74px;
+        width: 82px;
+        height: 82px;
       }
 
       .clarity-grid,
@@ -703,22 +688,22 @@
     <section class="human-proof">
 	      <div class="container human-proof-grid">
 	        <div class="founder-card fade-in-up">
-	          <div class="founder-mark" aria-hidden="true">S7</div>
+	          <img src="/724673307_17881181946603006_1870376955528019380_n.jpg" alt="Callum from Swift7" width="264" height="264" loading="lazy" decoding="async" />
 	          <div>
-	            <h3>Built by Callum, not a faceless agency.</h3>
+	            <h3>Built by Callum.</h3>
 	            <p>You speak to the person planning, writing and launching the site.</p>
 	          </div>
 	        </div>
-	        <p class="human-note fade-in-up" data-delay="1">Clear words. Clear pages. Clear next step.</p>
+	        <p class="human-note fade-in-up" data-delay="1">Clear words. Clear pages. A clear next step.</p>
       </div>
     </section>
 
     <section class="buyer-clarity">
       <div class="container">
         <div class="section-header fade-in-up">
-          <p class="section-label is-soft">The £500 bit, plain English</p>
-          <h2>What you pay, and when.</h2>
-          <p class="section-sub">No mystery package. No surprise hosting bill after you say yes.</p>
+	          <p class="section-label is-soft">The £500 bit</p>
+	          <h2>Simple price. Simple split.</h2>
+	          <p class="section-sub">Half to start. Half when the site is ready.</p>
         </div>
         <div class="clarity-grid">
           <div class="clarity-card fade-in-up">
@@ -748,8 +733,8 @@
     <section class="fit-section">
       <div class="container">
         <div class="section-header fade-in-up">
-          <p class="section-label is-soft">Who this is for</p>
-	          <h2>For businesses that need enquiries, not a long project.</h2>
+	          <p class="section-label is-soft">Who it is for</p>
+	          <h2>For businesses that need enquiries.</h2>
         </div>
         <div class="fit-grid">
           <div class="fit-card good fade-in-up">
@@ -779,7 +764,7 @@
     <section class="dont-do-section">
       <div class="container">
         <div class="section-header fade-in-up">
-          <p class="section-label is-soft">What you do not have to do</p>
+	          <p class="section-label is-soft">Less for you to do</p>
 	          <h2>No blank-page panic.</h2>
 	          <p class="section-sub">You answer the brief. We do the heavy lifting.</p>
         </div>
