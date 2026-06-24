@@ -17,9 +17,6 @@ const ignoredDirs = new Set([
 ]);
 
 const ignoredFiles = new Set([
-  'index.html',
-  'portfolio.html',
-  'faq.html',
   'astro.config.mjs',
   'package.json',
   'package-lock.json',
@@ -44,7 +41,7 @@ const copiedExtensions = new Set([
   '.webmanifest',
 ]);
 
-const astroOwnedRoots = new Set(['case-studies', 'services']);
+const astroOwnedRoots = new Set(['services']);
 
 async function copyTree(from, relative = '') {
   const entries = await readdir(from, { withFileTypes: true });
