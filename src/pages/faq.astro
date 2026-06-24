@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getFaqs, getNavigation, getSiteSettings } from '../lib/sanity';
+import { faqSchema } from '../lib/seo';
+
+const [settings, navigation, faqs] = await Promise.all([getSiteSettings(), getNavigation(), getFaqs()]);
+---
+<BaseLayout settings={settings} navigation={navigation} title="Swift7 FAQ | Website Questions Answered" description="Common questions about Swift7 websites, pricing, timelines, SEO, hosting and what is included." schema={[faqSchema(faqs)]}>
+  <section class="hero">
+    <div class="container">
+      <span class="eyebrow">FAQ</span>
+      <h1>Questions before we build.</h1>
+      <p class="lead">The essentials on price, timing, content, hosting and what happens after launch.</p>
+    </div>
+  </section>
+  <section>
+    <div class="container faq-list">
+      {faqs.slice(0, 10).map((faq, index) => (
+        <article class="faq-item">
+          <h2 style="font-size:24px"><span class="faq-num">{String(index + 1).padStart(2, '0')}</span>{faq.question}</h2>
+          <p class="muted">{faq.answer}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

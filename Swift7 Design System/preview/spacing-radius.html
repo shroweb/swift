@@ -1,0 +1,29 @@
+<!-- @dsCard group="Spacing" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  *{margin:0;box-sizing:border-box}
+  body{font-family:var(--s7-font);background:var(--s7-green-900);color:var(--s7-ink);padding:26px 30px}
+  .lead{font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--s7-lime);margin-bottom:18px}
+  .row{display:flex;gap:20px;align-items:flex-end}
+  .item{text-align:center}
+  .box{width:84px;height:64px;background:var(--s7-green-700);border:1px solid var(--s7-border-strong);border-top:3px solid var(--s7-lime)}
+  .pill{width:120px;height:44px;border-radius:100px;background:var(--s7-green-700);border:1px solid var(--s7-border-strong)}
+  .name{font-size:11px;font-weight:700;margin-top:9px}
+  .val{font-size:10.5px;color:var(--s7-ink-muted);margin-top:2px}
+</style>
+</head>
+<body>
+  <p class="lead">Radius — sharp by default</p>
+  <div class="row">
+    <div class="item"><div class="box" style="border-radius:4px"></div><div class="name">Base</div><div class="val">4px</div></div>
+    <div class="item"><div class="box" style="border-radius:8px"></div><div class="name">Medium</div><div class="val">8px</div></div>
+    <div class="item"><div class="box" style="border-radius:14px"></div><div class="name">Large</div><div class="val">14px</div></div>
+    <div class="item"><div class="box" style="border-radius:22%;border-top-width:1px;background:var(--s7-green-950)"><div style="color:var(--s7-lime);font-weight:900;font-size:34px;text-align:center;line-height:64px">7</div></div><div class="name">App tile</div><div class="val">22%</div></div>
+    <div class="item"><div class="pill"></div><div class="name">Pill</div><div class="val">100px</div></div>
+  </div>
+</body>
+</html>

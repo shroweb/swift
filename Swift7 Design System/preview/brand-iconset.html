@@ -1,0 +1,44 @@
+<!-- @dsCard group="Brand" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  *{margin:0;box-sizing:border-box}
+  body{font-family:var(--s7-font);background:var(--s7-green-900);color:var(--s7-ink);padding:24px 28px}
+  .lead{font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--s7-lime);margin-bottom:4px}
+  .sub{font-size:11px;color:var(--s7-ink-muted);font-weight:500;margin-bottom:18px}
+  .grid{display:grid;grid-template-columns:repeat(9,1fr);gap:14px 6px}
+  .cell{display:flex;flex-direction:column;align-items:center;gap:7px}
+  .s7i{width:26px;height:26px;fill:none;stroke:var(--s7-ink-muted);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .cell.lime .s7i{stroke:var(--s7-lime)}
+  .cap{font-size:9px;color:var(--s7-ink-muted);font-weight:500;text-align:center;line-height:1.1}
+</style>
+</head>
+<body>
+  <p class="lead">Swift7 Line — custom icon set</p>
+  <p class="sub">24px grid · 2px stroke · round joins · swift/speed personality</p>
+  <div class="grid" id="grid"></div>
+  <script>
+    const ICONS = [
+      ["s7-swift","swift"],["s7-bolt","bolt"],["s7-rocket","rocket"],["s7-seven-day","7 days"],
+      ["s7-tag","price"],["s7-gauge","speed"],["s7-search","SEO"],["s7-pin","local"],["s7-star","reviews"],
+      ["s7-browser","website"],["s7-mobile","mobile"],["s7-pages","pages"],["s7-pen","copy"],["s7-shield","guarantee"],
+      ["s7-key","you own it"],["s7-chat","enquiries"],["s7-mail","email"],["s7-phone","phone"],["s7-headset","support"]
+    ];
+    const lime = new Set(["s7-swift","s7-bolt","s7-rocket","s7-star"]);
+    fetch("../assets/icons/swift7-icons.svg").then(r=>r.text()).then(txt=>{
+      const holder=document.createElement("div");holder.style.display="none";holder.innerHTML=txt;
+      document.body.appendChild(holder);
+      const g=document.getElementById("grid");
+      ICONS.forEach(([id,label])=>{
+        const cell=document.createElement("div");
+        cell.className="cell"+(lime.has(id)?" lime":"");
+        cell.innerHTML=`<svg class="s7i"><use href="#${id}"></use></svg><span class="cap">${label}</span>`;
+        g.appendChild(cell);
+      });
+    });
+  </script>
+</body>
+</html>

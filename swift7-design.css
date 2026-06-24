@@ -1,0 +1,790 @@
+/* Swift7 design-system overrides
+   Source: Claude Design handoff, 2026-06-01.
+   Keeps the static site aligned to the forest-green + lime Swift7 brand. */
+
+:root {
+  --s7-lime: #A8C94A;
+  --s7-lime-bright: #BBD35A;
+  --s7-lime-soft: rgba(168, 201, 74, 0.10);
+  --s7-clay: #C96F45;
+  --s7-clay-soft: rgba(201, 111, 69, 0.14);
+  --s7-lavender: #B9A7FF;
+  --s7-lavender-soft: rgba(185, 167, 255, 0.14);
+  --s7-green-950: #0F2219;
+  --s7-green-900: #1B3528;
+  --s7-green-800: #234432;
+  --s7-green-700: #2A5040;
+  --s7-ink: #F0F0EC;
+  --s7-ink-muted: #C8DACC;
+  --s7-ink-faint: rgba(240, 240, 236, 0.88);
+  --s7-border: rgba(255, 255, 255, 0.10);
+  --s7-border-strong: rgba(255, 255, 255, 0.15);
+  --s7-radius: 4px;
+  --s7-radius-md: 8px;
+  --s7-ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --amber: var(--s7-lime) !important;
+  --amber-dark: #7A9E35 !important;
+  --black: var(--s7-ink) !important;
+  --off-white: var(--s7-green-900) !important;
+  --mid: var(--s7-ink-muted) !important;
+  --border: var(--s7-border) !important;
+  --radius: var(--s7-radius) !important;
+}
+
+html {
+  background: var(--s7-green-900);
+}
+
+body {
+  font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+  background: var(--s7-green-900) !important;
+  color: var(--s7-ink) !important;
+}
+
+nav,
+.mobile-nav,
+footer,
+#cta,
+.cta,
+.ticket-features,
+.pricing-box,
+.hero-pricing,
+.mobile-cta-bar {
+  background-color: var(--s7-green-950) !important;
+}
+
+section {
+  border-color: var(--s7-border) !important;
+}
+
+.container,
+.nav-inner,
+.hero-inner,
+.footer-top,
+.footer-bottom {
+  max-width: 1120px;
+}
+
+.logo,
+.logo span,
+.logo-seven,
+.footer-brand .logo,
+.nav-inner .logo {
+  color: var(--s7-ink) !important;
+}
+
+.logo img {
+  height: 24px;
+  width: auto;
+  display: block;
+}
+
+.logo-mark {
+  background: #fff !important;
+  color: var(--s7-lime) !important;
+  border-radius: 8px !important;
+}
+
+.nav-link,
+.mobile-nav a,
+.footer-links a,
+.footer-links button {
+  color: var(--s7-ink-faint) !important;
+}
+
+.nav-link:hover,
+.mobile-nav a:hover,
+.footer-links a:hover,
+.footer-links button:hover {
+  color: #fff !important;
+}
+
+.nav-link.plus,
+.nav-right .nav-link[href*="swift7-plus"],
+.mobile-nav a[href*="swift7-plus"],
+.plus-link,
+.plus-card-label,
+.tier-label,
+.compare-table thead th.plus-col,
+.section-label,
+.modal-eyebrow,
+.portfolio-num,
+.offer-num,
+.step-day,
+.step-label,
+.faq-num,
+.accent {
+  color: var(--s7-lime) !important;
+}
+
+.nav-right .nav-link[href*="swift7-plus"],
+.mobile-nav a[href*="swift7-plus"],
+.plus-link,
+.plus-card-label,
+.tier-label,
+.compare-table thead th.plus-col {
+  color: var(--s7-lavender) !important;
+}
+
+.about-photo-badge,
+.portfolio-tag,
+.offer-key-tag {
+  border-color: rgba(201, 111, 69, 0.35) !important;
+}
+
+.portfolio-tag,
+.offer-key-tag {
+  background: var(--s7-clay-soft) !important;
+  color: #F1B08D !important;
+}
+
+.hero-eyebrow {
+  display: none !important;
+}
+
+.s7i {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.search-demo-label {
+  color: var(--s7-ink-muted) !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0 !important;
+  margin-top: -4px !important;
+}
+
+.search-demo {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.22) !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25) !important;
+  width: min(100%, 420px) !important;
+  max-width: 100% !important;
+}
+
+.search-demo-icon {
+  color: var(--s7-ink-muted) !important;
+  opacity: 0.55 !important;
+  flex-shrink: 0;
+}
+
+.search-demo-text {
+  color: var(--s7-ink) !important;
+}
+
+.btn,
+button,
+input,
+select,
+textarea,
+.portfolio-image,
+.offer-grid,
+.testimonial-grid,
+.why-grid,
+.pricing-box,
+.hero-pricing,
+.type-card,
+.plus-card,
+.tier-card {
+  border-radius: var(--s7-radius) !important;
+}
+
+.btn-orange,
+.btn-dark,
+.btn-nav,
+.mobile-nav-cta,
+.cookie-accept {
+  background: var(--s7-lime) !important;
+  color: var(--s7-green-950) !important;
+  font-weight: 800 !important;
+}
+
+.btn-orange:hover,
+.btn-dark:hover,
+.btn-nav:hover,
+.mobile-nav-cta:hover {
+  background: var(--s7-lime-bright) !important;
+  opacity: 1 !important;
+}
+
+.btn-outline {
+  background: transparent !important;
+  color: var(--s7-lime) !important;
+  border-color: rgba(168, 201, 74, 0.5) !important;
+}
+
+.btn-outline:hover {
+  border-color: var(--s7-lime) !important;
+  background: rgba(168, 201, 74, 0.06) !important;
+  opacity: 1 !important;
+}
+
+.hero h1,
+h1,
+h2,
+h3,
+.portfolio-info h3,
+.process-step h3,
+.testimonial-name,
+.price-display,
+.hero-price {
+  color: var(--s7-ink) !important;
+}
+
+.hero h1,
+h1 {
+  font-weight: 900 !important;
+  line-height: 1 !important;
+}
+
+.hero h1 .accent,
+h1 .accent,
+.hero-price,
+.price-display,
+.step-big-num,
+.leads-stat-num,
+.s7-stat {
+  color: var(--s7-lime) !important;
+}
+
+p,
+li,
+.hero-sub,
+.section-sub,
+.modal-sub,
+.testimonial-quote,
+.portfolio-info p,
+.process-step p,
+.faq-answer p,
+.price-note,
+.hero-price-note,
+.footer-tagline {
+  color: var(--s7-ink-muted) !important;
+}
+
+.trust-item,
+.hero-trust,
+.google-badge-text,
+.pricing-bullets li,
+.offer-item h3,
+.why-col.us .why-item p,
+.hero-check,
+.pricing-check {
+  color: var(--s7-ink-faint) !important;
+}
+
+.ticker-dot,
+.eyebrow-dot,
+.check-icon,
+.pcheck-icon,
+.tier-badge {
+  background-color: var(--s7-lime) !important;
+  color: var(--s7-green-950) !important;
+}
+
+.trust-icon {
+  color: var(--s7-lime) !important;
+  background: transparent !important;
+}
+
+.hero-pricing,
+.pricing-box,
+.plus-card.featured,
+.tier-card.featured,
+.why-col.us {
+  border-top: 3px solid var(--s7-lime) !important;
+}
+
+.plus-card.featured,
+.tier-card.featured,
+.compare-table td.plus-col {
+  background: var(--s7-lavender-soft) !important;
+  border-color: rgba(185, 167, 255, 0.35) !important;
+}
+
+.plus-card.featured,
+.tier-card.featured {
+  border-top-color: var(--s7-lavender) !important;
+}
+
+.offer-item,
+.testimonial-card,
+.type-card,
+.plus-card,
+.tier-card,
+.google-badge,
+.form-field input,
+.form-field select {
+  background-color: var(--s7-green-700) !important;
+  border-color: var(--s7-border-strong) !important;
+}
+
+.offer-item:nth-child(even),
+.testimonial-avatar,
+.about-photo-badge {
+  background-color: var(--s7-green-950) !important;
+}
+
+.about-photo-badge {
+  border-top-color: var(--s7-clay) !important;
+}
+
+.modal-overlay {
+  background: rgba(12, 12, 12, 0.7) !important;
+  backdrop-filter: blur(4px);
+}
+
+.modal {
+  background: var(--s7-green-900) !important;
+  color: var(--s7-ink) !important;
+  border: 1px solid var(--s7-border-strong);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+}
+
+.modal-close {
+  background: var(--s7-green-700) !important;
+  color: var(--s7-ink-muted) !important;
+  border-color: var(--s7-border-strong) !important;
+}
+
+.modal-submit {
+  background: var(--s7-green-800) !important;
+  color: #fff !important;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  color: var(--s7-ink) !important;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: rgba(200, 218, 204, 0.65) !important;
+}
+
+.wa-sticky,
+.mobile-nav-wa,
+.btn-whatsapp {
+  background: #25D366 !important;
+}
+
+.skip-link {
+  background: #fff !important;
+  color: #0C0C0C !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero h1,
+  h1 {
+    font-size: clamp(34px, 10.4vw, 42px) !important;
+    letter-spacing: -1.6px !important;
+    line-height: 1.04 !important;
+    max-width: 100%;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  .hero,
+  .hero-inner,
+  .hero-left {
+    max-width: 100% !important;
+    overflow: hidden;
+  }
+
+  .hero h1 .accent,
+  h1 .accent {
+    display: block;
+    max-width: 100%;
+    white-space: normal;
+  }
+
+  .hero-sub,
+  .section-sub {
+    font-size: 15px !important;
+    max-width: min(100%, 330px) !important;
+    white-space: normal !important;
+    overflow-wrap: break-word;
+  }
+
+  .search-demo {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .search-demo-text {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: clip;
+  }
+
+  .hero-actions .btn,
+  .mobile-cta-bar .btn {
+    justify-content: center;
+  }
+}
+
+/* ══════════════════════════════════════════════════
+   20 PREMIUM UI UPGRADES — 2026-06-13
+   ══════════════════════════════════════════════════ */
+
+/* 1. Hero — dot grid texture overlay */
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(168, 201, 74, 0.10) 1px, transparent 1px);
+  background-size: 28px 28px;
+  pointer-events: none;
+  z-index: 0;
+}
+.hero-inner {
+  position: relative;
+  z-index: 1;
+}
+
+/* 2. Hero h1 — italic accent */
+.hero h1 .accent,
+h1 .accent {
+  font-style: italic !important;
+}
+
+/* 3. Section labels — pill badge treatment */
+.section-label {
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 4px 12px !important;
+  background: rgba(168, 201, 74, 0.07) !important;
+  border: 1px solid rgba(168, 201, 74, 0.22) !important;
+  border-radius: 100px !important;
+  font-size: 11px !important;
+  letter-spacing: 0.08em !important;
+  margin-bottom: 16px !important;
+}
+
+/* 4. Hero trust badges — solid chips */
+.hero-trust-row {
+  gap: 8px !important;
+  margin-top: 24px !important;
+  flex-wrap: wrap !important;
+}
+.hero-trust {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: 100px !important;
+  padding: 5px 14px !important;
+  border-right: none !important;
+  margin: 0 !important;
+  padding-right: 14px !important;
+}
+
+/* 5. Portfolio — image hover overlay */
+.portfolio-image {
+  position: relative !important;
+  overflow: hidden !important;
+}
+.portfolio-image::before {
+  content: 'View case study →';
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 34, 25, 0.88);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #A8C94A;
+  letter-spacing: -0.2px;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  z-index: 2;
+  border-radius: inherit;
+}
+.portfolio-item:hover .portfolio-image::before {
+  opacity: 1;
+}
+.portfolio-image.image-missing::before {
+  display: none;
+}
+
+/* 6. Testimonials — large decorative quote mark */
+.testimonial-card {
+  position: relative !important;
+  overflow: hidden !important;
+}
+.testimonial-card::before {
+  content: '\201C';
+  position: absolute;
+  top: -28px;
+  right: 16px;
+  font-size: 160px;
+  font-weight: 900;
+  line-height: 1;
+  color: rgba(168, 201, 74, 0.07);
+  pointer-events: none;
+  font-family: Georgia, 'Times New Roman', serif;
+  z-index: 0;
+}
+.testimonial-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* 7. Pricing — featured card with lime glow (not lavender) */
+.tier-card.featured {
+  background: rgba(168, 201, 74, 0.05) !important;
+  border-top-color: var(--s7-lime) !important;
+  border-color: rgba(168, 201, 74, 0.25) !important;
+  box-shadow: 0 0 0 1px rgba(168, 201, 74, 0.2), 0 20px 60px rgba(168, 201, 74, 0.08) !important;
+}
+
+/* 8. CTA — giant decorative "7" background glyph */
+#cta {
+  position: relative !important;
+  overflow: hidden !important;
+}
+#cta::after {
+  content: '7';
+  position: absolute;
+  right: -1%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: clamp(280px, 32vw, 480px);
+  font-weight: 900;
+  letter-spacing: -12px;
+  color: rgba(168, 201, 74, 0.04);
+  line-height: 1;
+  pointer-events: none;
+  z-index: 0;
+  user-select: none;
+  font-family: 'Poppins', sans-serif;
+}
+#cta .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* 9. FAQ — smooth max-height transition */
+.faq-answer {
+  display: block !important;
+  max-height: 0 !important;
+  overflow: hidden !important;
+  transition: max-height 0.4s cubic-bezier(0.22, 1, 0.36, 1) !important;
+}
+.faq-item.open .faq-answer {
+  max-height: 600px !important;
+}
+
+/* 10. Hero pricing card — subtle grid texture */
+.hero-pricing {
+  position: relative !important;
+}
+.hero-pricing::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 32px 32px;
+  pointer-events: none;
+  border-radius: inherit;
+  z-index: 0;
+}
+.hero-pricing > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* 11. Ticker — pause on hover */
+.ticket-features:hover .ticker-track {
+  animation-play-state: paused;
+}
+
+/* 12. Offer teaser items — hover indent */
+.offer-teaser-item {
+  transition: background 0.15s ease, padding-left 0.15s ease !important;
+  border-radius: 4px !important;
+  padding: 4px 6px !important;
+}
+.offer-teaser-item:hover {
+  background: rgba(168, 201, 74, 0.06) !important;
+  padding-left: 10px !important;
+}
+
+/* 13. Buttons — lift and shadow on hover */
+.btn-orange,
+.btn-dark,
+.btn-nav,
+.mobile-nav-cta {
+  transition: background 0.15s, transform 0.18s cubic-bezier(0.22,1,0.36,1), box-shadow 0.18s !important;
+}
+.btn-orange:hover,
+.btn-dark:hover,
+.btn-nav:hover,
+.mobile-nav-cta:hover {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 6px 20px rgba(168, 201, 74, 0.28) !important;
+}
+
+/* 14. Pricing guarantees — badge styling */
+.pricing-guarantees {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+  margin-top: 32px !important;
+}
+.pricing-guarantee {
+  background: rgba(168, 201, 74, 0.05) !important;
+  border: 1px solid rgba(168, 201, 74, 0.18) !important;
+  border-radius: 6px !important;
+  padding: 10px 16px !important;
+  font-size: 12px !important;
+  line-height: 1.55 !important;
+  letter-spacing: 0 !important;
+}
+
+/* 15. Footer — lime gradient top border */
+footer {
+  position: relative !important;
+}
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent 0%, rgba(168, 201, 74, 0.5) 30%, rgba(168, 201, 74, 0.9) 50%, rgba(168, 201, 74, 0.5) 70%, transparent 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* 16. Process grid — connecting timeline line */
+.process-grid {
+  position: relative !important;
+}
+.process-grid::before {
+  content: '';
+  position: absolute;
+  top: 52px;
+  left: 12.5%;
+  right: 12.5%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(168, 201, 74, 0.3) 20%, rgba(168, 201, 74, 0.3) 80%, transparent);
+  pointer-events: none;
+}
+
+/* 17. Step big numbers — lifted with glow */
+.step-big-num {
+  text-shadow: 0 0 40px rgba(168, 201, 74, 0.15) !important;
+}
+
+/* 18. Why section — us column hover items */
+.why-col.us .why-item {
+  transition: background 0.15s, padding-left 0.15s !important;
+  border-radius: 4px !important;
+}
+.why-col.us .why-item:hover {
+  background: rgba(168, 201, 74, 0.05) !important;
+  padding-left: 6px !important;
+}
+
+/* 19. "Who we build for" section */
+.industries-strip {
+  padding: 56px 0;
+  border-bottom: 1px solid var(--s7-border);
+}
+.industries-strip-inner {
+  text-align: center;
+}
+.industries-strip-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--s7-ink-muted);
+  margin-bottom: 28px;
+}
+.industries-strip-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.industry-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 14px;
+  background: var(--s7-green-700);
+  border: 1px solid var(--s7-border-strong);
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--s7-ink-faint);
+  text-decoration: none;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+  white-space: nowrap;
+}
+.industry-chip:hover {
+  background: rgba(168, 201, 74, 0.08);
+  border-color: rgba(168, 201, 74, 0.35);
+  color: var(--s7-ink);
+}
+
+/* 20. Portfolio — "view all" footer row */
+.portfolio-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 48px;
+  padding-top: 28px;
+  border-top: 1px solid var(--s7-border);
+}
+.portfolio-footer-count {
+  font-size: 13px;
+  color: var(--s7-ink-muted);
+}
+.portfolio-footer-count strong {
+  color: var(--s7-ink);
+  font-weight: 700;
+}
+.portfolio-footer-link {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--s7-lime);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: gap 0.2s ease;
+}
+.portfolio-footer-link:hover {
+  gap: 10px;
+}

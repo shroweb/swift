@@ -1,16 +1,37 @@
 {
-  "name": "uaptr",
+  "name": "swift7",
   "version": "1.0.0",
+  "type": "module",
   "private": true,
   "scripts": {
-    "install:all": "npm install --prefix server && npm install --prefix client",
-    "dev": "concurrently --names \"API,WEB\" --prefix-colors \"yellow,cyan\" \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
-    "outreach:audit": "node tools/outreach-auditor/server.mjs",
-    "db:up": "docker compose up -d",
-    "db:down": "docker compose down",
-    "setup": "npm run db:up && sleep 3 && npm run install:all"
+    "dev": "astro dev",
+    "build": "astro build && node scripts/copy-static-pages.mjs",
+    "preview": "astro preview",
+    "studio": "sanity dev --host 127.0.0.1",
+    "studio:build": "sanity build",
+    "studio:deploy": "sanity deploy",
+    "sanity:seed": "tsx scripts/seed-sanity.mjs",
+    "sanity:dataset:export": "sanity dataset export production backups/sanity-production.tar.gz",
+    "check": "astro check"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "UNLICENSED",
+  "description": "Swift7 marketing site with Astro static generation and Sanity CMS.",
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.3",
+    "@sanity/astro": "^3.4.1",
+    "@sanity/client": "^7.23.0",
+    "astro": "^5.18.2",
+    "dotenv": "^17.4.2",
+    "groq": "^5.31.1",
+    "styled-components": "^6.4.2"
   },
   "devDependencies": {
-    "concurrently": "^8.2.2"
+    "@astrojs/check": "^0.9.9",
+    "@sanity/vision": "^5.31.1",
+    "sanity": "^5.31.1",
+    "tsx": "^4.22.4",
+    "typescript": "^5.9.3"
   }
 }

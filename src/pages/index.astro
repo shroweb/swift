@@ -1,0 +1,145 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCaseStudies, getFaqs, getHomepage, getNavigation, getServices, getSiteSettings, getTestimonials } from '../lib/sanity';
+import { faqSchema } from '../lib/seo';
+
+const [settings, navigation, page, services, caseStudies, faqs, testimonials] = await Promise.all([
+  getSiteSettings(),
+  getNavigation(),
+  getHomepage(),
+  getServices(),
+  getCaseStudies(),
+  getFaqs(),
+  getTestimonials(),
+]);
+
+const launch = services[0] || {};
+const featuredCases = caseStudies.filter((item) => item.featured !== false).slice(0, 3);
+const featuredServices = services.slice(0, 3);
+const heroHeading = page.heroHeading || 'A website that wins you work.';
+const heroParts = heroHeading.split(' wins ');
+const imageUrl = (image: unknown) => (typeof image === 'string' ? image : (image as { url?: string })?.url);
+const launchFeatures = (launch.features || []) as string[];
+---
+<BaseLayout settings={settings} navigation={navigation} title="Swift7 | Websites Live in 7 Days" description={settings.seo?.description} seo={page.seo} schema={[faqSchema(faqs)]}>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">Fixed-price websites</span>
+        <h1>
+          {heroParts.length === 2 ? <>{heroParts[0]}{' '}<span class="accent">wins {heroParts[1]}</span></> : heroHeading}
+        </h1>
+        <p class="lead">{page.heroText}</p>
+        <div class="hero-actions">
+          <a class="btn" href="#start">{settings.primaryCtaLabel || 'Claim my slot'}</a>
+          <a class="btn btn-outline" href="/portfolio">See the work</a>
+        </div>
+        <div class="trust-row" aria-label="Included">
+          <span>£500 all-in</span>
+          <span>Up to 10 pages</span>
+          <span>Copy written</span>
+          <span>SEO setup</span>
+          <span>Live in 7 days</span>
+        </div>
+      </div>
+      <aside class="price-card" aria-label="Swift7 Launch price">
+        <span class="label">The Swift7 Launch</span>
+        <div class="price">{launch.price || '£500'}</div>
+        <p class="muted">All-in. 50% deposit, 50% on completion.</p>
+        <div class="check-list">
+          {launchFeatures.slice(0, 6).map((feature) => <span>{feature}</span>)}
+        </div>
+        <div class="hero-actions">
+          <a class="btn" href="#start">Claim my slot</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="included">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">What's included</span>
+        <h2>Everything needed to look credible and get found.</h2>
+        <p class="section-sub">Swift7 keeps the layout, build and SEO structure handled in code. You can edit the words, images and proof in Sanity.</p>
+      </div>
+      <div class="feature-grid">
+        {featuredServices.map((service) => (
+          <article class="card">
+            <span class="tag">{service.timeline || 'Website package'}</span>
+            <h3>{service.name}</h3>
+            <p class="muted">{service.shortDescription}</p>
+            <a class="btn btn-outline" href={`/services/${service.slug}`}>View package</a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Portfolio</span>
+        <h2>Proof it can look sharp without dragging on for months.</h2>
+      </div>
+      <div class="cards-grid">
+        {featuredCases.map((study) => (
+          <article class="card">
+            {study.featuredImage && <img src={imageUrl(study.featuredImage)} alt={`${study.clientName} website`} loading="lazy" />}
+            <span class="tag">{study.industry}</span>
+            <h3>{study.clientName}</h3>
+            <p class="muted">{study.summary}</p>
+            <a class="btn btn-outline" href={`/case-studies/${study.slug}`}>Read case study</a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Reviews</span>
+        <h2>Small business owners who needed it done properly.</h2>
+      </div>
+      <div class="cards-grid">
+        {testimonials.slice(0, 3).map((review) => (
+          <article class="card">
+            <div class="stars" aria-label={`${review.starRating || 5} star review`}>★★★★★</div>
+            <p>{review.reviewText}</p>
+            <p class="muted"><strong>{review.clientName}</strong>{review.company ? `, ${review.company}` : ''}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">FAQ</span>
+        <h2>Questions before we build.</h2>
+      </div>
+      <div class="faq-list">
+        {faqs.slice(0, 10).map((faq, index) => (
+          <article class="faq-item">
+            <h3><span class="faq-num">{String(index + 1).padStart(2, '0')}</span>{faq.question}</h3>
+            <p class="muted">{faq.answer}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band" id="start">
+    <div class="container">
+      <span class="eyebrow">Start this week</span>
+      <h2>{page.cta?.heading || 'Stop putting it off.'}</h2>
+      <p class="lead">{page.cta?.text || "Let's get your website live."}</p>
+      <div class="hero-actions" style="justify-content:center">
+        <a class="btn" href="https://wa.me/447380218301">Message on WhatsApp</a>
+        <a class="btn btn-outline" href={`mailto:${settings.email}`}>Email {settings.email}</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

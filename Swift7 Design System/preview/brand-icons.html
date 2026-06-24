@@ -1,0 +1,39 @@
+<!-- @dsCard group="Brand" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  *{margin:0;box-sizing:border-box}
+  body{font-family:var(--s7-font);background:var(--s7-green-900);color:var(--s7-ink);padding:24px 30px}
+  .lead{font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--s7-lime);margin-bottom:18px}
+  .row{display:flex;gap:26px;align-items:center;flex-wrap:wrap}
+  .icon{display:flex;flex-direction:column;align-items:center;gap:8px}
+  .icon svg{width:26px;height:26px;stroke:var(--s7-ink-muted)}
+  .icon.active svg{stroke:var(--s7-lime)}
+  .icon span{font-size:10px;color:var(--s7-ink-muted);font-weight:500}
+  .sep{width:1px;height:48px;background:var(--s7-border-strong)}
+  .brand svg{fill:#A8C94A;stroke:none}
+  .brand .wa{fill:#25D366}
+  .stars{color:#A8C94A;font-size:18px;letter-spacing:2px}
+</style>
+</head>
+<body>
+  <p class="lead">Iconography — Lucide (2px stroke) + brand glyphs</p>
+  <div class="row">
+    <div class="icon"><i data-lucide="mail"></i><span>mail</span></div>
+    <div class="icon"><i data-lucide="phone"></i><span>phone</span></div>
+    <div class="icon"><i data-lucide="map-pin"></i><span>map-pin</span></div>
+    <div class="icon"><i data-lucide="shield-check"></i><span>shield</span></div>
+    <div class="icon active"><i data-lucide="zap"></i><span>active</span></div>
+    <div class="icon active"><i data-lucide="search"></i><span>search</span></div>
+    <div class="sep"></div>
+    <div class="icon brand"><svg width="26" height="26" viewBox="0 0 24 24"><path class="wa" d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.528 5.845L.057 23.882l6.19-1.623A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.366l-.36-.214-3.722.976.993-3.625-.235-.372A9.818 9.818 0 1112 21.818z"/></svg><span>whatsapp</span></div>
+    <div class="icon"><span class="stars">★★★★★</span><span>google 5★</span></div>
+    <div class="icon active"><span style="font-size:24px;font-weight:800;color:#A8C94A;line-height:1">→</span><span>list marker</span></div>
+  </div>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

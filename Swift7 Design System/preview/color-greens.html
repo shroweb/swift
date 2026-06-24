@@ -1,0 +1,28 @@
+<!-- @dsCard group="Colors" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  *{margin:0;box-sizing:border-box}
+  body{font-family:var(--s7-font);background:var(--s7-green-900);color:var(--s7-ink);padding:26px 30px}
+  .row{display:flex;gap:14px}
+  .sw{flex:1;border-radius:var(--s7-radius);overflow:hidden;border:1px solid var(--s7-border)}
+  .chip{height:84px}
+  .meta{padding:10px 12px;background:rgba(0,0,0,0.18)}
+  .name{font-size:12px;font-weight:700;letter-spacing:-0.2px}
+  .hex{font-size:11px;font-weight:500;color:var(--s7-ink-muted);margin-top:2px;font-variant-numeric:tabular-nums}
+  .lead{font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--s7-lime);margin-bottom:16px}
+</style>
+</head>
+<body>
+  <p class="lead">Forest-green surface ramp · darkest → lightest</p>
+  <div class="row">
+    <div class="sw"><div class="chip" style="background:#0F2219"></div><div class="meta"><div class="name">Green 950</div><div class="hex">#0F2219</div></div></div>
+    <div class="sw"><div class="chip" style="background:#1B3528"></div><div class="meta"><div class="name">Green 900 · page</div><div class="hex">#1B3528</div></div></div>
+    <div class="sw"><div class="chip" style="background:#234432"></div><div class="meta"><div class="name">Green 800 · btn</div><div class="hex">#234432</div></div></div>
+    <div class="sw"><div class="chip" style="background:#2A5040"></div><div class="meta"><div class="name">Green 700 · panel</div><div class="hex">#2A5040</div></div></div>
+  </div>
+</body>
+</html>

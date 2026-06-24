@@ -15,6 +15,11 @@ tools/outreach-auditor/.env
 # Node
 node_modules/
 
+# Astro / Sanity generated output
+.astro/
+.sanity/
+dist/
+
 # Random screenshots / social media exports
 screenshot_*.png
 device-mockup_*.png

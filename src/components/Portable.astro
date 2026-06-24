@@ -1,0 +1,16 @@
+---
+const { value } = Astro.props;
+
+function textFromChildren(children: Array<{ text?: string }> = []) {
+  return children.map((child) => child.text || '').join('');
+}
+---
+<div class="portable">
+  {Array.isArray(value) ? value.map((block) => {
+    if (block._type === 'block') {
+      const Tag = block.style === 'h2' ? 'h2' : block.style === 'h3' ? 'h3' : 'p';
+      return <Tag>{textFromChildren(block.children)}</Tag>;
+    }
+    return null;
+  }) : typeof value === 'string' ? <p>{value}</p> : null}
+</div>

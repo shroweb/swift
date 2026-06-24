@@ -1,0 +1,30 @@
+<!-- @dsCard group="Components" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  *{margin:0;box-sizing:border-box}
+  body{font-family:var(--s7-font);background:var(--s7-green-900);color:var(--s7-ink);padding:28px 30px}
+  .lead{font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--s7-lime);margin-bottom:18px}
+  .row{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+  .btn{display:inline-flex;align-items:center;gap:7px;font-size:15px;font-weight:700;padding:13px 26px;border-radius:4px;text-decoration:none;border:none;cursor:pointer;font-family:var(--s7-font)}
+  .lime{background:#A8C94A;color:#0F2219}
+  .dark{background:#234432;color:#fff}
+  .outline{background:transparent;color:#A8C94A;border:1.5px solid rgba(168,201,74,0.5)}
+  .wa{background:#25D366;color:#0F2219}
+  .cap{font-size:10px;color:var(--s7-ink-muted);text-align:center;margin-top:8px;font-weight:500}
+  .item{text-align:center}
+</style>
+</head>
+<body>
+  <p class="lead">Buttons</p>
+  <div class="row">
+    <div class="item"><button class="btn lime">Get a free audit →</button><div class="cap">Primary · lime</div></div>
+    <div class="item"><button class="btn dark">See What's Included</button><div class="cap">Solid dark green</div></div>
+    <div class="item"><button class="btn outline">View Portfolio</button><div class="cap">Outline</div></div>
+    <div class="item"><button class="btn wa">WhatsApp Us</button><div class="cap">WhatsApp</div></div>
+  </div>
+</body>
+</html>

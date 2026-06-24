@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /client/
+Disallow: /tools/
+Disallow: /daily-plan.html
+
+Sitemap: https://swift7.co.uk/sitemap.xml

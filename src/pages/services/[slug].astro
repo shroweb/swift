@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getNavigation, getServices, getSiteSettings } from '../../lib/sanity';
+import { serviceSchema } from '../../lib/seo';
+
+export async function getStaticPaths() {
+  const services = await getServices();
+  return services.map((service) => ({ params: { slug: service.slug }, props: { service } }));
+}
+
+const { service } = Astro.props;
+const [settings, navigation] = await Promise.all([getSiteSettings(), getNavigation()]);
+const description = (service as { fullDescription?: string }).fullDescription || service.shortDescription;
+const features = (service.features || []) as string[];
+---
+<BaseLayout settings={settings} navigation={navigation} title={service.seo?.title || `${service.name} | Swift7`} description={service.seo?.description || service.shortDescription} seo={service.seo} schema={[serviceSchema(service)]}>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">{service.timeline || 'Website package'}</span>
+        <h1>{service.name}</h1>
+        <p class="lead">{service.shortDescription}</p>
+        <div class="hero-actions">
+          <a class="btn" href={service.ctaLink || '/#start'}>{service.ctaLabel || 'Claim my slot'}</a>
+          <a class="btn btn-outline" href="/portfolio">See examples</a>
+        </div>
+      </div>
+      <aside class="price-card">
+        <span class="label">Package price</span>
+        <div class="price">{service.price || 'Fixed'}</div>
+        <p class="muted">{service.timeline || 'Timeline confirmed before start'}</p>
+        <div class="check-list">
+          {features.map((feature) => <span>{feature}</span>)}
+        </div>
+      </aside>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">What you get</span>
+        <h2>Code-controlled layout. CMS-controlled content.</h2>
+        <p class="section-sub">{description}</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

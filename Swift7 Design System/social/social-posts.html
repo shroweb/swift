@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Swift7 — Social Posts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    :root{ --amber:#A8C94A; --lime-bright:#BBD35A; --g950:#0F2219; --g900:#1B3528; --g800:#234432; --g700:#2A5040; --ink:#F0F0EC; --mid:#C8DACC; --faint:rgba(240,240,236,0.88); --border:rgba(255,255,255,0.10); --border2:rgba(255,255,255,0.18); --wa:#25D366; }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:'Poppins',sans-serif}
+
+    /* ---- post shell ---- */
+    .post{position:relative;overflow:hidden;color:var(--ink);font-family:'Poppins',sans-serif;display:flex;flex-direction:column}
+    .sq{width:1080px;height:1080px}
+    .st{width:1080px;height:1920px}
+    .ls{width:1200px;height:627px}
+    .cov{width:1500px;height:500px}
+    .pad{padding:84px}
+    .pad-st{padding:96px 84px}
+    .pad-ls{padding:60px 72px}
+    .pad-cov{padding:0 96px}
+
+    .eyebrow{display:inline-flex;align-items:center;gap:16px;font-size:26px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--amber)}
+    .dot{width:14px;height:14px;border-radius:50%;background:var(--amber)}
+    .brandrow{display:flex;align-items:center;justify-content:space-between}
+    .brandrow img{height:62px;width:auto}
+    .url{font-size:28px;font-weight:700;color:var(--faint);letter-spacing:-0.3px}
+    .si{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+    h1.big{font-weight:900;letter-spacing:-5px;line-height:0.94;margin:0}
+    .a{color:var(--amber)}
+    .spacer{flex:1}
+
+    /* pills / ctas */
+    .cta{display:inline-flex;align-items:center;gap:16px;background:var(--amber);color:var(--g950);font-size:30px;font-weight:800;padding:26px 44px;border-radius:8px;align-self:flex-start}
+    .cta .si{width:30px;height:30px;stroke:var(--g950)}
+    .chip{display:inline-flex;align-items:center;gap:14px;font-size:26px;font-weight:600;color:var(--faint);background:rgba(255,255,255,0.06);border:1px solid var(--border2);padding:16px 28px;border-radius:100px}
+    .chip .live{width:14px;height:14px;border-radius:50%;background:#4ade80}
+
+    /* checks */
+    .checks{display:flex;flex-direction:column;gap:26px}
+    .ck{display:flex;align-items:center;gap:22px;font-size:34px;font-weight:500;color:var(--ink)}
+    .ck .si{width:40px;height:40px;stroke:var(--amber);flex-shrink:0}
+
+    /* price */
+    .price{font-weight:900;letter-spacing:-7px;line-height:0.9;color:var(--ink)}
+    .price sup{font-size:0.42em;vertical-align:super;font-weight:800}
+
+    /* stars */
+    .stars{display:inline-flex;gap:10px;color:var(--amber)}
+    .stars .si{width:44px;height:44px}
+
+    /* testimonial */
+    .quote{font-size:60px;font-weight:800;letter-spacing:-2px;line-height:1.18;font-style:normal}
+    .author{display:flex;align-items:center;gap:24px}
+    .avatar{width:84px;height:84px;border-radius:50%;background:var(--g950);display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:800;color:#fff;flex-shrink:0}
+    .aname{font-size:32px;font-weight:700;letter-spacing:-0.5px}
+    .abiz{font-size:26px;color:var(--mid);margin-top:4px}
+    .qmark{position:absolute;top:40px;right:70px;font-family:Georgia,serif;font-size:420px;line-height:1;color:rgba(168,201,74,0.07);pointer-events:none}
+
+    /* portfolio shot */
+    .shot{flex:1;border-radius:16px;overflow:hidden;border:1px solid var(--border2);box-shadow:0 30px 90px rgba(0,0,0,0.5)}
+    .shot img{width:100%;height:100%;object-fit:cover;display:block}
+    .tag{display:inline-block;font-size:24px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--amber);background:rgba(168,201,74,0.12);padding:8px 18px;border-radius:4px}
+
+    /* process steps */
+    .steps{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--border)}
+    .step{display:flex;align-items:center;gap:30px;padding:34px 0;border-bottom:1px solid var(--border)}
+    .step .si{width:48px;height:48px;stroke:var(--amber);flex-shrink:0}
+    .step .num{font-size:30px;font-weight:900;color:var(--amber);letter-spacing:-1px;width:54px;flex-shrink:0}
+    .step .stitle{font-size:36px;font-weight:700;letter-spacing:-0.6px}
+    .step .sday{font-size:24px;color:var(--mid);font-weight:500;margin-left:auto}
+
+    /* search demo */
+    .search{display:flex;align-items:center;gap:22px;background:rgba(255,255,255,0.06);border:2px solid rgba(255,255,255,0.22);border-radius:100px;padding:28px 40px}
+    .search .si{width:34px;height:34px;stroke:var(--mid);opacity:.6}
+    .search .txt{font-size:34px;color:var(--ink);font-weight:500}
+    .cursor{display:inline-block;width:3px;height:34px;background:var(--ink);margin-left:2px;vertical-align:middle;animation:blink .75s step-end infinite}
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+
+    .wash::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%, rgba(168,201,74,0.18) 0%, transparent 60%);pointer-events:none}
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <div id="sprite" style="display:none"></div>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script type="text/babel" src="design-canvas.jsx"></script>
+  <script type="text/babel" src="SocialPosts.jsx"></script>
+</body>
+</html>

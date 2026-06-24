@@ -1,0 +1,58 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+import { canonical, organizationSchema, pageDescription, pageTitle } from '../lib/seo';
+
+const {
+  settings,
+  navigation,
+  title = 'Swift7',
+  description = settings?.seo?.description || '',
+  seo = {},
+  path = Astro.url.pathname,
+  schema = [],
+} = Astro.props;
+
+const resolvedTitle = pageTitle(seo, title);
+const resolvedDescription = pageDescription(seo, description);
+const canonicalUrl = seo?.canonical || canonical(path);
+const ogTitle = seo?.ogTitle || resolvedTitle;
+const ogDescription = seo?.ogDescription || resolvedDescription;
+const ogImage = seo?.ogImage?.url || `${canonical('/')}/logo.png`;
+const schemas = [organizationSchema(settings || {}), ...schema];
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{resolvedTitle}</title>
+    <meta name="description" content={resolvedDescription} />
+    {seo?.noIndex && <meta name="robots" content="noindex,nofollow" />}
+    <link rel="canonical" href={canonicalUrl} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:site_name" content="Swift7" />
+    <meta property="og:title" content={ogTitle} />
+    <meta property="og:description" content={ogDescription} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={ogTitle} />
+    <meta name="twitter:description" content={ogDescription} />
+    <meta name="twitter:image" content={ogImage} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    {schemas.map((item) => <script is:inline type="application/ld+json" set:html={JSON.stringify(item)} />)}
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <Header settings={settings} navigation={navigation} />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer settings={settings} navigation={navigation} />
+  </body>
+</html>

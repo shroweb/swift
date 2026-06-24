@@ -1,0 +1,17 @@
+---
+const { settings, navigation } = Astro.props;
+type NavLink = { href: string; label: string };
+const links = (navigation?.headerLinks || []) as NavLink[];
+const cta = navigation?.ctaLink || { label: settings?.primaryCtaLabel || 'Claim my slot', href: settings?.primaryCtaLink || '#start' };
+---
+<nav class="site-nav">
+  <div class="container nav-inner">
+    <a href="/" class="logo" aria-label="Swift7 home">
+      <span>Swift</span><span class="logo-mark">7</span>
+    </a>
+    <div class="nav-links" aria-label="Main navigation">
+      {links.map((link) => <a href={link.href}>{link.label}</a>)}
+      <a class="btn" href={cta.href}>{cta.label}</a>
+    </div>
+  </div>
+</nav>

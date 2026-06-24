@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Swift7 — Hero Variations</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    :root{ --amber:#A8C94A; --lime-bright:#BBD35A; --g950:#0F2219; --g900:#1B3528; --g800:#234432; --g700:#2A5040; --ink:#F0F0EC; --mid:#C8DACC; --faint:rgba(240,240,236,0.88); --border:rgba(255,255,255,0.10); --border2:rgba(255,255,255,0.18); --wa:#25D366; }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:'Poppins',sans-serif}
+
+    /* hero shell */
+    .hv{width:1200px;height:640px;position:relative;overflow:hidden;color:var(--ink);display:flex;flex-direction:column;justify-content:center;padding:0 72px;font-family:'Poppins',sans-serif}
+    .hv .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--amber);margin-bottom:24px}
+    .hv .dot{width:7px;height:7px;border-radius:50%;background:var(--amber);animation:pulse 2.5s infinite}
+    @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+    .hv h1{font-weight:900;letter-spacing:-3px;line-height:1.0;margin:0 0 26px}
+    .hv h1 .a{color:var(--amber)}
+    .hv .sub{font-size:19px;line-height:1.6;color:var(--ink);max-width:520px;margin:0 0 30px}
+    .btn{display:inline-flex;align-items:center;gap:8px;font-size:15px;font-weight:800;padding:14px 28px;border-radius:4px;border:none;cursor:pointer;font-family:inherit;text-decoration:none}
+    .btn-lime{background:var(--amber);color:var(--g950)}
+    .btn-out{background:transparent;color:var(--amber);border:1.5px solid rgba(168,201,74,0.5);font-weight:700}
+    .btn-wa{background:var(--wa);color:var(--g950);font-weight:700}
+    .actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+    .trust{display:flex;align-items:center;gap:0;margin-top:26px;flex-wrap:wrap}
+    .trust span{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--mid);font-weight:500;padding-right:16px;margin-right:16px;border-right:1px solid rgba(255,255,255,0.14)}
+    .trust span:last-child{border-right:none}
+    .trust .ti{color:var(--amber);font-weight:700}
+    .hi{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+    /* search demo */
+    .search{display:flex;align-items:center;gap:12px;background:rgba(255,255,255,0.06);border:1.5px solid rgba(255,255,255,0.22);border-radius:100px;padding:13px 22px;max-width:440px;box-shadow:0 2px 12px rgba(0,0,0,0.25)}
+    .search .hi{stroke:var(--mid);opacity:.55;width:18px;height:18px}
+    .search .txt{font-size:15px;color:var(--ink);font-weight:500}
+    .cursor{display:inline-block;width:2px;height:16px;background:var(--ink);margin-left:1px;vertical-align:middle;animation:blink .75s step-end infinite}
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+    .label{font-size:12px;font-weight:600;color:var(--mid);margin:0 0 10px}
+
+    /* A — split */
+    .hvA{display:grid;grid-template-columns:1fr 360px;gap:48px;align-items:center;padding:0 72px}
+    .hvA h1{font-size:74px}
+    .card{background:var(--g950);border-radius:4px;padding:30px;border-top:3px solid var(--amber)}
+    .card .cl{font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--faint);margin-bottom:18px}
+    .card .price{font-size:62px;font-weight:900;letter-spacing:-3px;line-height:1}
+    .card .price sup{font-size:28px;vertical-align:super;font-weight:700}
+    .card .pn{font-size:13px;color:var(--faint);margin:4px 0 22px;padding-bottom:20px;border-bottom:1px solid rgba(255,255,255,0.1)}
+    .card .ck{display:flex;align-items:center;gap:11px;font-size:14px;color:var(--faint);margin-bottom:12px}
+    .card .ck .hi{width:18px;height:18px;stroke:var(--amber);flex-shrink:0}
+
+    /* B — centered */
+    .hvB{align-items:center;text-align:center;padding:0 64px}
+    .hvB h1{font-size:78px;max-width:980px}
+    .hvB .sub{margin-left:auto;margin-right:auto;text-align:center}
+    .hvB .search{margin:0 auto 30px}
+    .hvB .actions{justify-content:center}
+    .features{display:flex;gap:0;margin-top:40px;border:1px solid var(--border);border-radius:10px;overflow:hidden}
+    .feat{flex:1;padding:22px 18px;display:flex;flex-direction:column;align-items:center;gap:10px;border-right:1px solid var(--border)}
+    .feat:last-child{border-right:none}
+    .feat .hi{width:26px;height:26px;stroke:var(--amber)}
+    .feat .ft{font-size:13px;font-weight:600;color:var(--ink)}
+
+    /* C — image-led */
+    .hvC{display:grid;grid-template-columns:1fr 440px;gap:56px;align-items:center;padding:0 72px}
+    .hvC h1{font-size:66px}
+    .shot{position:relative}
+    .shot img{width:100%;height:auto;border-radius:12px;border:1px solid var(--border2);box-shadow:0 24px 80px rgba(0,0,0,0.5);display:block}
+    .shot .pricepill{position:absolute;bottom:-18px;left:-18px;background:var(--g950);border-top:3px solid var(--amber);border-radius:6px;padding:14px 18px;box-shadow:0 12px 40px rgba(0,0,0,0.4)}
+    .shot .pricepill b{display:block;font-size:30px;font-weight:900;letter-spacing:-1.5px;line-height:1}
+    .shot .pricepill span{font-size:11px;color:var(--faint);font-weight:600}
+    .stars{display:inline-flex;gap:3px;color:var(--amber)}
+    .stars .hi{width:16px;height:16px}
+
+    /* D — stat-forward */
+    .hvD{padding:0 72px;justify-content:center}
+    .hvD h1{font-size:60px;max-width:760px;margin-bottom:36px}
+    .statgrid{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--border2);border-radius:12px;overflow:hidden;margin-bottom:36px}
+    .stat{padding:28px 26px;border-right:1px solid var(--border)}
+    .stat:last-child{border-right:none}
+    .stat .hi{width:24px;height:24px;stroke:var(--amber);margin-bottom:16px}
+    .stat .num{font-size:46px;font-weight:900;letter-spacing:-2.5px;color:var(--amber);line-height:1;margin-bottom:8px}
+    .stat .num sup{font-size:22px;vertical-align:super}
+    .stat .sl{font-size:13px;color:var(--mid);font-weight:500;line-height:1.4}
+    .hvD .row{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+    .hvD .note{font-size:13px;color:var(--faint)}
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <!-- icon sprite injected here -->
+  <div id="sprite" style="display:none"></div>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script type="text/babel" src="design-canvas.jsx"></script>
+  <script type="text/babel" src="HeroVariations.jsx"></script>
+</body>
+</html>

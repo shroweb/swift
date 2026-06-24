@@ -1,0 +1,29 @@
+<!-- @dsCard group="Components" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  *{margin:0;box-sizing:border-box}
+  body{font-family:var(--s7-font);background:var(--s7-green-900);color:var(--s7-ink);padding:18px 30px}
+  .lead{font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--s7-lime);margin-bottom:8px}
+  .item{border-bottom:1px solid var(--s7-border)}
+  .q{display:flex;align-items:flex-start;gap:14px;padding:18px 44px 18px 0;position:relative;font-size:16px;font-weight:600;letter-spacing:-0.2px}
+  .num{font-size:11px;font-weight:700;color:#A8C94A;margin-top:4px;min-width:18px}
+  .q::after{content:'+';position:absolute;top:15px;right:0;width:28px;height:28px;border:1px solid rgba(255,255,255,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#A8C94A;font-size:18px;font-weight:400;line-height:1}
+  .item.open .q::after{content:'×';background:#0F2219;border-color:#F0F0EC;color:#fff}
+  .a{padding:0 0 20px 32px;font-size:14px;color:var(--s7-ink-muted);line-height:1.7;max-width:560px}
+</style>
+</head>
+<body>
+  <p class="lead">FAQ accordion</p>
+  <div class="item open">
+    <div class="q"><span class="num">01</span><span>Can you really launch my website in 7 days?</span></div>
+    <div class="a">Yes. Once we have your details and the first payment, we start immediately. Day 1 is your brief, days 2–5 we build, day 6 you review, day 7 you go live.</div>
+  </div>
+  <div class="item">
+    <div class="q"><span class="num">02</span><span>Do I have to write the content myself?</span></div>
+  </div>
+</body>
+</html>

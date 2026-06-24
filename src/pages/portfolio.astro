@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCaseStudies, getNavigation, getSiteSettings } from '../lib/sanity';
+
+const [settings, navigation, caseStudies] = await Promise.all([getSiteSettings(), getNavigation(), getCaseStudies()]);
+const imageUrl = (image: unknown) => (typeof image === 'string' ? image : (image as { url?: string })?.url);
+---
+<BaseLayout settings={settings} navigation={navigation} title="Swift7 Portfolio | Websites for UK Small Businesses" description="See Swift7 website projects for trades, local businesses, professional services and app launches.">
+  <section class="hero">
+    <div class="container">
+      <span class="eyebrow">Portfolio</span>
+      <h1>Websites built to win work.</h1>
+      <p class="lead">A selection of Swift7 projects and concepts. Case studies are managed in Sanity so projects, images and results can stay fresh without changing the layout.</p>
+    </div>
+  </section>
+  <section>
+    <div class="container cards-grid">
+      {caseStudies.map((study) => (
+        <article class="card">
+          {study.featuredImage && <img src={imageUrl(study.featuredImage)} alt={`${study.clientName} website`} loading="lazy" />}
+          <span class="tag">{study.location} · {study.industry}</span>
+          <h2 style="font-size:32px">{study.clientName}</h2>
+          <p class="muted">{study.summary}</p>
+          <a class="btn btn-outline" href={`/case-studies/${study.slug}`}>Read case study</a>
+        </article>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
