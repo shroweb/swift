@@ -1,4 +1,4 @@
-import { cp, mkdir, readdir, stat } from 'node:fs/promises';
+import { cp, mkdir, readdir, stat, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 
 const root = process.cwd();
@@ -45,6 +45,7 @@ const copiedExtensions = new Set([
 ]);
 
 const astroOwnedRoots = new Set(['case-studies', 'services']);
+const redirects = new Set();
 
 async function copyTree(from, relative = '') {
   const entries = await readdir(from, { withFileTypes: true });
@@ -67,9 +68,18 @@ async function copyTree(from, relative = '') {
 
     await mkdir(path.dirname(target), { recursive: true });
     await cp(source, target, { force: false });
+
+    if (path.extname(entry.name).toLowerCase() === '.html' && entry.name !== 'index.html') {
+      const cleanPath = `/${rel.replace(/\\/g, '/').replace(/\.html$/, '')}`;
+      const htmlPath = `/${rel.replace(/\\/g, '/')}`;
+      redirects.add(`${cleanPath} ${htmlPath} 200`);
+    }
   }
 }
 
 await stat(dist);
 await copyTree(root);
+if (redirects.size) {
+  await writeFile(path.join(dist, '_redirects'), `${Array.from(redirects).sort().join('\n')}\n`);
+}
 console.log('Copied legacy static pages and assets into dist without overwriting Astro-owned routes.');
