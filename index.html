@@ -207,6 +207,283 @@
   }
   </script>
   <link rel="stylesheet" href="swift7-design.css" />
+  <style>
+    .section-label,
+    .section-label.is-soft {
+      text-transform: none;
+      letter-spacing: 0.02em;
+      font-size: 13px;
+    }
+
+    .row-icon {
+      min-width: 34px;
+      font-size: 10px;
+      line-height: 1;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--amber);
+      font-weight: 800;
+    }
+
+    .search-proof {
+      padding: 44px 0;
+      background: #2A5040;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .search-proof-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(280px, 520px);
+      gap: 40px;
+      align-items: center;
+    }
+
+    .search-proof h2 {
+      font-size: clamp(28px, 3.2vw, 42px);
+      margin-top: 6px;
+    }
+
+    .search-proof .search-demo {
+      margin: 0;
+      max-width: 100%;
+      background: rgba(15, 34, 25, 0.72);
+    }
+
+    .human-proof,
+    .buyer-clarity,
+    .fit-section,
+    .dont-do-section,
+    .process-proof,
+    .jt-walkthrough {
+      background: var(--off-white);
+    }
+
+    .human-proof-grid {
+      display: grid;
+      grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.2fr);
+      gap: 48px;
+      align-items: center;
+    }
+
+    .founder-card {
+      display: grid;
+      grid-template-columns: 108px 1fr;
+      gap: 22px;
+      align-items: center;
+      padding: 28px;
+      background: #0F2219;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+
+    .founder-card img {
+      width: 108px;
+      height: 108px;
+      object-fit: cover;
+      border-radius: 8px;
+      filter: grayscale(0.12);
+    }
+
+    .founder-card h3,
+    .clarity-card h3,
+    .fit-card h3,
+    .dont-do-card h3,
+    .process-proof-card h3,
+    .walk-card h3 {
+      font-size: 18px;
+      letter-spacing: -0.3px;
+      margin-bottom: 8px;
+    }
+
+    .founder-card p,
+    .clarity-card p,
+    .fit-card p,
+    .dont-do-card p,
+    .process-proof-card p,
+    .walk-card p {
+      color: var(--mid);
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .human-note {
+      font-size: clamp(28px, 4vw, 50px);
+      font-weight: 900;
+      line-height: 1.05;
+      letter-spacing: -1.8px;
+      max-width: 680px;
+    }
+
+    .clarity-grid,
+    .fit-grid,
+    .dont-do-grid,
+    .process-proof-grid,
+    .walk-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .clarity-card,
+    .fit-card,
+    .dont-do-card,
+    .process-proof-card,
+    .walk-card {
+      background: #0F2219;
+      padding: 28px;
+      min-height: 180px;
+    }
+
+    .clarity-card strong {
+      display: block;
+      font-size: 32px;
+      line-height: 1;
+      letter-spacing: -1px;
+      color: var(--amber);
+      margin-bottom: 14px;
+    }
+
+    .plain-num {
+      display: inline-block;
+      color: var(--amber);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      margin-bottom: 18px;
+    }
+
+    .fit-card.good {
+      border-top: 3px solid var(--amber);
+    }
+
+    .fit-card.bad {
+      opacity: 0.78;
+    }
+
+    .process-shot {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .process-shot figure {
+      background: #0F2219;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .process-shot img {
+      width: 100%;
+      height: 100%;
+      min-height: 300px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .process-shot figcaption {
+      padding: 18px 20px;
+      color: var(--mid);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .walk-feature {
+      display: grid;
+      grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
+      gap: 40px;
+      align-items: center;
+      margin-bottom: 36px;
+    }
+
+    .walk-feature img {
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      display: block;
+    }
+
+    .hero-actions .btn-orange,
+    .hero-pricing .btn-orange,
+    .tier-card .btn,
+    .cta-buttons .btn-orange {
+      text-transform: none;
+    }
+
+    @media (max-width: 900px) {
+      .search-proof-inner,
+      .human-proof-grid,
+      .walk-feature,
+      .process-shot {
+        grid-template-columns: 1fr;
+      }
+
+      .clarity-grid,
+      .fit-grid,
+      .dont-do-grid,
+      .process-proof-grid,
+      .walk-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        padding-top: 52px;
+      }
+
+      .hero-sub {
+        max-width: 32rem;
+      }
+
+      .hero-trust-row {
+        gap: 8px 0;
+      }
+
+      .hero-trust {
+        width: 100%;
+        border-right: 0;
+        padding-right: 0;
+        margin-right: 0;
+      }
+
+      .search-proof {
+        padding: 32px 0;
+      }
+
+      .founder-card {
+        grid-template-columns: 74px 1fr;
+        padding: 22px;
+      }
+
+      .founder-card img {
+        width: 74px;
+        height: 74px;
+      }
+
+      .clarity-grid,
+      .fit-grid,
+      .dont-do-grid,
+      .process-proof-grid,
+      .walk-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .clarity-card,
+      .fit-card,
+      .dont-do-card,
+      .process-proof-card,
+      .walk-card {
+        min-height: auto;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -217,7 +494,7 @@
     <div class="mobile-cta-text">
       <p class="mcta-price">10-page website · £500</p>
     </div>
-    <a href="#" class="btn btn-orange" onclick="openModal(event)">Claim my slot</a>
+    <a href="#" class="btn btn-orange" onclick="openModal(event)">Start my website</a>
   </div>
 
   <!-- MODAL -->
@@ -294,7 +571,7 @@
         <a href="/pricing" class="nav-link">Pricing</a>
         <a href="/faq" class="nav-link">FAQ</a>
         <a href="/swift7-plus" class="nav-link" style="color:#A8C94A;">Swift7 Plus</a>
-        <a href="#" class="btn btn-nav" onclick="openModal(event)">Claim my slot</a>
+        <a href="#" class="btn btn-nav" onclick="openModal(event)">Start my website</a>
       </div>
       <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -310,7 +587,7 @@
     <a href="/pricing">Pricing</a>
     <a href="/faq">FAQ</a>
     <a href="/swift7-plus" style="color:#A8C94A;font-weight:700;">Swift7 Plus</a>
-    <a href="#" class="mobile-nav-cta" onclick="openModal(event)">Claim my slot</a>
+    <a href="#" class="mobile-nav-cta" onclick="openModal(event)">Start my website</a>
     <a href="https://wa.me/447380218301" class="mobile-nav-wa" target="_blank" rel="noopener">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
         <path
@@ -318,7 +595,7 @@
         <path
           d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.528 5.845L.057 23.882l6.19-1.623A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.366l-.36-.214-3.722.976.993-3.625-.235-.372A9.818 9.818 0 1112 21.818z" />
       </svg>
-      WhatsApp Us
+      Message Callum
     </a>
   </div>
 
@@ -336,31 +613,25 @@
     <section class="hero">
       <div class="hero-inner">
         <div class="hero-left">
-          <p class="hero-eyebrow"><span class="eyebrow-dot"></span> Live in 7 days · 3 build slots left this month</p>
-          <h1>A website that<br /><span class="accent">wins you work.</span></h1>
-          <p class="hero-sub">Professional, mobile-first websites for UK trades and small businesses. £500 all-in, live in seven days — content, SEO and Google Business Profile done for you.</p>
-
-          <p class="search-demo-label">Be the business they find first:</p>
-          <div class="search-demo" aria-label="Example Google searches">
-            <svg class="search-demo-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-            <span class="search-demo-text"><span id="searchTyper">web designer near me</span><span class="search-cursor"></span></span>
-          </div>
+          <p class="hero-eyebrow"><span class="eyebrow-dot"></span> A proper website, built this week</p>
+          <h1>A proper<br />website<br />for<br /><span class="accent">your local business.</span></h1>
+          <p class="hero-sub">Live in 7 days. Written, designed and set up properly so customers can find you, trust you and contact you.</p>
 
           <div class="hero-actions">
-            <a href="#" class="btn btn-orange" onclick="openModal(event)">Claim my slot</a>
+            <a href="#" class="btn btn-orange" onclick="openModal(event)">Start my website</a>
             <a href="/portfolio" class="btn btn-outline">View portfolio</a>
           </div>
           <div class="hero-trust-row">
-            <span class="hero-trust"><span class="trust-icon">★</span> 5.0 on Google</span>
-            <span class="hero-trust"><span class="trust-icon">✓</span> 15+ years building sites</span>
-            <span class="hero-trust"><span class="trust-icon">✓</span> You own it outright</span>
+            <span class="hero-trust">5.0 Google reviews</span>
+            <span class="hero-trust">15+ years building sites</span>
+            <span class="hero-trust">You own it outright</span>
           </div>
         </div>
         <div class="hero-right">
           <div class="hero-pricing">
             <p class="hero-card-label">The Swift7 Launch</p>
             <div class="hero-price"><sup>£</sup>500</div>
-            <p class="hero-price-note">All-in. No monthly fees. Live in 7 days.</p>
+            <p class="hero-price-note">£250 to start. £250 when the site is ready.</p>
             <div class="hero-checks">
               <div class="hero-check"><span class="check-icon">✓</span>Up to 10 pages, written for you</div>
               <div class="hero-check"><span class="check-icon">✓</span>On-page SEO + Google Business Profile</div>
@@ -368,9 +639,9 @@
               <div class="hero-check"><span class="check-icon">✓</span>50% upfront, 50% on completion</div>
             </div>
             <a href="#" class="btn btn-orange" onclick="openModal(event)"
-              style="width:100%;justify-content:center;margin-top:24px;font-size:15px;padding:14px;">Claim my slot</a>
+              style="width:100%;justify-content:center;margin-top:24px;font-size:15px;padding:14px;">Start my website</a>
             <p style="text-align:center;margin-top:14px;font-size:13px;color:var(--mid);">
-              No calls. No commitment. Or <a href="https://wa.me/447380218301" target="_blank" rel="noopener" style="color:#A8C94A;font-weight:600;text-decoration:none;">message on WhatsApp →</a>
+              No calls. No commitment. Or <a href="https://wa.me/447380218301" target="_blank" rel="noopener" style="color:#A8C94A;font-weight:600;text-decoration:none;">message Callum on WhatsApp</a>
             </p>
           </div>
         </div>
@@ -406,8 +677,136 @@
       </div>
     </div>
 
+    <section class="search-proof" aria-labelledby="search-proof-title">
+      <div class="container search-proof-inner">
+        <div class="fade-in-up">
+          <p class="section-label is-soft">Your customers are already searching</p>
+          <h2 id="search-proof-title">Be the business they find first.</h2>
+        </div>
+        <div class="fade-in-up" data-delay="1">
+          <p class="search-demo-label">Example local search:</p>
+          <div class="search-demo" aria-label="Example Google searches">
+            <svg class="search-demo-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+            <span class="search-demo-text"><span id="searchTyper">web designer near me</span><span class="search-cursor"></span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="human-proof">
+      <div class="container human-proof-grid">
+        <div class="founder-card fade-in-up">
+          <img src="/callum.png" alt="Callum from Swift7" width="216" height="216" loading="lazy" decoding="async" />
+          <div>
+            <h3>Built by Callum, not a faceless agency.</h3>
+            <p>You deal directly with the person planning, writing and launching the site. Clear brief, clear price, no agency fog.</p>
+          </div>
+        </div>
+        <p class="human-note fade-in-up" data-delay="1">Most small business websites fail because nobody says anything clearly. We write the words, structure the pages and make the next step obvious.</p>
+      </div>
+    </section>
+
+    <section class="buyer-clarity">
+      <div class="container">
+        <div class="section-header fade-in-up">
+          <p class="section-label is-soft">The £500 bit, plain English</p>
+          <h2>What you pay, and when.</h2>
+          <p class="section-sub">No mystery package. No surprise hosting bill after you say yes.</p>
+        </div>
+        <div class="clarity-grid">
+          <div class="clarity-card fade-in-up">
+            <strong>£250</strong>
+            <h3>To start</h3>
+            <p>This books the build and gets the brief, copy and structure moving.</p>
+          </div>
+          <div class="clarity-card fade-in-up" data-delay="1">
+            <strong>£250</strong>
+            <h3>When ready</h3>
+            <p>You only pay the second half when the site is built and ready to go live.</p>
+          </div>
+          <div class="clarity-card fade-in-up" data-delay="2">
+            <strong>£70</strong>
+            <h3>Per year after</h3>
+            <p>Hosting, SSL and basic upkeep after year one. Simple and predictable.</p>
+          </div>
+          <div class="clarity-card fade-in-up" data-delay="3">
+            <strong>7 days</strong>
+            <h3>Or you pay nothing more</h3>
+            <p>If we miss the launch window, the final payment is waived.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="fit-section">
+      <div class="container">
+        <div class="section-header fade-in-up">
+          <p class="section-label is-soft">Who this is for</p>
+          <h2>Best for businesses that need enquiries, not a six-month project.</h2>
+        </div>
+        <div class="fit-grid">
+          <div class="fit-card good fade-in-up">
+            <span class="plain-num">GOOD FIT</span>
+            <h3>Local trades and services</h3>
+            <p>You need people nearby to find you, trust you and make contact quickly.</p>
+          </div>
+          <div class="fit-card good fade-in-up" data-delay="1">
+            <span class="plain-num">GOOD FIT</span>
+            <h3>Professional firms</h3>
+            <p>Accountants, consultants, clinics and small firms where credibility matters.</p>
+          </div>
+          <div class="fit-card bad fade-in-up" data-delay="2">
+            <span class="plain-num">NOT IDEAL</span>
+            <h3>Big custom web apps</h3>
+            <p>If you need logins, dashboards or complex software, this is not the right package.</p>
+          </div>
+          <div class="fit-card bad fade-in-up" data-delay="3">
+            <span class="plain-num">NOT IDEAL</span>
+            <h3>Endless design rounds</h3>
+            <p>This is a fast, guided build. We keep it moving and make the important calls.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="dont-do-section">
+      <div class="container">
+        <div class="section-header fade-in-up">
+          <p class="section-label is-soft">What you do not have to do</p>
+          <h2>No blank-page panic.</h2>
+          <p class="section-sub">You answer a short brief. We turn it into a working site.</p>
+        </div>
+        <div class="dont-do-grid">
+          <div class="dont-do-card fade-in-up">
+            <span class="plain-num">01</span>
+            <h3>Write the website copy</h3>
+            <p>We write it in plain English, based on what your customers need to know.</p>
+          </div>
+          <div class="dont-do-card fade-in-up" data-delay="1">
+            <span class="plain-num">02</span>
+            <h3>Choose a template</h3>
+            <p>We design around your offer, proof and services rather than dropping text into a theme.</p>
+          </div>
+          <div class="dont-do-card fade-in-up" data-delay="2">
+            <span class="plain-num">03</span>
+            <h3>Fight with hosting</h3>
+            <p>Domain, hosting, SSL, forms and analytics are handled for you.</p>
+          </div>
+          <div class="dont-do-card fade-in-up" data-delay="3">
+            <span class="plain-num">04</span>
+            <h3>Guess what matters</h3>
+            <p>We structure the site around trust, search visibility and enquiries.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     
-<!-- WHAT'S INCLUDED -->
+	<!-- WHAT'S INCLUDED -->
     <section id="offer">
       <div class="container">
         <div class="offer-teaser fade-in-up">
@@ -456,8 +855,7 @@
             <p class="portfolio-num">01</p>
             <div class="portfolio-info">
               <h3>JT Accountancy</h3>
-              <p>Professional site for a Hull accountancy practice — built to attract limited companies, sole traders
-                and personal tax clients across Hull and East Yorkshire.</p>
+              <p>A trust-focused website for a Hull accountancy practice: clear services, local SEO structure and a simple route for new clients to enquire.</p>
               <div class="portfolio-row">
                 <span class="portfolio-tag">Static Site</span>
                 <a href="/case-studies/jt-accountancy" class="portfolio-link-label">Case study →</a>
@@ -565,27 +963,104 @@
       </div>
     </section>
 
+    <section class="jt-walkthrough">
+      <div class="container">
+        <div class="walk-feature fade-in-up">
+          <img src="/work-jt-accountancy.webp" alt="JT Accountancy website screenshot" loading="lazy" decoding="async" />
+          <div>
+            <p class="section-label is-soft">JT Accountancy walkthrough</p>
+            <h2>How a simple site earns trust.</h2>
+            <p class="section-sub">For JT Accountancy, the job was not to make noise. It was to look credible, explain the services clearly and give referred clients somewhere reassuring to land.</p>
+          </div>
+        </div>
+        <div class="walk-grid">
+          <div class="walk-card fade-in-up">
+            <span class="plain-num">01</span>
+            <h3>Trust first</h3>
+            <p>The page opens with a calm, professional message so visitors know they are in the right place.</p>
+          </div>
+          <div class="walk-card fade-in-up" data-delay="1">
+            <span class="plain-num">02</span>
+            <h3>Services made clear</h3>
+            <p>Accounts, bookkeeping, payroll, VAT and tax returns are separated so people can scan quickly.</p>
+          </div>
+          <div class="walk-card fade-in-up" data-delay="2">
+            <span class="plain-num">03</span>
+            <h3>Local search structure</h3>
+            <p>The site is written around Hull and East Yorkshire accountancy searches without stuffing keywords everywhere.</p>
+          </div>
+          <div class="walk-card fade-in-up" data-delay="3">
+            <span class="plain-num">04</span>
+            <h3>Easy enquiry route</h3>
+            <p>Visitors can understand the offer and contact the practice without digging through the page.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="process-proof">
+      <div class="container">
+        <div class="section-header fade-in-up">
+          <p class="section-label is-soft">What happens after you enquire</p>
+          <h2>A fast build still needs a proper process.</h2>
+          <p class="section-sub">You are not left wondering where the site is up to. The build is split into simple stages.</p>
+        </div>
+        <div class="process-proof-grid">
+          <div class="process-proof-card fade-in-up">
+            <span class="plain-num">DAY 1</span>
+            <h3>Quick brief</h3>
+            <p>You answer a short set of questions about the business, services and areas you cover.</p>
+          </div>
+          <div class="process-proof-card fade-in-up" data-delay="1">
+            <span class="plain-num">DAYS 2-5</span>
+            <h3>Write and build</h3>
+            <p>We write the copy, design the structure and build the site around your best enquiry routes.</p>
+          </div>
+          <div class="process-proof-card fade-in-up" data-delay="2">
+            <span class="plain-num">DAY 6</span>
+            <h3>Review link</h3>
+            <p>You get a private preview link, send notes, and we make the final edits.</p>
+          </div>
+          <div class="process-proof-card fade-in-up" data-delay="3">
+            <span class="plain-num">DAY 7</span>
+            <h3>Go live</h3>
+            <p>Domain, hosting, forms, analytics and launch checks are handled before the site goes live.</p>
+          </div>
+        </div>
+        <div class="process-shot fade-in-up">
+          <figure>
+            <img src="/screenshot_1.5x_postspark_2026-05-15_16-28-13.png" alt="Swift7 website build preview screenshot" loading="lazy" decoding="async" />
+            <figcaption>Preview links and real page reviews keep the build practical, not theoretical.</figcaption>
+          </figure>
+          <figure>
+            <img src="/device-mockup_1.5x_postspark_2026-05-15_16-24-55.png" alt="Swift7 mobile website preview" loading="lazy" decoding="async" />
+            <figcaption>Every launch is checked on mobile because that is where most local enquiries start.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
     <!-- WHO WE BUILD FOR -->
     <div class="industries-strip">
       <div class="container industries-strip-inner">
         <p class="industries-strip-label">Industries we build for</p>
         <div class="industries-strip-grid">
-          <a href="/web-design-for-plumbers" class="industry-chip">🔧 Plumbers</a>
-          <a href="/web-design-for-electricians" class="industry-chip">⚡ Electricians</a>
-          <a href="/web-design-for-builders" class="industry-chip">🏗 Builders</a>
-          <a href="/web-design-for-roofers" class="industry-chip">🏠 Roofers</a>
-          <a href="/web-design-for-cleaning-companies" class="industry-chip">🧹 Cleaners</a>
-          <a href="/web-design-for-decorators" class="industry-chip">🎨 Decorators</a>
-          <a href="/web-design-for-plasterers" class="industry-chip">🪣 Plasterers</a>
-          <a href="/web-design-for-joiners" class="industry-chip">🪚 Joiners</a>
-          <a href="/web-design-for-accountants" class="industry-chip">📊 Accountants</a>
-          <a href="/web-design-for-solicitors" class="industry-chip">⚖️ Solicitors</a>
-          <a href="/web-design-for-dentists" class="industry-chip">🦷 Dentists</a>
-          <a href="/web-design-for-personal-trainers" class="industry-chip">💪 Personal Trainers</a>
-          <a href="/web-design-for-landscapers" class="industry-chip">🌿 Landscapers</a>
-          <a href="/web-design-for-photographers" class="industry-chip">📸 Photographers</a>
-          <a href="/web-design-for-driving-instructors" class="industry-chip">🚗 Driving Instructors</a>
-          <a href="/web-design-for-physiotherapists" class="industry-chip">🩺 Physiotherapists</a>
+          <a href="/web-design-for-plumbers" class="industry-chip">Plumbers</a>
+          <a href="/web-design-for-electricians" class="industry-chip">Electricians</a>
+          <a href="/web-design-for-builders" class="industry-chip">Builders</a>
+          <a href="/web-design-for-roofers" class="industry-chip">Roofers</a>
+          <a href="/web-design-for-cleaning-companies" class="industry-chip">Cleaners</a>
+          <a href="/web-design-for-decorators" class="industry-chip">Decorators</a>
+          <a href="/web-design-for-plasterers" class="industry-chip">Plasterers</a>
+          <a href="/web-design-for-joiners" class="industry-chip">Joiners</a>
+          <a href="/web-design-for-accountants" class="industry-chip">Accountants</a>
+          <a href="/web-design-for-solicitors" class="industry-chip">Solicitors</a>
+          <a href="/web-design-for-dentists" class="industry-chip">Dentists</a>
+          <a href="/web-design-for-personal-trainers" class="industry-chip">Personal Trainers</a>
+          <a href="/web-design-for-landscapers" class="industry-chip">Landscapers</a>
+          <a href="/web-design-for-photographers" class="industry-chip">Photographers</a>
+          <a href="/web-design-for-driving-instructors" class="industry-chip">Driving Instructors</a>
+          <a href="/web-design-for-physiotherapists" class="industry-chip">Physiotherapists</a>
         </div>
       </div>
     </div>
@@ -725,37 +1200,37 @@
           </div>
 
           <!-- EDIT YOURSELF -->
-          <div class="type-row-label"><span class="row-icon">✏️</span>Edit content yourself</div>
+          <div class="type-row-label"><span class="row-icon">Edit</span>Edit content yourself</div>
           <div class="type-td rec"><span class="type-dash">—</span></div>
           <div class="type-td"><div class="type-tick-wrap"><span class="type-tick">✓</span></div></div>
           <div class="type-td"><div class="type-tick-wrap"><span class="type-tick">✓</span></div></div>
 
           <!-- BLOG -->
-          <div class="type-row-label"><span class="row-icon">📝</span>Blog &amp; publishing</div>
+          <div class="type-row-label"><span class="row-icon">Blog</span>Blog &amp; publishing</div>
           <div class="type-td rec"><span class="type-dash">—</span></div>
           <div class="type-td"><div class="type-tick-wrap"><span class="type-tick">✓</span></div></div>
           <div class="type-td"><div class="type-tick-wrap"><span class="type-tick">✓</span></div></div>
 
           <!-- ECOMMERCE -->
-          <div class="type-row-label"><span class="row-icon">🛒</span>Online shop</div>
+          <div class="type-row-label"><span class="row-icon">Shop</span>Online shop</div>
           <div class="type-td rec"><span class="type-dash">—</span></div>
           <div class="type-td"><span class="type-dash">—</span></div>
           <div class="type-td"><div class="type-tick-wrap"><span class="type-tick">✓</span></div></div>
 
           <!-- MAINTENANCE -->
-          <div class="type-row-label"><span class="row-icon">🔧</span>Ongoing maintenance</div>
+          <div class="type-row-label"><span class="row-icon">Care</span>Ongoing maintenance</div>
           <div class="type-td rec"><span class="type-val" style="color:#A8C94A;font-weight:700;">None</span></div>
           <div class="type-td"><span class="type-val muted">Monthly updates</span></div>
           <div class="type-td"><span class="type-val muted">Minimal</span></div>
 
           <!-- PERFORMANCE -->
-          <div class="type-row-label"><span class="row-icon">⚡</span>Load speed</div>
+          <div class="type-row-label"><span class="row-icon">Fast</span>Load speed</div>
           <div class="type-td rec"><span class="type-val" style="color:#A8C94A;font-weight:700;">Fastest</span></div>
           <div class="type-td"><span class="type-val muted">Fast</span></div>
           <div class="type-td"><span class="type-val muted">Fast</span></div>
 
           <!-- BEST FOR -->
-          <div class="type-row-label"><span class="row-icon">🎯</span>Best for</div>
+          <div class="type-row-label"><span class="row-icon">Fit</span>Best for</div>
           <div class="type-td rec"><span class="type-val">Trades, services, local businesses</span></div>
           <div class="type-td"><span class="type-val muted">Growing businesses wanting control</span></div>
           <div class="type-td"><span class="type-val muted">Businesses selling products online</span></div>
@@ -763,10 +1238,10 @@
           <!-- CTA ROW -->
           <div class="type-cta-empty"></div>
           <div class="type-td-cta rec">
-            <a href="#" class="btn btn-orange" onclick="openModal(event)" style="width:100%;justify-content:center;font-size:13px;padding:11px 16px;">Claim my slot</a>
+	            <a href="#" class="btn btn-orange" onclick="openModal(event)" style="width:100%;justify-content:center;font-size:13px;padding:11px 16px;">Start my website</a>
           </div>
           <div class="type-td-cta">
-            <a href="#" class="btn btn-outline" onclick="openModal(event)" style="width:100%;justify-content:center;font-size:13px;padding:11px 16px;">Claim my slot</a>
+	            <a href="#" class="btn btn-outline" onclick="openModal(event)" style="width:100%;justify-content:center;font-size:13px;padding:11px 16px;">Start my website</a>
           </div>
           <div class="type-td-cta">
             <a href="/swift7-plus" class="btn btn-outline" style="width:100%;justify-content:center;font-size:13px;padding:11px 16px;">Find out more →</a>
@@ -802,7 +1277,7 @@
               <li>Domain, hosting, SSL + emails</li>
               <li>Analytics + lead capture forms</li>
             </ul>
-            <a href="#" class="btn btn-outline" style="width:100%;justify-content:center;" onclick="openModal(event)">Claim my slot</a>
+            <a href="#" class="btn btn-outline" style="width:100%;justify-content:center;" onclick="openModal(event)">Start my website</a>
             <p style="font-size:12px;color:var(--mid);margin-top:12px;text-align:center;">50% deposit · 50% on completion · £70/yr after</p>
           </div>
 
@@ -821,7 +1296,7 @@
               <li>Conversion-optimised copy</li>
               <li>Enhanced SEO + 8 articles</li>
             </ul>
-            <a href="#" class="btn btn-orange" style="width:100%;justify-content:center;" onclick="openModal(event)">Claim my slot</a>
+            <a href="#" class="btn btn-orange" style="width:100%;justify-content:center;" onclick="openModal(event)">Start my website</a>
             <p style="font-size:12px;color: rgba(240,240,236,0.88);margin-top:12px;text-align:center;">50% deposit · 50% on completion · £70/yr after</p>
           </div>
 
@@ -847,7 +1322,7 @@
 
         <!-- GUARANTEES -->
         <div class="pricing-guarantees fade-in-up">
-          <p class="pricing-guarantee">🛡 Live in 7 days or you pay nothing more. No quibbles, no small print.</p>
+          <p class="pricing-guarantee">Guarantee: live in 7 days or you pay nothing more. No quibbles, no small print.</p>
           <p class="pricing-guarantee">✓ Not happy in the first 30 days? We'll fix it or refund you. No hassle.</p>
         </div>
 
@@ -1149,12 +1624,12 @@
       <div id="cta">
         <div class="cta-inner">
           <p class="cta-eyebrow" style="display:none;">Ready when you are</p>
-          <h2>Stop putting<br />it off.</h2>
-          <p class="cta-sub">You've been meaning to sort this for months. Let's get it done this week.</p>
-          <div class="cta-buttons">
-            <a href="#" class="btn btn-orange" onclick="openModal(event)">Claim my slot</a>
-            <p class="cta-email">Or email <a href="mailto:hello@swift7.co.uk">hello@swift7.co.uk</a> to chat first.</p>
-          </div>
+	          <h2>Get the website sorted this week.</h2>
+	          <p class="cta-sub">If your website is the thing you keep putting off, this is the simple route: answer a short brief, approve the preview, go live.</p>
+	          <div class="cta-buttons">
+	            <a href="#" class="btn btn-orange" onclick="openModal(event)">Start my website</a>
+	            <p class="cta-email">Or <a href="https://wa.me/447380218301" target="_blank" rel="noopener">message Callum on WhatsApp</a> to chat first.</p>
+	          </div>
         </div>
       </div>
     </section>
