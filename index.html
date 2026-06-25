@@ -248,13 +248,25 @@
       background: rgba(15, 34, 25, 0.72);
     }
 
-    .human-proof,
-    .buyer-clarity,
-    .fit-section,
-    .dont-do-section,
-    .process-proof,
-    .jt-walkthrough {
-      background: var(--off-white);
+    .human-proof {
+      background: #F0F0EC;
+      color: #0F2219;
+      border-bottom: 0;
+    }
+
+    .buyer-clarity {
+      background: #A8C94A;
+      color: #0F2219;
+      padding: 56px 0;
+      border-bottom: 0;
+    }
+
+    .process-proof {
+      background: #0F2219;
+    }
+
+    #offer {
+      background: #163024;
     }
 
     .human-proof-grid {
@@ -281,14 +293,13 @@
       object-fit: cover;
       border-radius: 50%;
       display: block;
+      border: 3px solid #A8C94A;
+      box-shadow: 0 18px 44px rgba(15, 34, 25, 0.16);
     }
 
     .founder-card h3,
     .clarity-card h3,
-    .fit-card h3,
-    .dont-do-card h3,
-    .process-proof-card h3,
-    .walk-card h3 {
+    .process-proof-card h3 {
       font-size: 18px;
       letter-spacing: -0.3px;
       margin-bottom: 8px;
@@ -296,13 +307,19 @@
 
     .founder-card p,
     .clarity-card p,
-    .fit-card p,
-    .dont-do-card p,
-    .process-proof-card p,
-    .walk-card p {
+    .process-proof-card p {
       color: var(--mid);
       font-size: 14px;
       line-height: 1.65;
+    }
+
+    .human-proof .founder-card h3,
+    .human-proof .human-note {
+      color: #0F2219 !important;
+    }
+
+    .human-proof .founder-card p {
+      color: #466154 !important;
     }
 
     .human-note {
@@ -314,10 +331,7 @@
     }
 
     .clarity-grid,
-    .fit-grid,
-    .dont-do-grid,
-    .process-proof-grid,
-    .walk-grid {
+    .process-proof-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 28px;
@@ -328,14 +342,38 @@
     }
 
     .clarity-card,
-    .fit-card,
-    .dont-do-card,
-    .process-proof-card,
-    .walk-card {
+    .process-proof-card {
       background: transparent;
       padding: 0 0 22px;
       min-height: 0;
       border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+    }
+
+    .buyer-clarity .section-header {
+      margin-bottom: 32px;
+    }
+
+    .buyer-clarity .section-label,
+    .buyer-clarity .section-sub,
+    .buyer-clarity h2,
+    .buyer-clarity .clarity-card h3,
+    .buyer-clarity .clarity-card p {
+      color: #0F2219 !important;
+    }
+
+    .buyer-clarity .clarity-grid {
+      gap: 0;
+      border-top: 1px solid rgba(15, 34, 25, 0.22);
+    }
+
+    .buyer-clarity .clarity-card {
+      border-bottom: 0;
+      border-right: 1px solid rgba(15, 34, 25, 0.2);
+      padding: 24px 28px 0 0;
+    }
+
+    .buyer-clarity .clarity-card:last-child {
+      border-right: 0;
     }
 
     .clarity-card strong {
@@ -347,6 +385,10 @@
       margin-bottom: 14px;
     }
 
+    .buyer-clarity .clarity-card strong {
+      color: #0F2219;
+    }
+
     .plain-num {
       display: inline-block;
       color: var(--amber);
@@ -356,27 +398,41 @@
       margin-bottom: 18px;
     }
 
-    .fit-card.good {
-      border-top: 0;
-    }
-
-    .fit-card.bad {
-      opacity: 0.78;
-    }
-
-    .walk-feature {
-      display: grid;
-      grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
-      gap: 40px;
+    #offer .offer-teaser {
       align-items: center;
-      margin-bottom: 36px;
     }
 
-    .walk-feature img {
-      width: 100%;
-      border-radius: 8px;
-      border: 1px solid var(--border);
-      display: block;
+    #offer .offer-teaser-items {
+      border: 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.16);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 0;
+      overflow: visible;
+      gap: 0;
+    }
+
+    #offer .offer-teaser-item {
+      background: transparent !important;
+      border: 0 !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+      padding: 18px 0;
+    }
+
+    #offer .offer-teaser-item:nth-last-child(-n+2) {
+      border-bottom: 0 !important;
+    }
+
+    .pricing-guarantees {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .pricing-guarantee {
+      border: 1px solid rgba(168, 201, 74, 0.25);
+      border-radius: 6px;
+      padding: 16px 18px;
+      background: rgba(168, 201, 74, 0.06);
     }
 
     .hero-actions .btn-orange,
@@ -403,17 +459,17 @@
 
     @media (max-width: 900px) {
       .search-proof-inner,
-      .human-proof-grid,
-      .walk-feature {
+      .human-proof-grid {
         grid-template-columns: 1fr;
       }
 
       .clarity-grid,
-      .fit-grid,
-      .dont-do-grid,
-      .process-proof-grid,
-      .walk-grid {
+      .process-proof-grid {
         grid-template-columns: 1fr 1fr;
+      }
+
+      .pricing-guarantees {
+        grid-template-columns: 1fr;
       }
     }
 
@@ -451,19 +507,23 @@
       }
 
       .clarity-grid,
-      .fit-grid,
-      .dont-do-grid,
-      .process-proof-grid,
-      .walk-grid {
+      .process-proof-grid {
         grid-template-columns: 1fr;
       }
 
       .clarity-card,
-      .fit-card,
-      .dont-do-card,
-      .process-proof-card,
-      .walk-card {
+      .process-proof-card {
         min-height: auto;
+      }
+
+      .buyer-clarity .clarity-card {
+        border-right: 0;
+        border-bottom: 1px solid rgba(15, 34, 25, 0.18);
+        padding-right: 0;
+      }
+
+      .buyer-clarity .clarity-card:last-child {
+        border-bottom: 0;
       }
 
       #cta h2 {
@@ -730,71 +790,7 @@
       </div>
     </section>
 
-    <section class="fit-section">
-      <div class="container">
-        <div class="section-header fade-in-up">
-	          <p class="section-label is-soft">Who it is for</p>
-	          <h2>For businesses that need enquiries.</h2>
-        </div>
-        <div class="fit-grid">
-          <div class="fit-card good fade-in-up">
-            <span class="plain-num">GOOD FIT</span>
-            <h3>Local trades and services</h3>
-	            <p>Get found locally and make contact easy.</p>
-          </div>
-          <div class="fit-card good fade-in-up" data-delay="1">
-            <span class="plain-num">GOOD FIT</span>
-            <h3>Professional firms</h3>
-	            <p>Look credible before the first conversation.</p>
-          </div>
-          <div class="fit-card bad fade-in-up" data-delay="2">
-            <span class="plain-num">NOT IDEAL</span>
-            <h3>Big custom web apps</h3>
-	            <p>Logins, dashboards or complex software need a different build.</p>
-          </div>
-          <div class="fit-card bad fade-in-up" data-delay="3">
-            <span class="plain-num">NOT IDEAL</span>
-            <h3>Endless design rounds</h3>
-	            <p>This is a guided 7-day build, not an open-ended design project.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="dont-do-section">
-      <div class="container">
-        <div class="section-header fade-in-up">
-	          <p class="section-label is-soft">Less for you to do</p>
-	          <h2>No blank-page panic.</h2>
-	          <p class="section-sub">You answer the brief. We do the heavy lifting.</p>
-        </div>
-        <div class="dont-do-grid">
-          <div class="dont-do-card fade-in-up">
-            <span class="plain-num">01</span>
-	            <h3>Write the copy</h3>
-	            <p>We turn your answers into clear website text.</p>
-          </div>
-          <div class="dont-do-card fade-in-up" data-delay="1">
-            <span class="plain-num">02</span>
-	            <h3>Choose a template</h3>
-	            <p>We structure the page around your business.</p>
-          </div>
-          <div class="dont-do-card fade-in-up" data-delay="2">
-            <span class="plain-num">03</span>
-	            <h3>Fight with hosting</h3>
-	            <p>Domain, SSL, forms and analytics are handled.</p>
-          </div>
-          <div class="dont-do-card fade-in-up" data-delay="3">
-            <span class="plain-num">04</span>
-	            <h3>Guess what matters</h3>
-	            <p>The site is built around trust and enquiries.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    
-	<!-- WHAT'S INCLUDED -->
+		<!-- WHAT'S INCLUDED -->
     <section id="offer">
       <div class="container">
         <div class="offer-teaser fade-in-up">
@@ -948,41 +944,6 @@
           <a href="/portfolio" class="portfolio-footer-link">View all work →</a>
         </div>
 
-      </div>
-    </section>
-
-    <section class="jt-walkthrough">
-      <div class="container">
-        <div class="walk-feature fade-in-up">
-          <img src="/work-jt-accountancy.webp" alt="JT Accountancy website screenshot" loading="lazy" decoding="async" />
-          <div>
-            <p class="section-label is-soft">JT Accountancy walkthrough</p>
-            <h2>How a simple site earns trust.</h2>
-            <p class="section-sub">For JT Accountancy, the job was not to make noise. It was to look credible, explain the services clearly and give referred clients somewhere reassuring to land.</p>
-          </div>
-        </div>
-        <div class="walk-grid">
-          <div class="walk-card fade-in-up">
-            <span class="plain-num">01</span>
-            <h3>Trust first</h3>
-            <p>The page opens with a calm, professional message so visitors know they are in the right place.</p>
-          </div>
-          <div class="walk-card fade-in-up" data-delay="1">
-            <span class="plain-num">02</span>
-            <h3>Services made clear</h3>
-            <p>Accounts, bookkeeping, payroll, VAT and tax returns are separated so people can scan quickly.</p>
-          </div>
-          <div class="walk-card fade-in-up" data-delay="2">
-            <span class="plain-num">03</span>
-            <h3>Local search structure</h3>
-            <p>The site is written around Hull and East Yorkshire accountancy searches without stuffing keywords everywhere.</p>
-          </div>
-          <div class="walk-card fade-in-up" data-delay="3">
-            <span class="plain-num">04</span>
-            <h3>Easy enquiry route</h3>
-            <p>Visitors can understand the offer and contact the practice without digging through the page.</p>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -1212,28 +1173,6 @@
         <div class="pricing-guarantees fade-in-up">
           <p class="pricing-guarantee">Guarantee: live in 7 days or you pay nothing more. No quibbles, no small print.</p>
           <p class="pricing-guarantee">✓ Not happy in the first 30 days? We'll fix it or refund you. No hassle.</p>
-        </div>
-
-        <!-- 3-YEAR COST COMPARISON -->
-        <div class="cost-compare fade-in-up">
-          <p class="cost-compare-header">Real cost over 3 years (Launch tier)</p>
-          <div class="cost-compare-row us">
-            <span class="cost-compare-name">Swift7 Launch <span class="cost-compare-badge">Cheapest</span></span>
-            <span class="cost-compare-price">£640</span>
-          </div>
-          <div class="cost-compare-row">
-            <span class="cost-compare-name">7daywebsites.co.uk (£250 + £200/yr hosting)</span>
-            <span class="cost-compare-price">£650</span>
-          </div>
-          <div class="cost-compare-row">
-            <span class="cost-compare-name">Budget agencies</span>
-            <span class="cost-compare-price">£995+</span>
-          </div>
-          <div class="cost-compare-row">
-            <span class="cost-compare-name">Local agencies</span>
-            <span class="cost-compare-price">£3,000+</span>
-          </div>
-          <p class="cost-compare-note">Based on £500 upfront + £70/yr × 2 renewal years.</p>
         </div>
 
         <!-- Care Plans -->
