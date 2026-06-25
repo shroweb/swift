@@ -435,6 +435,337 @@
       background: rgba(168, 201, 74, 0.06);
     }
 
+    .refresh-proof {
+      background: #F0F0EC;
+      color: #0F2219;
+      border-bottom: 0;
+      padding: 110px 0;
+    }
+
+    .refresh-proof * {
+      color: inherit;
+    }
+
+    .refresh-proof-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.75fr);
+      gap: 72px;
+      align-items: stretch;
+    }
+
+    .refresh-kicker,
+    .receipt-kicker,
+    .timeline-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.02em;
+      margin-bottom: 22px;
+      color: #0F2219 !important;
+    }
+
+    .refresh-kicker::before,
+    .receipt-kicker::before,
+    .timeline-kicker::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: #A8C94A;
+      box-shadow: 0 0 0 7px rgba(168, 201, 74, 0.18);
+    }
+
+    .refresh-proof h2,
+    .launch-receipt h2,
+    .process-proof h2 {
+      color: inherit !important;
+    }
+
+    .refresh-proof h2 {
+      font-size: clamp(48px, 6vw, 88px);
+      line-height: 0.96;
+      letter-spacing: -3px;
+      max-width: 780px;
+      margin-bottom: 28px;
+    }
+
+    .refresh-proof h2 span {
+      color: #A8C94A !important;
+    }
+
+    .refresh-lede {
+      max-width: 590px;
+      font-size: 20px;
+      line-height: 1.6;
+      color: #466154 !important;
+      margin-bottom: 42px;
+    }
+
+    .proof-search-card {
+      max-width: 580px;
+      background: #0F2219;
+      color: #F0F0EC;
+      border-radius: 18px;
+      padding: 26px;
+      box-shadow: 0 24px 70px rgba(15, 34, 25, 0.18);
+    }
+
+    .proof-search-card .search-demo-label {
+      color: rgba(240, 240, 236, 0.7) !important;
+      margin-bottom: 12px;
+    }
+
+    .proof-search-card .search-demo {
+      margin: 0;
+      max-width: 100%;
+      background: #F0F0EC !important;
+      border: 0 !important;
+      box-shadow: none !important;
+    }
+
+    .proof-search-card .search-demo-icon {
+      color: #0F2219 !important;
+      opacity: 0.45;
+    }
+
+    .proof-search-card .search-demo-text {
+      color: #0F2219 !important;
+      font-weight: 800;
+    }
+
+    .proof-search-card .search-cursor {
+      background: #0F2219;
+    }
+
+    .refresh-aside {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: #A8C94A;
+      color: #0F2219;
+      border-radius: 22px;
+      padding: 34px;
+      min-height: 520px;
+      transform: rotate(1.2deg);
+    }
+
+    .refresh-aside img {
+      width: 122px;
+      height: 122px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #0F2219;
+      margin-bottom: 28px;
+    }
+
+    .refresh-aside blockquote {
+      font-size: clamp(30px, 3.5vw, 52px);
+      line-height: 0.98;
+      letter-spacing: -2px;
+      font-weight: 900;
+      margin: 0;
+    }
+
+    .refresh-aside p {
+      margin-top: 22px;
+      color: #234432 !important;
+      font-size: 16px;
+      line-height: 1.55;
+      font-weight: 700;
+    }
+
+    .launch-receipt {
+      background: #10251b;
+      color: #F0F0EC;
+      border-bottom: 0;
+      padding: 112px 0;
+    }
+
+    #offer.launch-receipt {
+      background: #10251b;
+    }
+
+    .receipt-layout {
+      display: grid;
+      grid-template-columns: minmax(300px, 0.78fr) minmax(0, 1fr);
+      gap: 70px;
+      align-items: center;
+    }
+
+    .receipt-panel {
+      background: #F0F0EC;
+      color: #0F2219;
+      border-radius: 18px;
+      padding: 30px;
+      box-shadow: 0 30px 90px rgba(0, 0, 0, 0.28);
+      transform: rotate(-1.4deg);
+    }
+
+    .receipt-panel * {
+      color: inherit !important;
+    }
+
+    .receipt-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+      padding-bottom: 22px;
+      border-bottom: 2px dashed rgba(15, 34, 25, 0.22);
+      margin-bottom: 22px;
+    }
+
+    .receipt-brand {
+      font-size: 18px;
+      font-weight: 900;
+    }
+
+    .receipt-total {
+      font-size: clamp(58px, 6vw, 92px);
+      line-height: 0.9;
+      letter-spacing: -4px;
+      font-weight: 900;
+      margin: 0 0 22px;
+    }
+
+    .receipt-lines {
+      display: grid;
+      gap: 0;
+      margin-bottom: 26px;
+    }
+
+    .receipt-line {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 13px 0;
+      border-bottom: 1px solid rgba(15, 34, 25, 0.13);
+      font-size: 15px;
+      font-weight: 800;
+    }
+
+    .receipt-panel .btn {
+      width: 100%;
+      justify-content: center;
+      background: #A8C94A;
+      color: #0F2219 !important;
+      padding: 16px 20px;
+      font-weight: 900;
+    }
+
+    .receipt-copy h2 {
+      font-size: clamp(42px, 5vw, 76px);
+      line-height: 0.98;
+      letter-spacing: -3px;
+      max-width: 680px;
+      margin-bottom: 28px;
+    }
+
+    .receipt-copy p {
+      color: #C8DACC !important;
+      font-size: 19px;
+      line-height: 1.65;
+      max-width: 590px;
+    }
+
+    .receipt-proof-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 34px;
+    }
+
+    .receipt-proof-row span {
+      border: 1px solid rgba(168, 201, 74, 0.32);
+      border-radius: 999px;
+      padding: 9px 14px;
+      color: #F0F0EC !important;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .launch-receipt .receipt-kicker,
+    .process-proof .timeline-kicker {
+      color: #A8C94A !important;
+    }
+
+    .process-proof {
+      padding: 118px 0;
+    }
+
+    .timeline-layout {
+      display: grid;
+      grid-template-columns: minmax(280px, 0.55fr) minmax(0, 1fr);
+      gap: 80px;
+      align-items: start;
+    }
+
+    .timeline-intro {
+      position: sticky;
+      top: 96px;
+    }
+
+    .timeline-list {
+      counter-reset: step;
+      border-left: 2px solid rgba(168, 201, 74, 0.34);
+      padding-left: 44px;
+      display: grid;
+      gap: 46px;
+    }
+
+    .timeline-step {
+      position: relative;
+      padding: 0 0 42px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .timeline-step:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .timeline-step::before {
+      counter-increment: step;
+      content: counter(step);
+      position: absolute;
+      left: -69px;
+      top: -4px;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: #A8C94A;
+      color: #0F2219;
+      font-weight: 900;
+      font-size: 18px;
+    }
+
+    .timeline-step time {
+      display: block;
+      color: #A8C94A !important;
+      font-size: 13px;
+      font-weight: 900;
+      margin-bottom: 8px;
+    }
+
+    .timeline-step h3 {
+      color: #F0F0EC !important;
+      font-size: clamp(28px, 3vw, 44px);
+      line-height: 1.02;
+      letter-spacing: -1.4px;
+      margin-bottom: 10px;
+    }
+
+    .timeline-step p {
+      color: #C8DACC !important;
+      font-size: 17px;
+      line-height: 1.6;
+      max-width: 620px;
+    }
+
     .hero-actions .btn-orange,
     .hero-pricing .btn-orange,
     .tier-card .btn,
@@ -470,6 +801,31 @@
 
       .pricing-guarantees {
         grid-template-columns: 1fr;
+      }
+
+      .refresh-proof-grid,
+      .receipt-layout,
+      .timeline-layout {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+
+      .refresh-aside {
+        min-height: auto;
+        transform: none;
+      }
+
+      .receipt-panel {
+        transform: none;
+        order: 2;
+      }
+
+      .receipt-copy {
+        order: 1;
+      }
+
+      .timeline-intro {
+        position: static;
       }
     }
 
@@ -524,6 +880,61 @@
 
       .buyer-clarity .clarity-card:last-child {
         border-bottom: 0;
+      }
+
+      .refresh-proof,
+      .launch-receipt,
+      .process-proof {
+        padding: 72px 0;
+      }
+
+      .refresh-proof h2,
+      .receipt-copy h2,
+      .process-proof h2 {
+        font-size: clamp(38px, 12vw, 54px);
+        letter-spacing: -2px;
+      }
+
+      .refresh-lede,
+      .receipt-copy p,
+      .timeline-step p {
+        font-size: 16px;
+      }
+
+      .proof-search-card,
+      .refresh-aside,
+      .receipt-panel {
+        border-radius: 14px;
+        padding: 22px;
+      }
+
+      .refresh-aside blockquote {
+        font-size: 34px;
+        letter-spacing: -1.4px;
+      }
+
+      .receipt-total {
+        font-size: 64px;
+      }
+
+      .receipt-line {
+        align-items: flex-start;
+        font-size: 14px;
+      }
+
+      .timeline-list {
+        padding-left: 34px;
+        gap: 34px;
+      }
+
+      .timeline-step::before {
+        left: -58px;
+        width: 42px;
+        height: 42px;
+      }
+
+      .timeline-step h3 {
+        font-size: 28px;
       }
 
       #cta h2 {
@@ -725,90 +1136,62 @@
       </div>
     </div>
 
-    <section class="search-proof" aria-labelledby="search-proof-title">
-      <div class="container search-proof-inner">
-        <div class="fade-in-up">
-          <p class="section-label is-soft">Your customers are already searching</p>
-          <h2 id="search-proof-title">Be the business they find first.</h2>
-        </div>
-        <div class="fade-in-up" data-delay="1">
-          <p class="search-demo-label">Example local search:</p>
-          <div class="search-demo" aria-label="Example Google searches">
-            <svg class="search-demo-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-              stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <circle cx="11" cy="11" r="8" />
-              <line x1="21" y1="21" x2="16.65" y2="16.65" />
-            </svg>
-            <span class="search-demo-text"><span id="searchTyper">web designer near me</span><span class="search-cursor"></span></span>
+    <section class="refresh-proof" aria-labelledby="search-proof-title">
+      <div class="container refresh-proof-grid">
+        <div class="refresh-main fade-in-up">
+          <p class="refresh-kicker">Your customers start on Google</p>
+          <h2 id="search-proof-title">The website has one job: <span>turn searches into enquiries.</span></h2>
+          <p class="refresh-lede">Swift7 is built around the route a real customer takes: search, scan, trust, contact. No filler pages, no vague agency waffle, no making you write everything yourself.</p>
+          <div class="proof-search-card">
+            <p class="search-demo-label">Example local search:</p>
+            <div class="search-demo" aria-label="Example Google searches">
+              <svg class="search-demo-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="11" cy="11" r="8" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+              </svg>
+              <span class="search-demo-text"><span id="searchTyper">web designer near me</span><span class="search-cursor"></span></span>
+            </div>
           </div>
         </div>
+        <aside class="refresh-aside fade-in-up" data-delay="1" aria-label="Built by Callum">
+          <div>
+            <img src="/724673307_17881181946603006_1870376955528019380_n.jpg" alt="Callum from Swift7" width="244" height="244" loading="lazy" decoding="async" />
+            <blockquote>Built by Callum. Not passed around an agency.</blockquote>
+          </div>
+          <p>You speak to the person planning, writing and launching the site.</p>
+        </aside>
       </div>
     </section>
 
-    <section class="human-proof">
-	      <div class="container human-proof-grid">
-	        <div class="founder-card fade-in-up">
-	          <img src="/724673307_17881181946603006_1870376955528019380_n.jpg" alt="Callum from Swift7" width="264" height="264" loading="lazy" decoding="async" />
-	          <div>
-	            <h3>Built by Callum.</h3>
-	            <p>You speak to the person planning, writing and launching the site.</p>
-	          </div>
-	        </div>
-	        <p class="human-note fade-in-up" data-delay="1">Clear words. Clear pages. A clear next step.</p>
-      </div>
-    </section>
-
-    <section class="buyer-clarity">
+    <section class="launch-receipt" id="offer">
       <div class="container">
-        <div class="section-header fade-in-up">
-	          <p class="section-label is-soft">The £500 bit</p>
-	          <h2>Simple price. Simple split.</h2>
-	          <p class="section-sub">Half to start. Half when the site is ready.</p>
-        </div>
-        <div class="clarity-grid">
-          <div class="clarity-card fade-in-up">
-            <strong>£250</strong>
-            <h3>To start</h3>
-            <p>This books the build and gets the brief, copy and structure moving.</p>
+        <div class="receipt-layout">
+          <div class="receipt-panel fade-in-up">
+            <div class="receipt-top">
+              <span class="receipt-brand">Swift7 Launch</span>
+              <span>7 days</span>
+            </div>
+            <p class="receipt-total">£500</p>
+            <div class="receipt-lines">
+              <div class="receipt-line"><span>Copy written for you</span><span>included</span></div>
+              <div class="receipt-line"><span>Up to 10 pages</span><span>included</span></div>
+              <div class="receipt-line"><span>SEO + Google setup</span><span>included</span></div>
+              <div class="receipt-line"><span>Domain, hosting, SSL</span><span>included</span></div>
+              <div class="receipt-line"><span>Payment split</span><span>£250 / £250</span></div>
+            </div>
+            <a href="/whats-included" class="btn">See what's included</a>
           </div>
-          <div class="clarity-card fade-in-up" data-delay="1">
-            <strong>£250</strong>
-            <h3>When ready</h3>
-            <p>You only pay the second half when the site is built and ready to go live.</p>
-          </div>
-          <div class="clarity-card fade-in-up" data-delay="2">
-            <strong>£70</strong>
-            <h3>Per year after</h3>
-            <p>Hosting, SSL and basic upkeep after year one. Simple and predictable.</p>
-          </div>
-          <div class="clarity-card fade-in-up" data-delay="3">
-            <strong>7 days</strong>
-            <h3>Or you pay nothing more</h3>
-            <p>If we miss the launch window, the final payment is waived.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-		<!-- WHAT'S INCLUDED -->
-    <section id="offer">
-      <div class="container">
-        <div class="offer-teaser fade-in-up">
-          <div class="offer-teaser-left">
-            <p class="section-label">What's Included</p>
-            <h2>Everything done<br />for you. £500.</h2>
-	            <p class="section-sub">Design, copy, SEO, hosting, domain, email and Google setup. One fixed price.</p>
-	            <a href="/whats-included" class="btn btn-orange" style="margin-top:8px;">See what's included →</a>
-          </div>
-          <div class="offer-teaser-items">
-            <div class="offer-teaser-item"><span class="offer-teaser-check">✓</span><span>All content written for you</span></div>
-            <div class="offer-teaser-item"><span class="offer-teaser-check">✓</span><span>Mobile-first design</span></div>
-            <div class="offer-teaser-item"><span class="offer-teaser-check">✓</span><span>SEO foundation + 5 articles</span></div>
-            <div class="offer-teaser-item"><span class="offer-teaser-check">✓</span><span>Domain, hosting + SSL</span></div>
-            <div class="offer-teaser-item"><span class="offer-teaser-check">✓</span><span>Business email addresses</span></div>
-            <div class="offer-teaser-item"><span class="offer-teaser-check">✓</span><span>Google Business Profile setup</span></div>
-            <div class="offer-teaser-item"><span class="offer-teaser-check">✓</span><span>Analytics + enquiry forms</span></div>
-            <div class="offer-teaser-item"><span class="offer-teaser-check">✓</span><span>Live in 7 days — guaranteed</span></div>
+          <div class="receipt-copy fade-in-up" data-delay="1">
+            <p class="receipt-kicker">The offer</p>
+            <h2>Everything needed to look credible and start getting found.</h2>
+            <p>Design, copy, basic SEO, hosting, domain, email, analytics, forms and Google Business Profile setup. One fixed launch price, then simple yearly hosting after year one.</p>
+            <div class="receipt-proof-row" aria-label="Swift7 launch proof points">
+              <span>50% upfront</span>
+              <span>50% when ready</span>
+              <span>£70/year after</span>
+              <span>Final payment waived if late</span>
+            </div>
           </div>
         </div>
       </div>
@@ -949,61 +1332,37 @@
 
     <section class="process-proof">
       <div class="container">
-        <div class="section-header fade-in-up">
-          <p class="section-label is-soft">What happens after you enquire</p>
-	          <h2>From brief to live in 7 days.</h2>
-	          <p class="section-sub">Simple stages. Clear updates. No chasing.</p>
-        </div>
-        <div class="process-proof-grid">
-          <div class="process-proof-card fade-in-up">
-            <span class="plain-num">DAY 1</span>
-            <h3>Quick brief</h3>
-	            <p>Answer a short brief about the business.</p>
+        <div class="timeline-layout">
+          <div class="timeline-intro fade-in-up">
+            <p class="timeline-kicker">How it moves</p>
+            <h2>Fast, but not vague.</h2>
+            <p class="section-sub">You always know what is happening, what is needed, and when the site goes live.</p>
           </div>
-          <div class="process-proof-card fade-in-up" data-delay="1">
-            <span class="plain-num">DAYS 2-5</span>
-            <h3>Write and build</h3>
-	            <p>We write, design and build the first version.</p>
+          <div class="timeline-list">
+            <div class="timeline-step fade-in-up">
+              <time>Day 1</time>
+              <h3>The brief gets clear.</h3>
+              <p>You answer a short set of questions. We turn that into page structure, copy direction and the route customers need to take.</p>
+            </div>
+            <div class="timeline-step fade-in-up" data-delay="1">
+              <time>Days 2-5</time>
+              <h3>The site gets written and built.</h3>
+              <p>Copy, layout, service pages, mobile checks, forms and basic SEO are built into the first working version.</p>
+            </div>
+            <div class="timeline-step fade-in-up" data-delay="2">
+              <time>Day 6</time>
+              <h3>You get a private review link.</h3>
+              <p>You can send final notes before launch. No endless design rounds, just a clear chance to tighten the important bits.</p>
+            </div>
+            <div class="timeline-step fade-in-up" data-delay="3">
+              <time>Day 7</time>
+              <h3>Your website goes live.</h3>
+              <p>Domain, hosting, SSL, analytics and enquiry forms are connected before launch, so the site is ready for real visitors.</p>
+            </div>
           </div>
-          <div class="process-proof-card fade-in-up" data-delay="2">
-            <span class="plain-num">DAY 6</span>
-            <h3>Review link</h3>
-	            <p>You get a private link and send final notes.</p>
-          </div>
-          <div class="process-proof-card fade-in-up" data-delay="3">
-            <span class="plain-num">DAY 7</span>
-            <h3>Go live</h3>
-	            <p>We connect the domain, forms and analytics.</p>
-	          </div>
-	        </div>
-	      </div>
-	    </section>
-
-    <!-- WHO WE BUILD FOR -->
-    <div class="industries-strip">
-      <div class="container industries-strip-inner">
-        <p class="industries-strip-label">Industries we build for</p>
-        <div class="industries-strip-grid">
-          <a href="/web-design-for-plumbers" class="industry-chip">Plumbers</a>
-          <a href="/web-design-for-electricians" class="industry-chip">Electricians</a>
-          <a href="/web-design-for-builders" class="industry-chip">Builders</a>
-          <a href="/web-design-for-roofers" class="industry-chip">Roofers</a>
-          <a href="/web-design-for-cleaning-companies" class="industry-chip">Cleaners</a>
-          <a href="/web-design-for-decorators" class="industry-chip">Decorators</a>
-          <a href="/web-design-for-plasterers" class="industry-chip">Plasterers</a>
-          <a href="/web-design-for-joiners" class="industry-chip">Joiners</a>
-          <a href="/web-design-for-accountants" class="industry-chip">Accountants</a>
-          <a href="/web-design-for-solicitors" class="industry-chip">Solicitors</a>
-          <a href="/web-design-for-dentists" class="industry-chip">Dentists</a>
-          <a href="/web-design-for-personal-trainers" class="industry-chip">Personal Trainers</a>
-          <a href="/web-design-for-landscapers" class="industry-chip">Landscapers</a>
-          <a href="/web-design-for-photographers" class="industry-chip">Photographers</a>
-          <a href="/web-design-for-driving-instructors" class="industry-chip">Driving Instructors</a>
-          <a href="/web-design-for-physiotherapists" class="industry-chip">Physiotherapists</a>
         </div>
       </div>
-    </div>
-
+    </section>
 
 <!-- TESTIMONIALS -->
     <section id="testimonials">
