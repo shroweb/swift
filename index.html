@@ -224,202 +224,8 @@
       font-weight: 800;
     }
 
-    .search-proof {
-      padding: 44px 0;
-      background: #2A5040;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .search-proof-inner {
-      display: grid;
-      grid-template-columns: minmax(0, 0.9fr) minmax(280px, 520px);
-      gap: 40px;
-      align-items: center;
-    }
-
-    .search-proof h2 {
-      font-size: clamp(28px, 3.2vw, 42px);
-      margin-top: 6px;
-    }
-
-    .search-proof .search-demo {
-      margin: 0;
-      max-width: 100%;
-      background: rgba(15, 34, 25, 0.72);
-    }
-
-    .human-proof {
-      background: #F0F0EC;
-      color: #0F2219;
-      border-bottom: 0;
-    }
-
-    .buyer-clarity {
-      background: #A8C94A;
-      color: #0F2219;
-      padding: 56px 0;
-      border-bottom: 0;
-    }
-
     .process-proof {
       background: #0F2219;
-    }
-
-    #offer {
-      background: #163024;
-    }
-
-    .human-proof-grid {
-      display: grid;
-      grid-template-columns: 320px minmax(0, 1fr);
-      gap: 72px;
-      align-items: center;
-    }
-
-    .founder-card {
-      display: grid;
-      grid-template-columns: 132px 1fr;
-      gap: 24px;
-      align-items: center;
-      padding: 0;
-      background: transparent;
-      border: 0;
-      border-radius: 0;
-    }
-
-    .founder-card img {
-      width: 132px;
-      height: 132px;
-      object-fit: cover;
-      border-radius: 50%;
-      display: block;
-      border: 3px solid #A8C94A;
-      box-shadow: 0 18px 44px rgba(15, 34, 25, 0.16);
-    }
-
-    .founder-card h3,
-    .clarity-card h3,
-    .process-proof-card h3 {
-      font-size: 18px;
-      letter-spacing: -0.3px;
-      margin-bottom: 8px;
-    }
-
-    .founder-card p,
-    .clarity-card p,
-    .process-proof-card p {
-      color: var(--mid);
-      font-size: 14px;
-      line-height: 1.65;
-    }
-
-    .human-proof .founder-card h3,
-    .human-proof .human-note {
-      color: #0F2219 !important;
-    }
-
-    .human-proof .founder-card p {
-      color: #466154 !important;
-    }
-
-    .human-note {
-      font-size: clamp(30px, 3.4vw, 46px);
-      font-weight: 900;
-      line-height: 1.05;
-      letter-spacing: -1.3px;
-      max-width: 560px;
-    }
-
-    .clarity-grid,
-    .process-proof-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 28px;
-      background: transparent;
-      border: 0;
-      border-radius: 0;
-      overflow: visible;
-    }
-
-    .clarity-card,
-    .process-proof-card {
-      background: transparent;
-      padding: 0 0 22px;
-      min-height: 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.14);
-    }
-
-    .buyer-clarity .section-header {
-      margin-bottom: 32px;
-    }
-
-    .buyer-clarity .section-label,
-    .buyer-clarity .section-sub,
-    .buyer-clarity h2,
-    .buyer-clarity .clarity-card h3,
-    .buyer-clarity .clarity-card p {
-      color: #0F2219 !important;
-    }
-
-    .buyer-clarity .clarity-grid {
-      gap: 0;
-      border-top: 1px solid rgba(15, 34, 25, 0.22);
-    }
-
-    .buyer-clarity .clarity-card {
-      border-bottom: 0;
-      border-right: 1px solid rgba(15, 34, 25, 0.2);
-      padding: 24px 28px 0 0;
-    }
-
-    .buyer-clarity .clarity-card:last-child {
-      border-right: 0;
-    }
-
-    .clarity-card strong {
-      display: block;
-      font-size: 32px;
-      line-height: 1;
-      letter-spacing: -1px;
-      color: var(--amber);
-      margin-bottom: 14px;
-    }
-
-    .buyer-clarity .clarity-card strong {
-      color: #0F2219;
-    }
-
-    .plain-num {
-      display: inline-block;
-      color: var(--amber);
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      margin-bottom: 18px;
-    }
-
-    #offer .offer-teaser {
-      align-items: center;
-    }
-
-    #offer .offer-teaser-items {
-      border: 0;
-      border-top: 1px solid rgba(255, 255, 255, 0.16);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.16);
-      border-radius: 0;
-      overflow: visible;
-      gap: 0;
-    }
-
-    #offer .offer-teaser-item {
-      background: transparent !important;
-      border: 0 !important;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
-      padding: 18px 0;
-    }
-
-    #offer .offer-teaser-item:nth-last-child(-n+2) {
-      border-bottom: 0 !important;
     }
 
     .pricing-guarantees {
@@ -766,6 +572,340 @@
       max-width: 620px;
     }
 
+    #portfolio {
+      background: #F0F0EC;
+      color: #0F2219;
+      border-bottom: 0;
+    }
+
+    #portfolio * {
+      color: inherit;
+    }
+
+    #portfolio .section-label,
+    #portfolio .portfolio-num,
+    #portfolio .portfolio-link-label {
+      color: #234432 !important;
+    }
+
+    #portfolio .portfolio-info h3 {
+      color: #0F2219 !important;
+    }
+
+    #portfolio .section-sub,
+    #portfolio .portfolio-info p {
+      color: #466154 !important;
+    }
+
+    #portfolio .portfolio-grid {
+      grid-template-columns: minmax(0, 1.12fr) minmax(280px, 0.88fr);
+      gap: 30px;
+      align-items: start;
+    }
+
+    #portfolio .portfolio-item {
+      padding-top: 24px;
+      border-top: 1px solid rgba(15, 34, 25, 0.16);
+    }
+
+    #portfolio .portfolio-item:first-child {
+      grid-row: span 2;
+      background: #0F2219;
+      color: #F0F0EC;
+      border: 0;
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: 0 30px 80px rgba(15, 34, 25, 0.18);
+    }
+
+    #portfolio .portfolio-item:first-child .portfolio-image {
+      aspect-ratio: 16 / 10;
+    }
+
+    #portfolio .portfolio-item:first-child .portfolio-info p {
+      color: #C8DACC !important;
+      font-size: 16px;
+      max-width: 560px;
+    }
+
+    #portfolio .portfolio-item:first-child .portfolio-info h3 {
+      color: #F0F0EC !important;
+    }
+
+    #portfolio .portfolio-item:first-child .portfolio-link-label,
+    #portfolio .portfolio-item:first-child .portfolio-num {
+      color: #A8C94A !important;
+    }
+
+    #portfolio .portfolio-item:nth-child(n+4) {
+      display: none;
+    }
+
+    #portfolio .portfolio-tag {
+      background: rgba(168, 201, 74, 0.18);
+      color: #234432;
+    }
+
+    #portfolio .portfolio-item:first-child .portfolio-tag {
+      color: #A8C94A;
+    }
+
+    #portfolio .portfolio-footer {
+      border-top: 1px solid rgba(15, 34, 25, 0.16);
+      margin-top: 42px;
+      padding-top: 24px;
+    }
+
+    #testimonials {
+      background: #A8C94A;
+      color: #0F2219;
+      border-bottom: 0;
+    }
+
+    #testimonials * {
+      color: inherit;
+    }
+
+    #testimonials .section-label,
+    #testimonials .testimonial-name {
+      color: #0F2219 !important;
+    }
+
+    #testimonials .google-badge,
+    #testimonials .google-reviews-cta a {
+      background: rgba(15, 34, 25, 0.08);
+      border-color: rgba(15, 34, 25, 0.18);
+      color: #0F2219;
+    }
+
+    #testimonials .testimonial-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.85fr 0.85fr;
+      gap: 32px;
+      border: 0;
+      border-radius: 0;
+      overflow: visible;
+      margin-top: 48px;
+    }
+
+    #testimonials .testimonial-card {
+      border: 0;
+      border-top: 1px solid rgba(15, 34, 25, 0.22);
+      padding: 28px 0 0;
+      background: transparent !important;
+      box-shadow: none;
+    }
+
+    #testimonials .testimonial-card:first-child {
+      border-top: 0;
+      padding-top: 0;
+    }
+
+    #testimonials .testimonial-card::before {
+      display: none;
+    }
+
+    #testimonials .testimonial-card:hover {
+      transform: none;
+      box-shadow: none;
+    }
+
+    #testimonials .testimonial-card:first-child .testimonial-quote {
+      font-size: clamp(28px, 3.2vw, 46px);
+      line-height: 1.05;
+      letter-spacing: -1.5px;
+      font-weight: 900;
+      color: #0F2219 !important;
+      font-style: normal;
+    }
+
+    #testimonials .testimonial-quote {
+      color: #0F2219 !important;
+      font-style: normal;
+      font-weight: 600;
+    }
+
+    #testimonials .testimonial-author {
+      border-top: 0;
+      padding-top: 0;
+    }
+
+    #pricing {
+      background: #10251b;
+      color: #F0F0EC;
+      border-bottom: 0;
+    }
+
+    #pricing .section-sub {
+      color: #C8DACC;
+    }
+
+    #pricing .tier-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.16);
+      margin-top: 52px;
+    }
+
+    #pricing .tier-card {
+      display: grid;
+      grid-template-columns: minmax(170px, 0.42fr) minmax(0, 1fr) minmax(170px, 0.36fr);
+      gap: 28px;
+      align-items: start;
+      background: transparent;
+      border: 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 0;
+      padding: 34px 0;
+    }
+
+    #pricing .tier-card.featured {
+      background: transparent;
+      border-color: rgba(255, 255, 255, 0.16);
+    }
+
+    #pricing .tier-label {
+      grid-column: 1;
+      color: #A8C94A;
+    }
+
+    #pricing .tier-badge {
+      position: static;
+      transform: none;
+      width: max-content;
+      margin-bottom: 12px;
+      grid-column: 1;
+    }
+
+    #pricing .tier-price {
+      color: #F0F0EC;
+      margin-bottom: 8px;
+      grid-column: 1;
+      grid-row: 2;
+    }
+
+    #pricing .tier-turnaround {
+      grid-column: 3;
+      grid-row: 1;
+      justify-self: end;
+      margin: 0;
+    }
+
+    #pricing .tier-best,
+    #pricing .tier-features li {
+      color: #C8DACC;
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    #pricing .tier-best {
+      grid-column: 2;
+      grid-row: 1 / span 2;
+      max-width: 460px;
+      padding-bottom: 0;
+      border-bottom: 0;
+      margin: 0;
+    }
+
+    #pricing .tier-features {
+      grid-column: 2;
+      columns: 2;
+      column-gap: 28px;
+      margin-bottom: 0;
+    }
+
+    #pricing .tier-features li {
+      break-inside: avoid;
+    }
+
+    #pricing .tier-card .btn {
+      grid-column: 3;
+      align-self: start;
+      justify-content: center;
+      width: 100%;
+    }
+
+    #pricing .tier-card > p[style] {
+      grid-column: 3;
+      margin-top: -8px !important;
+      text-align: right !important;
+    }
+
+    #pricing .pricing-guarantees {
+      margin-top: 34px;
+    }
+
+    #pricing .pricing-guarantee {
+      border-radius: 999px;
+      border-color: rgba(168, 201, 74, 0.32);
+      background: transparent;
+      color: #F0F0EC;
+    }
+
+    #pricing .monthly-services {
+      display: none !important;
+    }
+
+    .price-menu {
+      border-top: 1px solid rgba(255, 255, 255, 0.16);
+      margin-top: 54px;
+    }
+
+    .price-row {
+      display: grid;
+      grid-template-columns: minmax(250px, 0.4fr) minmax(0, 1fr) minmax(180px, 0.3fr);
+      gap: 34px;
+      align-items: center;
+      padding: 30px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+    }
+
+    .price-row.featured {
+      margin: 0 -24px;
+      padding: 34px 24px;
+      background: rgba(168, 201, 74, 0.08);
+      border: 1px solid rgba(168, 201, 74, 0.22);
+      border-radius: 14px;
+    }
+
+    .price-name {
+      display: grid;
+      gap: 8px;
+    }
+
+    .price-name strong {
+      font-size: clamp(44px, 5vw, 72px);
+      line-height: 0.92;
+      letter-spacing: -3px;
+      color: #F0F0EC;
+    }
+
+    .price-name small {
+      color: #A8C94A;
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .price-desc {
+      color: #C8DACC;
+      font-size: 17px;
+      line-height: 1.55;
+      max-width: 560px;
+    }
+
+    .price-actions {
+      display: grid;
+      gap: 12px;
+      justify-items: stretch;
+    }
+
+    .price-note {
+      color: #C8DACC;
+      font-size: 12px;
+      line-height: 1.45;
+      text-align: right;
+    }
+
     .hero-actions .btn-orange,
     .hero-pricing .btn-orange,
     .tier-card .btn,
@@ -789,16 +929,6 @@
     }
 
     @media (max-width: 900px) {
-      .search-proof-inner,
-      .human-proof-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .clarity-grid,
-      .process-proof-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
       .pricing-guarantees {
         grid-template-columns: 1fr;
       }
@@ -827,6 +957,50 @@
       .timeline-intro {
         position: static;
       }
+
+      #portfolio .portfolio-grid,
+      #testimonials .testimonial-grid,
+      #pricing .tier-card {
+        grid-template-columns: 1fr;
+      }
+
+      #portfolio .portfolio-item:first-child {
+        grid-row: auto;
+      }
+
+      #pricing .tier-features {
+        columns: 1;
+      }
+
+      #pricing .tier-label,
+      #pricing .tier-badge,
+      #pricing .tier-price,
+      #pricing .tier-turnaround,
+      #pricing .tier-best,
+      #pricing .tier-features,
+      #pricing .tier-card .btn,
+      #pricing .tier-card > p[style] {
+        grid-column: 1;
+        grid-row: auto;
+        justify-self: stretch;
+      }
+
+      #pricing .tier-card > p[style] {
+        margin-top: 0 !important;
+        text-align: left !important;
+      }
+
+      .price-row,
+      .price-row.featured {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      .price-note {
+        text-align: left;
+      }
     }
 
     @media (max-width: 600px) {
@@ -847,39 +1021,6 @@
         border-right: 0;
         padding-right: 0;
         margin-right: 0;
-      }
-
-      .search-proof {
-        padding: 32px 0;
-      }
-
-      .founder-card {
-        grid-template-columns: 82px 1fr;
-      }
-
-      .founder-card img {
-        width: 82px;
-        height: 82px;
-      }
-
-      .clarity-grid,
-      .process-proof-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .clarity-card,
-      .process-proof-card {
-        min-height: auto;
-      }
-
-      .buyer-clarity .clarity-card {
-        border-right: 0;
-        border-bottom: 1px solid rgba(15, 34, 25, 0.18);
-        padding-right: 0;
-      }
-
-      .buyer-clarity .clarity-card:last-child {
-        border-bottom: 0;
       }
 
       .refresh-proof,
@@ -935,6 +1076,14 @@
 
       .timeline-step h3 {
         font-size: 28px;
+      }
+
+      #testimonials .testimonial-grid {
+        gap: 28px;
+      }
+
+      #pricing .tier-card {
+        gap: 18px;
       }
 
       #cta h2 {
@@ -1323,7 +1472,7 @@
 
         <!-- Portfolio footer -->
         <div class="portfolio-footer fade-in-up">
-          <p class="portfolio-footer-count"><strong>5</strong> projects completed · more in progress</p>
+          <p class="portfolio-footer-count"><strong>3</strong> featured builds · more in progress</p>
           <a href="/portfolio" class="portfolio-footer-link">View all work →</a>
         </div>
 
@@ -1466,66 +1615,48 @@
         <div class="section-header fade-in-up">
           <p class="section-label">Pricing</p>
           <h2>Fixed price.<br />No surprises.</h2>
-          <p class="section-sub">Three tiers to fit every budget. No hidden costs, no calls needed — pick your fit and we'll send a written recommendation within 24 hours.</p>
+          <p class="section-sub">Start with the £500 launch. Move up only if the business needs more proof, content or lead features.</p>
         </div>
 
-        <div class="tier-grid">
-
-          <!-- LAUNCH -->
-          <div class="tier-card fade-in-up">
-            <p class="tier-label">Swift7 Launch</p>
-            <div class="tier-price"><sup>£</sup>500</div>
-            <p class="tier-turnaround">Live in 7 days</p>
-            <p class="tier-best">Best for: trades, local businesses, startups needing a fast credible website</p>
-            <ul class="tier-features">
-              <li>All content written for you</li>
-              <li>Up to 10 pages, mobile-first</li>
-              <li>Basic SEO setup + 5 articles</li>
-              <li>Google Business Profile setup</li>
-              <li>Domain, hosting, SSL + emails</li>
-              <li>Analytics + lead capture forms</li>
-            </ul>
-            <a href="#" class="btn btn-outline" style="width:100%;justify-content:center;" onclick="openModal(event)">Start my website</a>
-            <p style="font-size:12px;color:var(--mid);margin-top:12px;text-align:center;">50% deposit · 50% on completion · £70/yr after</p>
+        <div class="price-menu">
+          <div class="price-row fade-in-up">
+            <div class="price-name">
+              <p class="tier-label">Swift7 Launch</p>
+              <strong>£500</strong>
+              <small>Live in 7 days</small>
+            </div>
+            <p class="price-desc">The simple route for most local businesses: up to 10 pages, copy written for you, basic SEO, hosting, forms and Google setup.</p>
+            <div class="price-actions">
+              <a href="#" class="btn btn-outline" onclick="openModal(event)">Start my website</a>
+              <p class="price-note">50% upfront · 50% when ready · £70/year after</p>
+            </div>
           </div>
 
-          <!-- TRUST -->
-          <div class="tier-card featured fade-in-up" data-delay="1">
-            <div class="tier-badge">Most popular</div>
-            <p class="tier-label">Swift7 Trust</p>
-            <div class="tier-price"><sup>£</sup>995</div>
-            <p class="tier-turnaround">Live in 10 days</p>
-            <p class="tier-best">Best for: accountants, solicitors, clinics, consultants — businesses where trust drives conversions</p>
-            <ul class="tier-features">
-              <li>Everything in Launch</li>
-              <li>Trust-focused premium design</li>
-              <li>Credentials, reviews &amp; proof sections</li>
-              <li>Professional services page structure</li>
-              <li>Conversion-optimised copy</li>
-              <li>Enhanced SEO + 8 articles</li>
-            </ul>
-            <a href="#" class="btn btn-orange" style="width:100%;justify-content:center;" onclick="openModal(event)">Start my website</a>
-            <p style="font-size:12px;color: rgba(240,240,236,0.88);margin-top:12px;text-align:center;">50% deposit · 50% on completion · £70/yr after</p>
+          <div class="price-row featured fade-in-up" data-delay="1">
+            <div class="price-name">
+              <p class="tier-label">Swift7 Trust</p>
+              <strong>£995</strong>
+              <small>Live in 10 days</small>
+            </div>
+            <p class="price-desc">For firms where credibility matters more: deeper trust sections, stronger service pages, proof-led copy and enhanced SEO content.</p>
+            <div class="price-actions">
+              <a href="#" class="btn btn-orange" onclick="openModal(event)">Start my website</a>
+              <p class="price-note">Best for accountants, clinics and professional services</p>
+            </div>
           </div>
 
-          <!-- PLUS/GROWTH -->
-          <div class="tier-card fade-in-up" data-delay="2">
-            <p class="tier-label">Swift7 Plus</p>
-            <div class="tier-price"><sup>£</sup>1,495<span style="font-size:18px;font-weight:600;letter-spacing:0;">+</span></div>
-            <p class="tier-turnaround">Live in 10–14 days</p>
-            <p class="tier-best">Best for: estate agents, clinics, premium local firms — where leads, SEO and branding drive revenue</p>
-            <ul class="tier-features">
-              <li>Everything in Trust</li>
-              <li>Advanced SEO foundations</li>
-              <li>Booking &amp; advanced lead features</li>
-              <li>10 SEO articles</li>
-              <li>Brand &amp; visual direction</li>
-              <li>Conversion optimisation</li>
-            </ul>
-            <a href="/swift7-plus" class="btn btn-outline" style="width:100%;justify-content:center;">Find out more →</a>
-            <p style="font-size:12px;color:var(--mid);margin-top:12px;text-align:center;">Price varies with scope · 50/50 payment</p>
+          <div class="price-row fade-in-up" data-delay="2">
+            <div class="price-name">
+              <p class="tier-label">Swift7 Plus</p>
+              <strong>£1,495+</strong>
+              <small>Live in 10-14 days</small>
+            </div>
+            <p class="price-desc">For businesses that need more than a launch site: stronger brand direction, advanced lead features and a larger SEO foundation.</p>
+            <div class="price-actions">
+              <a href="/swift7-plus" class="btn btn-outline">Find out more →</a>
+              <p class="price-note">Scoped before build · 50/50 payment</p>
+            </div>
           </div>
-
         </div>
 
         <!-- GUARANTEES -->
