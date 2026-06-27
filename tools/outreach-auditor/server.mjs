@@ -824,13 +824,13 @@ function makeEmail({ businessName, businessType, issues, personalDetail = '', sp
   // Pitch — "content written for you" always in. Email only if they're on a free address.
   const hasEmailIssue = issues.some(i => /gmail|hotmail|outlook|public email|domain email/i.test(i))
   const pitches = hasEmailIssue ? [
-    `I build websites for small businesses — £500, live in 7 days, Yorkshire based. I write all the content for you. Hosting, a business email and basic SEO included.`,
-    `I run Swift 7 — fixed-price web design for small businesses. £500, live within a week. I write all the copy, and hosting, a domain email and SEO basics are included.`,
-    `I design websites for small businesses — £500, live in 7 days, Yorkshire based. Content written for you, plus hosting, a business email and basic SEO.`,
+    `I build websites for small businesses — £250, live in 7 days, Yorkshire based. I write all the content for you. Hosting, a business email and basic SEO included.`,
+    `I run Swift 7 — fixed-price web design for small businesses. £250, live within a week. I write all the copy, and hosting, a domain email and SEO basics are included.`,
+    `I design websites for small businesses — £250, live in 7 days, Yorkshire based. Content written for you, plus hosting, a business email and basic SEO.`,
   ] : [
-    `I build websites for small businesses — £500, live in 7 days, Yorkshire based. I write all the content for you. Hosting and basic SEO included.`,
-    `I run Swift 7 — fixed-price web design for small businesses. £500, live within a week. I write all the copy, and hosting and SEO basics are included.`,
-    `I design websites for small businesses — £500, live in 7 days, Yorkshire based. Content written for you, plus hosting and basic SEO.`,
+    `I build websites for small businesses — £250, live in 7 days, Yorkshire based. I write all the content for you. Hosting and basic SEO included.`,
+    `I run Swift 7 — fixed-price web design for small businesses. £250, live within a week. I write all the copy, and hosting and SEO basics are included.`,
+    `I design websites for small businesses — £250, live in 7 days, Yorkshire based. Content written for you, plus hosting and basic SEO.`,
   ]
 
   // Closer — varied

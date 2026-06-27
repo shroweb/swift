@@ -25,7 +25,7 @@ export function organizationSchema(settings: any) {
     logo: `${siteUrl}/logo.png`,
     email: settings.email,
     telephone: settings.phone ? `+44${settings.phone.replace(/^0/, '').replace(/\D/g, '')}` : '+447380218301',
-    priceRange: '£500',
+    priceRange: '£250',
     founder: { '@type': 'Person', name: 'Callum MacInnes', jobTitle: 'Web Designer & Founder' },
     areaServed: { '@type': 'Country', name: 'United Kingdom' },
     address: { '@type': 'PostalAddress', addressLocality: 'Hull', addressRegion: 'East Yorkshire', addressCountry: 'GB' },

@@ -12,9 +12,9 @@ export const siteSettings = {
   socialLinks: [{ platform: 'WhatsApp', url: 'https://wa.me/447380218301' }],
   seo: {
     title: 'Swift7 | Affordable Web Design | Live in 7 Days',
-    description: 'Professional websites for UK small businesses. £500 all-in, live in 7 days. Mobile-friendly, built to rank on Google. Content written for you.',
-    ogTitle: 'Swift7 — Affordable Web Design, Live in 7 Days | £500 All-In',
-    ogDescription: 'Professional websites for UK small businesses. £500 all-in, live in 7 days. Mobile-friendly, built to rank on Google. Content written for you.',
+    description: 'Professional websites for UK small businesses. £250 one-time fee, live in 7 days. Mobile-friendly, built to rank on Google. Content written for you.',
+    ogTitle: 'Swift7 — Affordable Web Design, Live in 7 Days | £250 One-Time',
+    ogDescription: 'Professional websites for UK small businesses. £250 one-time fee, live in 7 days. Mobile-friendly, built to rank on Google. Content written for you.',
   },
 };
 
@@ -44,17 +44,17 @@ export const services = [
   {
     name: 'Swift7 Launch',
     slug: 'swift7-launch',
-    shortDescription: '£500 all-in website for trades, local businesses and startups needing a credible site fast.',
+    shortDescription: '£250 one-time fee website for trades, local businesses and startups needing a credible site fast.',
     ctaLabel: 'Claim my slot',
     ctaLink: '#start',
     displayOrder: 1,
     featured: true,
-    price: '£500',
+    price: '£250',
     timeline: 'Live in 7 days',
     features: ['All content written for you', 'Up to 10 pages, mobile-first', 'Basic SEO setup + 5 articles', 'Google Business Profile setup', 'Domain, hosting, SSL + emails', 'Analytics + lead capture forms'],
     seo: {
-      title: 'Swift7 Launch | £500 Website Live in 7 Days',
-      description: 'The Swift7 Launch is a £500 all-in website package for UK small businesses, live in 7 days with copy, SEO, hosting and Google Business Profile setup.',
+      title: 'Swift7 Launch | £250 Website Live in 7 Days',
+      description: 'The Swift7 Launch is a £250 one-time fee website package for UK small businesses, live in 7 days with copy, SEO, hosting and Google Business Profile setup.',
     },
   },
   {
@@ -192,13 +192,13 @@ export const testimonials = [
 ];
 
 export const faqs = [
-  ['Can you really launch my website in 7 days?', 'Yes. Once we have your business details and the first payment, we start immediately and work to a tight 7-day launch process. Day 1 is your brief, days 2–5 we build, day 6 you review, day 7 you go live.'],
+  ['Can you really launch my website in 7 days?', 'Yes. Once we have your business details, we start immediately and work to a tight 7-day launch process. Day 1 is your brief, days 2–5 we build, day 6 you review, day 7 you go live.'],
   ['What do I need to provide?', 'Just a short business brief, your logo if you have one, any existing images, and the best way for customers to contact you.'],
   ['Do I have to write the content myself?', 'No. We write the website copy for you, including page content, calls to action, SEO titles, descriptions, and starter articles.'],
   ['How many pages are included?', 'The Swift7 Launch includes up to 10 pages, usually covering home, about, services, service detail pages, blog/articles, and contact.'],
-  ['Is hosting included?', 'Yes. Your first year of domain, hosting, and SSL is included. After that, renewal is £70 per year for domain and hosting.'],
+  ['Is hosting included?', 'Yes. Your first year of domain, hosting, and SSL is included. The current offer is a £250 one-time fee and goes up to £500 in September.'],
   ['What if I need changes?', 'You review a preview before launch. We handle sensible revisions quickly so the site still goes live on schedule.'],
-  ['How does payment work?', 'Payment is split 50% upfront and 50% on completion, so you only pay the final balance when the website is ready to launch.'],
+  ['How does payment work?', 'The current offer is a £250 one-time fee. It goes up to £500 in September.'],
   ['Will the website work on mobile?', 'Yes. Every site is designed mobile-first, then refined for tablets and desktops so it feels clean and fast everywhere.'],
   ['Do you set up Google Business Profile?', "Yes. We set up and optimise your Google Business Profile as part of the package. If you already have a profile, we'll optimise what's there."],
   ['What if I need something more bespoke?', 'If you need stronger SEO, premium design or advanced lead features, Swift7 Plus is built for that. For ecommerce or custom apps, get in touch and we will point you in the right direction.'],
@@ -208,7 +208,7 @@ export const homepage = {
   title: 'Home',
   slug: '',
   heroHeading: 'A website that wins you work.',
-  heroText: 'Professional, mobile-first websites for UK trades and small businesses. £500 all-in, live in seven days — content, SEO and Google Business Profile done for you.',
+  heroText: 'Professional, mobile-first websites for UK trades and small businesses. £250 one-time fee, live in seven days — content, SEO and Google Business Profile done for you.',
   cta: {
     heading: 'Stop putting it off.',
     text: "You've been meaning to sort this for months. Let's get it done this week.",
