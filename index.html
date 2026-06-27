@@ -1091,6 +1091,243 @@
         letter-spacing: -2px;
       }
     }
+
+    /* Final homepage refresh */
+    .ticket-features {
+      display: none;
+    }
+
+    .refresh-proof {
+      padding: 84px 0;
+    }
+
+    .refresh-proof-grid {
+      display: block;
+    }
+
+    .flow-header {
+      display: grid;
+      grid-template-columns: minmax(0, 0.8fr) minmax(320px, 0.72fr);
+      gap: 72px;
+      align-items: end;
+      margin-bottom: 58px;
+    }
+
+    .flow-header h2 {
+      font-size: clamp(48px, 7vw, 96px);
+      line-height: 0.92;
+      letter-spacing: -4px;
+      margin: 0;
+      color: #0F2219 !important;
+    }
+
+    .flow-header p {
+      margin: 0;
+      color: #466154 !important;
+      font-size: 19px;
+      line-height: 1.6;
+      max-width: 510px;
+    }
+
+    .flow-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      border-top: 1px solid rgba(15, 34, 25, 0.16);
+      border-bottom: 1px solid rgba(15, 34, 25, 0.16);
+    }
+
+    .flow-card {
+      padding: 30px 30px 34px 0;
+      border-right: 1px solid rgba(15, 34, 25, 0.14);
+    }
+
+    .flow-card + .flow-card {
+      padding-left: 30px;
+    }
+
+    .flow-card:last-child {
+      border-right: 0;
+      padding-right: 0;
+    }
+
+    .flow-num {
+      display: block;
+      color: #A8C94A !important;
+      font-size: 13px;
+      font-weight: 900;
+      margin-bottom: 20px;
+    }
+
+    .flow-card h3 {
+      color: #0F2219 !important;
+      font-size: clamp(24px, 2.6vw, 34px);
+      line-height: 1.02;
+      letter-spacing: -1px;
+      margin-bottom: 12px;
+    }
+
+    .flow-card p {
+      color: #466154 !important;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .flow-card .search-demo {
+      margin: 20px 0 0;
+      max-width: 100%;
+      background: #0F2219 !important;
+      border: 0 !important;
+      box-shadow: none !important;
+    }
+
+    .flow-card .search-demo-text,
+    .flow-card .search-demo-icon {
+      color: #F0F0EC !important;
+    }
+
+    .flow-card .search-cursor {
+      background: #F0F0EC;
+    }
+
+    .callum-strip {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+      margin-top: 38px;
+      background: #0F2219;
+      color: #F0F0EC;
+      border-radius: 18px;
+      padding: 20px 24px;
+    }
+
+    .callum-strip img {
+      width: 72px;
+      height: 72px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #A8C94A;
+      flex-shrink: 0;
+    }
+
+    .callum-strip p {
+      color: #C8DACC !important;
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.55;
+    }
+
+    .callum-strip strong {
+      color: #F0F0EC !important;
+    }
+
+    .receipt-copy h2 {
+      max-width: 560px;
+    }
+
+    .receipt-copy p {
+      max-width: 560px;
+    }
+
+    .price-menu {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      border-top: 0;
+      margin-top: 44px;
+    }
+
+    .price-row,
+    .price-row.featured {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 22px;
+      margin: 0;
+      padding: 28px;
+      min-height: 100%;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.025);
+    }
+
+    .price-row.featured {
+      background: rgba(168, 201, 74, 0.10);
+      border-color: rgba(168, 201, 74, 0.34);
+    }
+
+    .price-name strong {
+      font-size: clamp(48px, 5vw, 68px);
+    }
+
+    .price-desc {
+      font-size: 15px;
+      flex: 1;
+    }
+
+    .price-note {
+      text-align: left;
+    }
+
+    #pricing .pricing-guarantees {
+      grid-template-columns: 1fr;
+      max-width: 720px;
+      margin-top: 28px;
+    }
+
+    @media (max-width: 900px) {
+      .flow-header,
+      .flow-grid,
+      .price-menu {
+        grid-template-columns: 1fr;
+      }
+
+      .flow-header {
+        gap: 22px;
+      }
+
+      .flow-card,
+      .flow-card + .flow-card {
+        padding: 26px 0;
+        border-right: 0;
+        border-bottom: 1px solid rgba(15, 34, 25, 0.14);
+      }
+
+      .flow-card:last-child {
+        border-bottom: 0;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .refresh-proof {
+        padding: 64px 0;
+      }
+
+      .flow-header h2 {
+        font-size: clamp(42px, 14vw, 58px);
+        letter-spacing: -2.4px;
+      }
+
+      .flow-header p {
+        font-size: 16px;
+      }
+
+      .callum-strip {
+        align-items: flex-start;
+        padding: 18px;
+      }
+
+      .callum-strip img {
+        width: 56px;
+        height: 56px;
+      }
+
+      .price-row,
+      .price-row.featured {
+        padding: 24px;
+      }
+    }
   </style>
 </head>
 
@@ -1256,60 +1493,46 @@
       </div>
     </section>
 
-    
-<!-- TICKER STRIP -->
-    <div class="ticket-features">
-      <div class="ticker-fade-left"></div>
-      <div class="ticker-fade-right"></div>
-      <div class="ticker-track">
-        <span class="ticker-item">7-day delivery guarantee <span class="ticker-dot"></span></span>
-        <span class="ticker-item">£250 one-time fee <span class="ticker-dot"></span></span>
-        <span class="ticker-item">All content written for you <span class="ticker-dot"></span></span>
-        <span class="ticker-item">Google Business Profile included <span class="ticker-dot"></span></span>
-        <span class="ticker-item">Mobile-friendly &amp; cross-browser tested <span class="ticker-dot"></span></span>
-        <span class="ticker-item">Domain, hosting &amp; SSL included <span class="ticker-dot"></span></span>
-        <span class="ticker-item">15+ years building websites <span class="ticker-dot"></span></span>
-        <span class="ticker-item">No hidden costs <span class="ticker-dot"></span></span>
-        <span class="ticker-item">Going up to £500 in September <span class="ticker-dot"></span></span>
-        <span class="ticker-item">Built for local enquiries <span class="ticker-dot"></span></span>
-        <span class="ticker-item">7-day delivery guarantee <span class="ticker-dot"></span></span>
-        <span class="ticker-item">£250 one-time fee <span class="ticker-dot"></span></span>
-        <span class="ticker-item">All content written for you <span class="ticker-dot"></span></span>
-        <span class="ticker-item">Google Business Profile included <span class="ticker-dot"></span></span>
-        <span class="ticker-item">Mobile-friendly &amp; cross-browser tested <span class="ticker-dot"></span></span>
-        <span class="ticker-item">Domain, hosting &amp; SSL included <span class="ticker-dot"></span></span>
-        <span class="ticker-item">15+ years building websites <span class="ticker-dot"></span></span>
-        <span class="ticker-item">No hidden costs <span class="ticker-dot"></span></span>
-        <span class="ticker-item">Going up to £500 in September <span class="ticker-dot"></span></span>
-        <span class="ticker-item">Built for local enquiries <span class="ticker-dot"></span></span>
-      </div>
-    </div>
-
     <section class="refresh-proof" aria-labelledby="search-proof-title">
       <div class="container refresh-proof-grid">
-        <div class="refresh-main fade-in-up">
-          <p class="refresh-kicker">Your customers start on Google</p>
-          <h2 id="search-proof-title">The website has one job: <span>turn searches into enquiries.</span></h2>
-          <p class="refresh-lede">Swift7 is built around the route a real customer takes: search, scan, trust, contact. No filler pages, no vague agency waffle, no making you write everything yourself.</p>
-          <div class="proof-search-card">
-            <p class="search-demo-label">Example local search:</p>
+        <div class="flow-header fade-in-up">
+          <div>
+            <p class="refresh-kicker">From search to enquiry</p>
+            <h2 id="search-proof-title">Search. Trust. Enquire.</h2>
+          </div>
+          <p>Most local customers make a quick decision. Swift7 gives them the right words, proof and a clear route to contact you without making the page feel busy.</p>
+        </div>
+
+        <div class="flow-grid">
+          <div class="flow-card fade-in-up">
+            <span class="flow-num">01</span>
+            <h3>Show up.</h3>
+            <p>Service pages, local wording and Google setup give the site a proper search foundation.</p>
             <div class="search-demo" aria-label="Example Google searches">
               <svg class="search-demo-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <circle cx="11" cy="11" r="8" />
                 <line x1="21" y1="21" x2="16.65" y2="16.65" />
               </svg>
-              <span class="search-demo-text"><span id="searchTyper">web designer near me</span><span class="search-cursor"></span></span>
+              <span class="search-demo-text"><span id="searchTyper">plumbers near me</span><span class="search-cursor"></span></span>
             </div>
           </div>
-        </div>
-        <aside class="refresh-aside fade-in-up" data-delay="1" aria-label="Built by Callum">
-          <div>
-            <img src="/724673307_17881181946603006_1870376955528019380_n.jpg" alt="Callum from Swift7" width="244" height="244" loading="lazy" decoding="async" />
-            <blockquote>Built by Callum. Not passed around an agency.</blockquote>
+          <div class="flow-card fade-in-up" data-delay="1">
+            <span class="flow-num">02</span>
+            <h3>Look right.</h3>
+            <p>Clear copy, tidy service sections and real proof make the business feel credible fast.</p>
           </div>
-          <p>You speak to the person planning, writing and launching the site.</p>
-        </aside>
+          <div class="flow-card fade-in-up" data-delay="2">
+            <span class="flow-num">03</span>
+            <h3>Get the lead.</h3>
+            <p>Calls, WhatsApp and enquiry forms are easy to find, especially on mobile.</p>
+          </div>
+        </div>
+
+        <div class="callum-strip fade-in-up" data-delay="3">
+          <img src="/724673307_17881181946603006_1870376955528019380_n.jpg" alt="Callum from Swift7" width="144" height="144" loading="lazy" decoding="async" />
+          <p><strong>Built by Callum, not passed around an agency.</strong> You speak to the person planning, writing and launching the site.</p>
+        </div>
       </div>
     </section>
 
@@ -1333,12 +1556,11 @@
           </div>
           <div class="receipt-copy fade-in-up" data-delay="1">
             <p class="receipt-kicker">The offer</p>
-            <h2>Everything needed to look credible and start getting found.</h2>
-            <p>Design, copy, basic SEO, hosting, domain, email, analytics, forms and Google Business Profile setup. One fixed one-time fee. Going up to £500 in September.</p>
+            <h2>Everything for £250.</h2>
+            <p>A written, designed and launched website with basic SEO, hosting, domain, SSL, email, forms and Google Business Profile setup. One fee. Live in 7 days.</p>
             <div class="receipt-proof-row" aria-label="Swift7 launch proof points">
               <span>£250 one-time fee</span>
-              <span>Going up to £500 in September</span>
-              <span>No monthly website fee</span>
+              <span>Price rises in September</span>
               <span>Live in 7 days</span>
             </div>
           </div>
@@ -1484,29 +1706,29 @@
         <div class="timeline-layout">
           <div class="timeline-intro fade-in-up">
             <p class="timeline-kicker">How it moves</p>
-            <h2>Fast, but not vague.</h2>
-            <p class="section-sub">You always know what is happening, what is needed, and when the site goes live.</p>
+            <h2>Clear steps.</h2>
+            <p class="section-sub">A fast build still needs a proper process.</p>
           </div>
           <div class="timeline-list">
             <div class="timeline-step fade-in-up">
               <time>Day 1</time>
-              <h3>The brief gets clear.</h3>
-              <p>You answer a short set of questions. We turn that into page structure, copy direction and the route customers need to take.</p>
+              <h3>Brief.</h3>
+              <p>You answer a short set of questions. We turn it into the page structure and copy direction.</p>
             </div>
             <div class="timeline-step fade-in-up" data-delay="1">
               <time>Days 2-5</time>
-              <h3>The site gets written and built.</h3>
-              <p>Copy, layout, service pages, mobile checks, forms and basic SEO are built into the first working version.</p>
+              <h3>Build.</h3>
+              <p>Copy, layout, service pages, mobile checks, forms and basic SEO go into the first version.</p>
             </div>
             <div class="timeline-step fade-in-up" data-delay="2">
               <time>Day 6</time>
-              <h3>You get a private review link.</h3>
-              <p>You can send final notes before launch. No endless design rounds, just a clear chance to tighten the important bits.</p>
+              <h3>Review.</h3>
+              <p>You get a private preview link and send final notes before launch.</p>
             </div>
             <div class="timeline-step fade-in-up" data-delay="3">
               <time>Day 7</time>
-              <h3>Your website goes live.</h3>
-              <p>Domain, hosting, SSL, analytics and enquiry forms are connected before launch, so the site is ready for real visitors.</p>
+              <h3>Launch.</h3>
+              <p>Domain, hosting, SSL, analytics and enquiry forms are connected before real visitors arrive.</p>
             </div>
           </div>
         </div>
@@ -1614,8 +1836,8 @@
       <div class="container">
         <div class="section-header fade-in-up">
           <p class="section-label">Pricing</p>
-          <h2>Fixed price.<br />No surprises.</h2>
-          <p class="section-sub">Start with the £250 one-time offer. Move up only if the business needs more proof, content or lead features.</p>
+          <h2>Choose your build.</h2>
+          <p class="section-sub">Most local businesses only need Launch. The bigger options are there if you need deeper proof, content or lead features.</p>
         </div>
 
         <div class="price-menu">
@@ -1661,8 +1883,8 @@
 
         <!-- GUARANTEES -->
         <div class="pricing-guarantees fade-in-up">
-          <p class="pricing-guarantee">Guarantee: live in 7 days or you pay nothing more. No quibbles, no small print.</p>
-          <p class="pricing-guarantee">✓ Not happy in the first 30 days? We'll fix it or refund you. No hassle.</p>
+          <p class="pricing-guarantee"><strong>7-day launch guarantee.</strong> If it is late, you pay nothing more.</p>
+          <p class="pricing-guarantee"><strong>30-day tidy-up.</strong> If something feels off after launch, we fix it.</p>
         </div>
 
         <!-- Care Plans -->
