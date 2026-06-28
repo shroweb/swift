@@ -1328,6 +1328,340 @@
         padding: 24px;
       }
     }
+
+    /* Hero, work and review refresh */
+    .hero {
+      padding: 92px 0 76px;
+      background:
+        radial-gradient(circle at 18% 18%, rgba(168, 201, 74, 0.14), transparent 30%),
+        linear-gradient(135deg, #10251b 0%, #163b2c 100%);
+    }
+
+    .hero-inner {
+      max-width: 1180px;
+      grid-template-columns: minmax(0, 1fr) minmax(320px, 410px);
+      gap: 78px;
+      align-items: center;
+    }
+
+    .hero-eyebrow {
+      margin-bottom: 18px;
+      color: #C8DACC;
+    }
+
+    .hero h1 {
+      max-width: 760px;
+      font-size: clamp(58px, 7.2vw, 104px);
+      line-height: 0.93;
+      letter-spacing: -4px;
+      margin-bottom: 26px;
+    }
+
+    .hero h1 .accent {
+      display: block;
+      color: #A8C94A;
+    }
+
+    .hero-sub {
+      max-width: 620px;
+      font-size: clamp(18px, 1.65vw, 22px);
+      line-height: 1.55;
+      color: #D9E5DB;
+    }
+
+    .hero-actions {
+      margin-top: 4px;
+    }
+
+    .hero-trust-row {
+      margin-top: 28px;
+      gap: 10px;
+    }
+
+    .hero-trust {
+      border: 1px solid rgba(255, 255, 255, 0.13);
+      border-radius: 999px;
+      padding: 7px 12px;
+      margin: 0;
+      color: #D9E5DB;
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .hero-pricing {
+      border: 1px solid rgba(168, 201, 74, 0.22);
+      border-top: 4px solid #A8C94A;
+      border-radius: 18px;
+      padding: 30px;
+      background:
+        linear-gradient(rgba(168, 201, 74, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(168, 201, 74, 0.035) 1px, transparent 1px),
+        #0F2219;
+      background-size: 44px 44px;
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.24);
+    }
+
+    .hero-card-label {
+      margin-bottom: 18px;
+      color: #C8DACC;
+    }
+
+    .hero-price {
+      color: #A8C94A;
+      font-size: clamp(68px, 6vw, 92px);
+      margin-bottom: 10px;
+    }
+
+    .hero-price-note {
+      margin-bottom: 24px;
+      color: #D9E5DB;
+      font-size: 15px;
+      line-height: 1.45;
+    }
+
+    .hero-checks {
+      gap: 0;
+      padding-top: 18px;
+    }
+
+    .hero-check {
+      align-items: flex-start;
+      padding: 11px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      color: #D9E5DB;
+      line-height: 1.4;
+    }
+
+    .hero-check:last-child {
+      border-bottom: 0;
+    }
+
+    #portfolio {
+      padding: 106px 0;
+      background: #F0F0EC;
+    }
+
+    #portfolio .section-header {
+      display: grid;
+      grid-template-columns: minmax(280px, 0.72fr) minmax(0, 1fr);
+      gap: 72px;
+      align-items: end;
+      margin-bottom: 42px;
+    }
+
+    #portfolio h2 {
+      color: #0F2219 !important;
+      font-size: clamp(46px, 5.4vw, 82px);
+      line-height: 0.96;
+      letter-spacing: -3px;
+    }
+
+    #portfolio .section-sub {
+      margin: 0;
+      max-width: 620px;
+      font-size: 20px;
+      line-height: 1.55;
+    }
+
+    #portfolio .portfolio-grid {
+      grid-template-columns: repeat(3, 1fr) !important;
+      gap: 28px;
+      margin-top: 0;
+    }
+
+    #portfolio .portfolio-item,
+    #portfolio .portfolio-item:first-child {
+      grid-row: auto;
+      display: block;
+      padding: 0;
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+      color: #0F2219;
+    }
+
+    #portfolio .portfolio-image,
+    #portfolio .portfolio-item:first-child .portfolio-image {
+      aspect-ratio: 4 / 3;
+      border-radius: 16px;
+      margin-bottom: 20px;
+      border: 1px solid rgba(15, 34, 25, 0.12);
+      background: #fff;
+      box-shadow: 0 18px 50px rgba(15, 34, 25, 0.11);
+    }
+
+    #portfolio .portfolio-item:first-child .portfolio-info h3,
+    #portfolio .portfolio-info h3 {
+      color: #0F2219 !important;
+      font-size: 26px;
+      letter-spacing: -0.7px;
+      margin-bottom: 10px;
+    }
+
+    #portfolio .portfolio-item:first-child .portfolio-info p,
+    #portfolio .portfolio-info p {
+      color: #466154 !important;
+      font-size: 15px;
+      line-height: 1.55;
+      max-width: none;
+    }
+
+    #portfolio .portfolio-row {
+      margin-top: 18px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(15, 34, 25, 0.12);
+    }
+
+    #portfolio .portfolio-num,
+    #portfolio .portfolio-item:first-child .portfolio-num {
+      color: #A8C94A !important;
+      margin-bottom: 10px;
+    }
+
+    #portfolio .portfolio-tag,
+    #portfolio .portfolio-item:first-child .portfolio-tag {
+      background: #E5E0D7;
+      color: #0F2219;
+    }
+
+    #portfolio .portfolio-link-label,
+    #portfolio .portfolio-item:first-child .portfolio-link-label {
+      color: #234432 !important;
+      opacity: 1;
+    }
+
+    #testimonials {
+      padding: 110px 0;
+      background: #10251b;
+      color: #F0F0EC;
+    }
+
+    #testimonials .section-header {
+      display: grid !important;
+      grid-template-columns: minmax(280px, 0.85fr) auto;
+      align-items: end !important;
+      margin-bottom: 44px;
+    }
+
+    #testimonials h2 {
+      max-width: 620px;
+      color: #F0F0EC !important;
+      font-size: clamp(46px, 5.8vw, 84px);
+      line-height: 0.96;
+      letter-spacing: -3px;
+    }
+
+    #testimonials .section-label {
+      color: #A8C94A !important;
+    }
+
+    #testimonials .google-badge,
+    #testimonials .google-reviews-cta a {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(255, 255, 255, 0.16);
+      color: #F0F0EC;
+    }
+
+    #testimonials .testimonial-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 0;
+      border: 0;
+    }
+
+    #testimonials .testimonial-card,
+    #testimonials .testimonial-card:first-child {
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 16px;
+      padding: 28px;
+      background: rgba(255, 255, 255, 0.035) !important;
+      min-height: 100%;
+    }
+
+    #testimonials .testimonial-card:first-child .testimonial-quote,
+    #testimonials .testimonial-quote {
+      color: #F0F0EC !important;
+      font-size: 18px;
+      line-height: 1.55;
+      letter-spacing: 0;
+      font-weight: 700;
+      font-style: normal;
+      margin-bottom: 30px;
+    }
+
+    #testimonials .testimonial-stars {
+      margin-bottom: 22px;
+    }
+
+    #testimonials .star {
+      color: #A8C94A;
+    }
+
+    #testimonials .testimonial-author {
+      margin-top: auto;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255, 255, 255, 0.10);
+    }
+
+    #testimonials .testimonial-name {
+      color: #F0F0EC !important;
+    }
+
+    #testimonials .testimonial-biz {
+      color: #C8DACC !important;
+    }
+
+    @media (max-width: 900px) {
+      .hero-inner,
+      #portfolio .section-header,
+      #testimonials .section-header,
+      #portfolio .portfolio-grid,
+      #testimonials .testimonial-grid {
+        grid-template-columns: 1fr !important;
+      }
+
+      .hero-inner {
+        gap: 42px;
+      }
+
+      #testimonials .section-header {
+        justify-items: start;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        padding: 58px 0 58px;
+      }
+
+      .hero h1 {
+        font-size: clamp(42px, 13vw, 58px);
+        letter-spacing: -2.4px;
+      }
+
+      .hero-sub {
+        font-size: 16px;
+      }
+
+      .hero-pricing {
+        padding: 24px;
+      }
+
+      #portfolio,
+      #testimonials {
+        padding: 72px 0;
+      }
+
+      .launch-receipt {
+        padding-top: 56px;
+      }
+
+      #portfolio h2,
+      #testimonials h2 {
+        font-size: clamp(38px, 12vw, 54px);
+        letter-spacing: -2px;
+      }
+    }
   </style>
 </head>
 
@@ -1458,9 +1792,9 @@
     <section class="hero">
       <div class="hero-inner">
         <div class="hero-left">
-          <p class="hero-eyebrow"><span class="eyebrow-dot"></span> A proper website, built this week</p>
-          <h1>A proper<br />website<br />for<br /><span class="accent">your local business.</span></h1>
-          <p class="hero-sub">Live in 7 days. Written, designed and set up properly so customers can find you, trust you and contact you.</p>
+          <p class="hero-eyebrow"><span class="eyebrow-dot"></span> £250 launch offer</p>
+          <h1>A proper website.<span class="accent">Live in 7 days.</span></h1>
+          <p class="hero-sub">For local businesses that need enquiries, not another half-finished website project.</p>
 
           <div class="hero-actions">
             <a href="#" class="btn btn-orange" onclick="openModal(event)">Start my website</a>
@@ -1479,9 +1813,9 @@
             <p class="hero-price-note">One-time fee. Going up to £500 in September.</p>
             <div class="hero-checks">
               <div class="hero-check"><span class="check-icon">✓</span>Up to 10 pages, written for you</div>
-              <div class="hero-check"><span class="check-icon">✓</span>On-page SEO + Google Business Profile</div>
-              <div class="hero-check"><span class="check-icon">✓</span>Domain, hosting &amp; SSL — year one</div>
-              <div class="hero-check"><span class="check-icon">✓</span>Going up to £500 in September</div>
+              <div class="hero-check"><span class="check-icon">✓</span>SEO basics and Google setup</div>
+              <div class="hero-check"><span class="check-icon">✓</span>Domain, hosting and SSL in year one</div>
+              <div class="hero-check"><span class="check-icon">✓</span>You own the site outright</div>
             </div>
             <a href="#" class="btn btn-orange" onclick="openModal(event)"
               style="width:100%;justify-content:center;margin-top:24px;font-size:15px;padding:14px;">Start my website</a>
@@ -1573,9 +1907,11 @@
     <section id="portfolio">
       <div class="container">
         <div class="section-header fade-in-up">
-          <p class="section-label">Recent Work</p>
-          <h2>Websites that<br />actually work.</h2>
-          <p class="section-sub">Not mock-ups. Real sites, for real businesses — live and already earning enquiries.</p>
+          <div>
+            <p class="section-label">Recent Work</p>
+            <h2>Real sites.<br />Real enquiries.</h2>
+          </div>
+          <p class="section-sub">A few recent builds with clear services, local search structure and simple routes to get in touch.</p>
         </div>
 
         <div class="portfolio-grid">
@@ -1585,7 +1921,7 @@
                 <picture>
                   <source srcset="work-jt-accountancy.webp" type="image/webp" />
                   <img src="work-jt-accountancy.webp"
-                    alt="JT Accountancy — Swift7 client website" loading="lazy" decoding="async" width="800"
+                    alt="JT Accountancy — Swift7 client website" loading="eager" decoding="async" width="800"
                     height="800" />
                 </picture>
               </div>
@@ -1593,9 +1929,9 @@
             <p class="portfolio-num">01</p>
             <div class="portfolio-info">
               <h3>JT Accountancy</h3>
-              <p>A trust-focused website for a Hull accountancy practice: clear services, local SEO structure and a simple route for new clients to enquire.</p>
+              <p>Trust-led service pages for a Hull accountancy practice, built around credibility and new client enquiries.</p>
               <div class="portfolio-row">
-                <span class="portfolio-tag">Static Site</span>
+                <span class="portfolio-tag">Accountancy</span>
                 <a href="/case-studies/jt-accountancy" class="portfolio-link-label">Case study →</a>
               </div>
             </div>
@@ -1607,7 +1943,7 @@
                 <picture>
                   <source srcset="work-hull-cleaning.webp" type="image/webp" />
                   <img src="work-hull-cleaning.webp"
-                    alt="Hull Cleaning — Swift7 client website on mobile" loading="lazy" decoding="async" width="800"
+                    alt="Hull Cleaning — Swift7 client website on mobile" loading="eager" decoding="async" width="800"
                     height="800" />
                 </picture>
               </div>
@@ -1615,10 +1951,9 @@
             <p class="portfolio-num">02</p>
             <div class="portfolio-info">
               <h3>Hull Cleaning</h3>
-              <p>Mobile-friendly site for a local cleaning business — with service pages, enquiry forms, and Google
-                Business Profile to drive local leads.</p>
+              <p>Mobile-first cleaning website with clear service pages, trust proof and quick enquiry routes.</p>
               <div class="portfolio-row">
-                <span class="portfolio-tag">Static Site</span>
+                <span class="portfolio-tag">Cleaning</span>
                 <a href="/case-studies/hull-cleaning" class="portfolio-link-label">Case study →</a>
               </div>
             </div>
@@ -1629,7 +1964,7 @@
               <div class="portfolio-image">
                 <picture>
                   <source srcset="ellandroad.webp" type="image/webp" />
-                  <img src="ellandroad.webp" alt="Elland Road Roofing — Swift7 client website on mobile" loading="lazy"
+                  <img src="ellandroad.webp" alt="Elland Road Roofing — Swift7 client website on mobile" loading="eager"
                     decoding="async" width="800" height="800" />
                 </picture>
               </div>
@@ -1637,10 +1972,9 @@
             <p class="portfolio-num">03</p>
             <div class="portfolio-info">
               <h3>Elland Road Roofing</h3>
-              <p>Website for a Yorkshire roofer — ranking on Google for local search terms and generating quote
-                requests directly through the site.</p>
+              <p>Local roofing website structured for search visibility, quotes and fast mobile contact.</p>
               <div class="portfolio-row">
-                <span class="portfolio-tag">Local SEO</span>
+                <span class="portfolio-tag">Roofing</span>
                 <a href="/case-studies/elland-road-roofing" class="portfolio-link-label">Case study →</a>
               </div>
             </div>
@@ -1742,7 +2076,7 @@
           style="display:flex; align-items:flex-end; justify-content:space-between; flex-wrap:wrap; gap:20px;">
           <div>
             <p class="section-label">Client Feedback</p>
-            <h2>Real clients.<br />Real results.</h2>
+            <h2>Clients say it best.</h2>
           </div>
           <div class="google-badge">
             <svg width="18" height="18" viewBox="0 0 24 24" aria-label="Google">
@@ -1766,8 +2100,7 @@
               <span class="star">★</span><span class="star">★</span><span class="star">★</span><span
                 class="star">★</span><span class="star">★</span>
             </div>
-            <p class="testimonial-quote">Honestly didn't have to do much at all. Filled in a form, Callum wrote
-              everything, and it was live within the week. Already had people contact us through it.</p>
+            <p class="testimonial-quote">Filled in the brief, Callum wrote everything, and the site was live within the week. We had enquiries soon after launch.</p>
             <div class="testimonial-author">
               <div class="testimonial-avatar">MM</div>
               <div>
@@ -1782,8 +2115,7 @@
               <span class="star">★</span><span class="star">★</span><span class="star">★</span><span
                 class="star">★</span><span class="star">★</span>
             </div>
-            <p class="testimonial-quote">Thought the 7 days thing was a gimmick. Callum had it done in 6. Had a couple
-              of people get in touch through the site not long after it went live.</p>
+            <p class="testimonial-quote">I thought the 7-day thing was a gimmick. It was ready in 6, and people started getting in touch through the site.</p>
             <div class="testimonial-author">
               <div class="testimonial-avatar">SD</div>
               <div>
@@ -1798,8 +2130,7 @@
               <span class="star">★</span><span class="star">★</span><span class="star">★</span><span
                 class="star">★</span><span class="star">★</span>
             </div>
-            <p class="testimonial-quote">I just answered some questions about the business and that was pretty much it.
-              Callum sorted the domain, emails, everything. Good value for what you get.</p>
+            <p class="testimonial-quote">I answered a few questions and Callum sorted the pages, domain, emails and launch. Good value for what you get.</p>
             <div class="testimonial-author">
               <div class="testimonial-avatar">IB</div>
               <div>
