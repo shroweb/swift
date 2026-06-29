@@ -1980,6 +1980,266 @@
         max-width: 34ch;
       }
     }
+
+    #portfolio {
+      padding: 112px 0;
+      background:
+        radial-gradient(circle at 12% 18%, rgba(168, 201, 74, 0.16), transparent 28%),
+        linear-gradient(135deg, #0A1D14 0%, #173E2C 100%);
+      color: #F0F0EC;
+      overflow: hidden;
+    }
+
+    #portfolio .work-showcase {
+      display: grid;
+      grid-template-columns: minmax(250px, 0.42fr) minmax(0, 1fr);
+      gap: 64px;
+      align-items: start;
+    }
+
+    #portfolio .work-copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      grid-row: 1 / span 2;
+      min-height: 0;
+      padding: 8px 0;
+    }
+
+    #portfolio .work-kicker {
+      color: #A8C94A;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      margin-bottom: 22px;
+      text-transform: uppercase;
+    }
+
+    #portfolio .work-copy h2 {
+      color: #F0F0EC !important;
+      font-size: clamp(44px, 5vw, 72px);
+      line-height: 0.94;
+      letter-spacing: -3px;
+      max-width: 360px;
+      margin-bottom: 24px;
+    }
+
+    #portfolio .work-copy > p {
+      color: #C8DACC;
+      font-size: 18px;
+      line-height: 1.55;
+      max-width: 31ch;
+      margin-bottom: 34px;
+    }
+
+    #portfolio .work-all-link,
+    #portfolio .work-meta a,
+    #portfolio .work-mini a {
+      color: #A8C94A !important;
+      font-size: 14px;
+      font-weight: 900;
+      text-decoration: none;
+    }
+
+    #portfolio .work-feature {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 0.72fr);
+      gap: 22px;
+      align-items: start;
+      grid-column: 2;
+      background: #F0F0EC;
+      color: #0F2219 !important;
+      border-radius: 20px;
+      padding: 18px;
+      box-shadow: 0 36px 90px rgba(0, 0, 0, 0.28);
+    }
+
+    #portfolio .work-image-link,
+    #portfolio .work-mini-image {
+      display: block;
+      width: 100%;
+      min-width: 0;
+      overflow: hidden;
+      border-radius: 14px;
+      background: #DCE7DF;
+    }
+
+    #portfolio .work-image-link img,
+    #portfolio .work-mini-image img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.35s ease;
+    }
+
+    #portfolio .work-image-link {
+      aspect-ratio: 16 / 11;
+      margin-bottom: 0;
+    }
+
+    #portfolio .work-feature:hover img,
+    #portfolio .work-mini:hover img {
+      transform: scale(1.035);
+    }
+
+    #portfolio .work-feature-content {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      padding: 10px 10px 10px 0;
+    }
+
+    #portfolio .work-number {
+      color: #8EAA3E !important;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      margin-bottom: 12px;
+    }
+
+    #portfolio .work-feature h3 {
+      color: #0F2219 !important;
+      font-size: clamp(30px, 3.1vw, 44px);
+      line-height: 0.98;
+      letter-spacing: -2px;
+      margin-bottom: 14px;
+    }
+
+    #portfolio .work-feature p:not(.work-number) {
+      color: #466154 !important;
+      font-size: 17px;
+      line-height: 1.5;
+      max-width: 42ch;
+    }
+
+    #portfolio .work-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-top: auto;
+      padding-top: 20px;
+      border-top: 1px solid rgba(15, 34, 25, 0.14);
+    }
+
+    #portfolio .work-meta span {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      padding: 5px 10px;
+      border-radius: 4px;
+      background: #E8DDD2;
+      color: #C86A34;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+
+    #portfolio .work-list {
+      display: grid;
+      grid-column: 2;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+      margin-top: 22px;
+    }
+
+    #portfolio .work-mini {
+      display: grid;
+      grid-template-columns: 132px minmax(0, 1fr);
+      gap: 20px;
+      align-items: center;
+      min-height: 0;
+      padding: 22px;
+      border: 1px solid rgba(240, 240, 236, 0.14);
+      border-radius: 18px;
+      background: rgba(240, 240, 236, 0.055);
+    }
+
+    #portfolio .work-mini-image {
+      aspect-ratio: 1 / 1;
+      border-radius: 12px;
+    }
+
+    #portfolio .work-mini h3 {
+      color: #F0F0EC;
+      font-size: clamp(23px, 2.2vw, 32px);
+      line-height: 1;
+      letter-spacing: -1px;
+      margin-bottom: 10px;
+    }
+
+    #portfolio .work-mini p:not(.work-number) {
+      color: #C8DACC;
+      font-size: 15px;
+      line-height: 1.45;
+      margin-bottom: 16px;
+    }
+
+    @media (max-width: 1040px) {
+      #portfolio .work-showcase {
+        grid-template-columns: 1fr;
+      }
+
+      #portfolio .work-copy {
+        grid-row: auto;
+        display: grid;
+        grid-template-columns: minmax(0, 0.8fr) minmax(260px, 0.6fr);
+        gap: 24px;
+        align-items: end;
+      }
+
+      #portfolio .work-all-link {
+        display: none;
+      }
+
+      #portfolio .work-feature,
+      #portfolio .work-list {
+        grid-column: auto;
+      }
+    }
+
+    @media (max-width: 760px) {
+      #portfolio {
+        padding: 78px 0;
+      }
+
+      #portfolio .work-showcase,
+      #portfolio .work-copy,
+      #portfolio .work-feature,
+      #portfolio .work-list,
+      #portfolio .work-mini {
+        grid-template-columns: 1fr;
+      }
+
+      #portfolio .work-copy h2 {
+        font-size: clamp(42px, 13vw, 56px);
+        letter-spacing: -2px;
+      }
+
+      #portfolio .work-feature {
+        padding: 16px;
+        border-radius: 16px;
+      }
+
+      #portfolio .work-feature-content {
+        padding: 0;
+      }
+
+      #portfolio .work-feature h3 {
+        font-size: clamp(31px, 10vw, 44px);
+      }
+
+      #portfolio .work-mini {
+        min-height: 0;
+        padding: 16px;
+      }
+
+      #portfolio .work-mini-image {
+        aspect-ratio: 16 / 10;
+      }
+    }
   </style>
 </head>
 
@@ -2217,130 +2477,65 @@
 <!-- PORTFOLIO -->
     <section id="portfolio">
       <div class="container">
-        <div class="section-header fade-in-up">
-          <div>
-            <p class="section-label">Recent Work</p>
-            <h2>Real sites.</h2>
+        <div class="work-showcase">
+          <div class="work-copy">
+            <p class="work-kicker">Recent Work</p>
+            <h2>Built to earn trust.</h2>
+            <p>Real client sites with clearer wording, stronger proof and simple routes from visit to enquiry.</p>
+            <a href="/portfolio" class="work-all-link">View all work →</a>
           </div>
-          <p class="section-sub">Live builds with clearer services, stronger trust signals and easier routes to enquire.</p>
-        </div>
 
-        <div class="portfolio-grid">
-          <div class="portfolio-item scale-in">
-            <a href="/case-studies/jt-accountancy" class="portfolio-image-link">
-              <div class="portfolio-image">
-                <picture>
-                  <source srcset="work-jt-accountancy.webp" type="image/webp" />
-                  <img src="work-jt-accountancy.webp"
-                    alt="JT Accountancy — Swift7 client website" loading="eager" decoding="async" width="800"
-                    height="800" />
-                </picture>
-              </div>
+          <article class="work-feature">
+            <a href="/case-studies/jt-accountancy" class="work-image-link">
+              <picture>
+                <source srcset="work-jt-accountancy.webp" type="image/webp" />
+                <img src="work-jt-accountancy.webp" alt="JT Accountancy website by Swift7" loading="eager" decoding="async" width="900" height="560" />
+              </picture>
             </a>
-            <p class="portfolio-num">01</p>
-            <div class="portfolio-info">
-              <h3>JT Accountancy</h3>
-              <p>Trust-led service pages for a Hull accountancy practice, built around credibility and new client enquiries.</p>
-              <div class="portfolio-row">
-                <span class="portfolio-tag">Accountancy</span>
-                <a href="/case-studies/jt-accountancy" class="portfolio-link-label">Case study →</a>
+            <div class="work-feature-content">
+              <div>
+                <p class="work-number">01</p>
+                <h3>JT Accountancy</h3>
+                <p>Trust-led service pages for a Hull accountancy practice, built around credibility and new client enquiries.</p>
+              </div>
+              <div class="work-meta">
+                <span>Accountancy</span>
+                <a href="/case-studies/jt-accountancy">Case study →</a>
               </div>
             </div>
-          </div>
+          </article>
 
-          <div class="portfolio-item scale-in">
-            <a href="/case-studies/hull-cleaning" class="portfolio-image-link">
-              <div class="portfolio-image">
+          <div class="work-list" aria-label="More recent Swift7 builds">
+            <article class="work-mini">
+              <a href="/case-studies/hull-cleaning" class="work-mini-image">
                 <picture>
                   <source srcset="work-hull-cleaning.webp" type="image/webp" />
-                  <img src="work-hull-cleaning.webp"
-                    alt="Hull Cleaning — Swift7 client website on mobile" loading="eager" decoding="async" width="800"
-                    height="800" />
+                  <img src="work-hull-cleaning.webp" alt="Hull Cleaning website by Swift7" loading="lazy" decoding="async" width="520" height="320" />
                 </picture>
+              </a>
+              <div>
+                <p class="work-number">02</p>
+                <h3>Hull Cleaning</h3>
+                <p>Mobile-first service pages with quick enquiry routes.</p>
+                <a href="/case-studies/hull-cleaning">Case study →</a>
               </div>
-            </a>
-            <p class="portfolio-num">02</p>
-            <div class="portfolio-info">
-              <h3>Hull Cleaning</h3>
-              <p>Mobile-first cleaning website with clear service pages, trust proof and quick enquiry routes.</p>
-              <div class="portfolio-row">
-                <span class="portfolio-tag">Cleaning</span>
-                <a href="/case-studies/hull-cleaning" class="portfolio-link-label">Case study →</a>
-              </div>
-            </div>
-          </div>
+            </article>
 
-          <div class="portfolio-item scale-in">
-            <a href="/case-studies/elland-road-roofing" class="portfolio-image-link">
-              <div class="portfolio-image">
+            <article class="work-mini">
+              <a href="/case-studies/elland-road-roofing" class="work-mini-image">
                 <picture>
                   <source srcset="ellandroad.webp" type="image/webp" />
-                  <img src="ellandroad.webp" alt="Elland Road Roofing — Swift7 client website on mobile" loading="eager"
-                    decoding="async" width="800" height="800" />
+                  <img src="ellandroad.webp" alt="Elland Road Roofing website by Swift7" loading="lazy" decoding="async" width="520" height="320" />
                 </picture>
+              </a>
+              <div>
+                <p class="work-number">03</p>
+                <h3>Elland Road Roofing</h3>
+                <p>Local roofing pages structured for quotes and mobile contact.</p>
+                <a href="/case-studies/elland-road-roofing">Case study →</a>
               </div>
-            </a>
-            <p class="portfolio-num">03</p>
-            <div class="portfolio-info">
-              <h3>Elland Road Roofing</h3>
-              <p>Local roofing website structured for search visibility, quotes and fast mobile contact.</p>
-              <div class="portfolio-row">
-                <span class="portfolio-tag">Roofing</span>
-                <a href="/case-studies/elland-road-roofing" class="portfolio-link-label">Case study →</a>
-              </div>
-            </div>
+            </article>
           </div>
-
-          <div class="portfolio-item scale-in">
-            <a href="/case-studies/useforge" class="portfolio-image-link">
-              <div class="portfolio-image">
-                <picture>
-                  <source srcset="device-mockup_1.5x_postspark_2026-04-23_20-37-03.webp" type="image/webp" />
-                  <img src="device-mockup_1.5x_postspark_2026-04-23_20-37-03.webp"
-                    alt="UseForge — Swift7 client website on mobile" loading="lazy" decoding="async" width="800"
-                    height="800" />
-                </picture>
-              </div>
-            </a>
-            <p class="portfolio-num">04</p>
-            <div class="portfolio-info">
-              <h3>UseForge</h3>
-              <p>Fast, clean app landing page built for conversions — driving app store downloads with a clear
-                mobile-first layout.</p>
-              <div class="portfolio-row">
-                <span class="portfolio-tag">Static Site</span>
-                <a href="/case-studies/useforge" class="portfolio-link-label">Case study →</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="portfolio-item scale-in">
-            <a href="/case-studies/apex-strength" class="portfolio-image-link">
-              <div class="portfolio-image">
-                <picture>
-                  <source srcset="work-apex-gym.webp" type="image/webp" />
-                  <img src="work-apex-gym.webp" alt="Apex Strength — concept gym website by Swift7" loading="lazy"
-                    decoding="async" width="800" height="800" />
-                </picture>
-              </div>
-            </a>
-            <p class="portfolio-num">05</p>
-            <div class="portfolio-info">
-              <h3>Apex Strength</h3>
-              <p>Concept site for a Hull-based gym — bold design built to drive memberships, with class timetables,
-                pricing, and a strong mobile-first layout.</p>
-              <div class="portfolio-row">
-                <span class="portfolio-tag">Concept</span>
-                <a href="/case-studies/apex-strength" class="portfolio-link-label">Case study →</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Portfolio footer -->
-        <div class="portfolio-footer fade-in-up">
-          <p class="portfolio-footer-count"><strong>3</strong> featured builds · more in progress</p>
-          <a href="/portfolio" class="portfolio-footer-link">View all work →</a>
         </div>
 
       </div>
