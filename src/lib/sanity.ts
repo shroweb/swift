@@ -77,7 +77,26 @@ export async function getServices() {
   );
   return services.map((service: any) => {
     const fallback = fallbackServices.find((item) => item.slug === service.slug) || {};
-    return { ...fallback, ...service };
+    const merged = { ...fallback, ...service };
+    if (merged.slug === 'swift7-launch') {
+      return {
+        ...merged,
+        shortDescription: '£250 one-time fee website for trades, local businesses and startups needing a credible site fast.',
+        price: '£250',
+        seo: {
+          ...(merged.seo || {}),
+          title: 'Swift7 Launch | £250 Website Live in 7 Days',
+          description: 'The Swift7 Launch is a £250 one-time fee website package for UK small businesses, live in 7 days with copy, SEO, hosting and Google Business Profile setup.',
+        },
+      };
+    }
+    if (merged.slug === 'swift7-trust') {
+      return { ...merged, price: '£550' };
+    }
+    if (merged.slug === 'swift7-plus') {
+      return { ...merged, price: '£995' };
+    }
+    return merged;
   });
 }
 
