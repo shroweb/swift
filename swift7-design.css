@@ -686,16 +686,15 @@ footer::before {
 /* 16. Process grid — connecting timeline line */
 .process-grid {
   position: relative !important;
+  border-top: 0 !important;
 }
 .process-grid::before {
-  content: '';
-  position: absolute;
-  top: 52px;
-  left: 12.5%;
-  right: 12.5%;
-  height: 1px;
-  background: linear-gradient(to right, transparent, rgba(168, 201, 74, 0.3) 20%, rgba(168, 201, 74, 0.3) 80%, transparent);
-  pointer-events: none;
+  display: none !important;
+  content: none !important;
+}
+.process-step:not(:last-child)::after {
+  display: none !important;
+  content: none !important;
 }
 
 /* 17. Step big numbers — lifted with glow */

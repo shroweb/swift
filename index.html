@@ -164,6 +164,8 @@
     .portfolio-image.image-missing, .cs-hero-img.image-missing { min-height: 260px; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); }
     .portfolio-image.image-missing::after, .cs-hero-img.image-missing::after { content: 'Case study image unavailable'; color: rgba(255,255,255,0.72); font-size: 13px; font-weight: 700; }
     .portfolio-image.image-missing img, .cs-hero-img.image-missing img { display: none; }
+    .process-grid { border-top: 0 !important; }
+    .process-grid::before, .process-step:not(:last-child)::after { display: none !important; content: none !important; }
     @media (max-width: 600px) { .modal-overlay { align-items: flex-end; padding: 12px; } .modal { width: 100%; max-height: calc(100vh - 24px); border-radius: 16px 16px 0 0; padding: 28px 20px 24px; } .modal-close { top: 10px; right: 10px; } }
   .footer-top{grid-template-columns:1fr auto 1fr 1fr auto!important;gap:40px!important}.footer-links--wide{display:grid!important;grid-template-columns:1fr 1fr;gap:6px 16px}.footer-links--wide a{margin-bottom:0!important}@media(max-width:1100px){.footer-top{grid-template-columns:1fr 1fr!important;gap:32px!important}.footer-links--wide{grid-template-columns:1fr 1fr}}@media(max-width:600px){.footer-top{grid-template-columns:1fr!important}.footer-links--wide{grid-template-columns:1fr}}</style>
   <script type="application/ld+json" id="swift7-org-schema">

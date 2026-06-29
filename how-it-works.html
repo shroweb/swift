@@ -157,7 +157,6 @@
     .process-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      border-top: 1px solid var(--border);
       margin-top: 16px;
     }
 
@@ -170,15 +169,8 @@
     .process-step:last-child { border-right: none; padding-right: 0; }
 
     .process-step:not(:last-child)::after {
-      content: '→';
-      position: absolute;
-      right: -14px;
-      top: 44px;
-      font-size: 16px;
-      color: #A8C94A;
-      opacity: 0.5;
-      font-weight: 700;
-      z-index: 1;
+      display: none;
+      content: none;
     }
 
     .process-step:first-child { padding-left: 0; }
