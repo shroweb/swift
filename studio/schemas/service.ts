@@ -8,7 +8,7 @@ export const service = defineType({
     defineField({ name: 'name', title: 'Service name', type: 'string', validation: (Rule) => Rule.required() }),
     defineField({ name: 'slug', title: 'Slug', type: 'slug', options: { source: 'name' }, validation: (Rule) => Rule.required() }),
     defineField({ name: 'shortDescription', title: 'Short description', type: 'text', rows: 3 }),
-    defineField({ name: 'price', title: 'Price', type: 'string', description: 'Short display price, for example £250 or £1,495+.' }),
+    defineField({ name: 'price', title: 'Price', type: 'string', description: 'Short display price, for example £250 or £995.' }),
     defineField({ name: 'timeline', title: 'Timeline', type: 'string', description: 'Short delivery promise, for example Live in 7 days.' }),
     defineField({ name: 'features', title: 'Features', type: 'array', of: [{ type: 'string' }], description: 'Short bullet points shown on package cards.' }),
     defineField({ name: 'fullDescription', title: 'Full description', type: 'blockContent' }),

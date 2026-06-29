@@ -65,7 +65,7 @@ export const services = [
     ctaLink: '#start',
     displayOrder: 2,
     featured: true,
-    price: '£995',
+    price: '£550',
     timeline: 'Live in 10 days',
     features: ['Everything in Launch', 'Trust-focused premium design', 'Credentials, reviews & proof sections', 'Professional services page structure', 'Conversion-optimised copy', 'Enhanced SEO + 8 articles'],
     seo: {
@@ -81,7 +81,7 @@ export const services = [
     ctaLink: '/swift7-plus',
     displayOrder: 3,
     featured: false,
-    price: '£1,495+',
+    price: '£995',
     timeline: 'Live in 10–14 days',
     features: ['Everything in Trust', 'Advanced SEO foundations', 'Booking & advanced lead features', '10 SEO articles', 'Brand & visual direction', 'Conversion optimisation'],
     seo: {
