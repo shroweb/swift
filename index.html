@@ -57,11 +57,17 @@
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "5",
-      "reviewCount": "3",
+      "reviewCount": "4",
       "bestRating": "5",
       "worstRating": "1"
     },
     "review": [
+      {
+        "@type": "Review",
+        "author": {"@type": "Person", "name": "Jordan"},
+        "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+        "reviewBody": "Swift7 created a new website for our accountancy practice and I cannot recommend them highly enough. Our inbox has been flooded with enquiries since."
+      },
       {
         "@type": "Review",
         "author": {"@type": "Person", "name": "Marie M."},
@@ -1900,8 +1906,8 @@
     }
 
     #testimonials .testimonial-grid {
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+      gap: 22px;
       margin-top: 0;
       border: 0;
     }
@@ -1915,7 +1921,40 @@
       min-height: 100%;
     }
 
-    #testimonials .testimonial-card:first-child .testimonial-quote,
+    #testimonials .testimonial-card:first-child {
+      grid-row: span 2;
+      background: #F0F0EC !important;
+      color: #0F2219 !important;
+      border-color: transparent;
+      padding: 42px;
+    }
+
+    #testimonials .testimonial-card:first-child .testimonial-quote {
+      color: #0F2219 !important;
+      font-size: clamp(30px, 3.6vw, 52px);
+      line-height: 1.06;
+      letter-spacing: -1.8px;
+      font-weight: 900;
+      font-style: normal;
+      margin-bottom: 36px;
+    }
+
+    #testimonials .testimonial-card:first-child .star {
+      color: #B68119;
+    }
+
+    #testimonials .testimonial-card:first-child .testimonial-author {
+      border-top-color: rgba(15, 34, 25, 0.16);
+    }
+
+    #testimonials .testimonial-card:first-child .testimonial-name {
+      color: #0F2219 !important;
+    }
+
+    #testimonials .testimonial-card:first-child .testimonial-biz {
+      color: #466154 !important;
+    }
+
     #testimonials .testimonial-quote {
       color: #F0F0EC !important;
       font-size: 18px;
@@ -2343,6 +2382,16 @@
       #portfolio .work-mini-image {
         aspect-ratio: 16 / 10;
       }
+
+      #testimonials .testimonial-card:first-child {
+        padding: 26px;
+      }
+
+      #testimonials .testimonial-card:first-child .testimonial-quote {
+        font-size: clamp(25px, 8vw, 31px);
+        line-height: 1.1;
+        letter-spacing: -1px;
+      }
     }
   </style>
 </head>
@@ -2710,12 +2759,12 @@
               <span class="star">★</span><span class="star">★</span><span class="star">★</span><span
                 class="star">★</span><span class="star">★</span>
             </div>
-            <p class="testimonial-quote">Filled in the brief, Callum wrote everything, and the site was live within the week. We had enquiries soon after launch.</p>
+            <p class="testimonial-quote">Swift7 created our new website. Our inbox has been flooded with enquiries since.</p>
             <div class="testimonial-author">
-              <div class="testimonial-avatar">MM</div>
+              <div class="testimonial-avatar">JT</div>
               <div>
-                <p class="testimonial-name">Marie M.</p>
-                <p class="testimonial-biz">Hull Cleaning Co.</p>
+                <p class="testimonial-name">Jordan</p>
+                <p class="testimonial-biz">Founder at JT Accountancy</p>
               </div>
             </div>
           </div>
