@@ -37,6 +37,10 @@ RewriteEngine On
 RewriteCond %{HTTP_HOST} ^www\.swift7\.co\.uk [NC]
 RewriteRule ^ https://swift7.co.uk%{REQUEST_URI} [R=301,L]
 
+# Retired offer page
+RewriteRule ^swift7-plus/?$ /pricing [R=301,L]
+RewriteRule ^services/swift7-(trust|plus)/?$ /pricing [R=301,L]
+
 # Remove .html extension from URLs
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
