@@ -6,19 +6,22 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build && node scripts/copy-static-pages.mjs",
-    "preview": "astro preview",
+    "preview": "npm run build && wrangler dev",
     "studio": "sanity dev --host 127.0.0.1",
     "studio:build": "sanity build",
     "studio:deploy": "sanity deploy",
     "sanity:seed": "tsx scripts/seed-sanity.mjs",
     "sanity:dataset:export": "sanity dataset export production backups/sanity-production.tar.gz",
-    "check": "astro check"
+    "check": "astro check",
+    "deploy": "npm run build && wrangler deploy",
+    "cf-typegen": "wrangler types"
   },
   "keywords": [],
   "author": "",
   "license": "UNLICENSED",
   "description": "Swift7 marketing site with Astro static generation and Sanity CMS.",
   "dependencies": {
+    "@astrojs/cloudflare": "12",
     "@astrojs/sitemap": "^3.7.3",
     "@sanity/astro": "^3.4.1",
     "@sanity/client": "^7.23.0",
@@ -32,6 +35,7 @@
     "@sanity/vision": "^5.31.1",
     "sanity": "^5.31.1",
     "tsx": "^4.22.4",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "wrangler": "^4.107.0"
   }
 }
