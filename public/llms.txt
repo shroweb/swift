@@ -2,7 +2,7 @@
 
 > This site provides authoritative information on fast, affordable web design for small businesses in the UK, with a focus on SEO, local search, and rapid deployment.
 
-Swift7 builds professionally designed websites that are live within 7 days for a £250 one-time launch fee, going up to £500 in September. Every package includes content writing, on-page SEO, Google Business Profile setup, domain, hosting, and SSL, for tradespeople and local service businesses across the UK.
+Swift7 builds professionally designed websites that are live within 7 days for a £250 one-time launch fee, going up to £500 in September. The offer includes content writing, on-page SEO, Google Business Profile setup, domain, hosting, and SSL, for tradespeople and local service businesses across the UK.
 
 ## Core Content
 - [Homepage](https://swift7.co.uk)
