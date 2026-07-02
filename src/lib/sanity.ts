@@ -52,10 +52,17 @@ export async function getSiteSettings() {
 }
 
 export async function getNavigation() {
-  return fetchWithFallback(
+  const navigation = await fetchWithFallback(
     groq`*[_type == "navigation"][0]{headerLinks, footerLinks, ctaLink, socialLinks}`,
     fallbackNavigation,
   );
+  const stripRetiredLinks = (links: any[] = []) =>
+    links.filter((link) => link?.href !== '/swift7-plus' && link?.label !== 'Swift7 Plus');
+  return {
+    ...navigation,
+    headerLinks: stripRetiredLinks((navigation as any).headerLinks),
+    footerLinks: stripRetiredLinks((navigation as any).footerLinks),
+  };
 }
 
 export async function getHomepage() {
@@ -75,7 +82,7 @@ export async function getServices() {
     }`,
     fallbackServices,
   );
-  return services.map((service: any) => {
+  return services.filter((service: any) => service.slug === 'swift7-launch').map((service: any) => {
     const fallback = fallbackServices.find((item) => item.slug === service.slug) || {};
     const merged = { ...fallback, ...service };
     if (merged.slug === 'swift7-launch') {
@@ -86,15 +93,9 @@ export async function getServices() {
         seo: {
           ...(merged.seo || {}),
           title: 'Swift7 Launch | £250 Website Live in 7 Days',
-          description: 'The Swift7 Launch is a £250 one-time fee website package for UK small businesses, live in 7 days with copy, SEO, hosting and Google Business Profile setup.',
+          description: 'The Swift7 Launch is a £250 one-time fee website build for UK small businesses, live in 7 days with copy, SEO, hosting and Google Business Profile setup.',
         },
       };
-    }
-    if (merged.slug === 'swift7-trust') {
-      return { ...merged, price: '£550' };
-    }
-    if (merged.slug === 'swift7-plus') {
-      return { ...merged, price: '£995' };
     }
     return merged;
   });

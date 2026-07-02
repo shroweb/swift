@@ -100,13 +100,7 @@ section {
   color: #fff !important;
 }
 
-.nav-link.plus,
-.nav-right .nav-link[href*="swift7-plus"],
-.mobile-nav a[href*="swift7-plus"],
-.plus-link,
-.plus-card-label,
 .tier-label,
-.compare-table thead th.plus-col,
 .section-label,
 .modal-eyebrow,
 .portfolio-num,
@@ -118,12 +112,7 @@ section {
   color: var(--s7-lime) !important;
 }
 
-.nav-right .nav-link[href*="swift7-plus"],
-.mobile-nav a[href*="swift7-plus"],
-.plus-link,
-.plus-card-label,
-.tier-label,
-.compare-table thead th.plus-col {
+.tier-label {
   color: var(--s7-lavender) !important;
 }
 

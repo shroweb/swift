@@ -25,7 +25,6 @@ export const navigation = {
     { label: 'How It Works', href: '/how-it-works' },
     { label: 'Pricing', href: '/pricing' },
     { label: 'FAQ', href: '/faq' },
-    { label: 'Swift7 Plus', href: '/swift7-plus' },
   ],
   footerLinks: [
     { label: "What's Included", href: '/whats-included' },
@@ -34,7 +33,6 @@ export const navigation = {
     { label: 'FAQ', href: '/faq' },
     { label: 'Our Work', href: '/portfolio' },
     { label: 'About', href: '/about' },
-    { label: 'Swift7 Plus', href: '/swift7-plus' },
   ],
   ctaLink: { label: 'Claim my slot', href: '#start' },
   socialLinks: [{ platform: 'WhatsApp', url: 'https://wa.me/447380218301' }],
@@ -54,39 +52,7 @@ export const services = [
     features: ['All content written for you', 'Up to 10 pages, mobile-first', 'Basic SEO setup + 5 articles', 'Google Business Profile setup', 'Domain, hosting, SSL + emails', 'Analytics + lead capture forms'],
     seo: {
       title: 'Swift7 Launch | £250 Website Live in 7 Days',
-      description: 'The Swift7 Launch is a £250 one-time fee website package for UK small businesses, live in 7 days with copy, SEO, hosting and Google Business Profile setup.',
-    },
-  },
-  {
-    name: 'Swift7 Trust',
-    slug: 'swift7-trust',
-    shortDescription: 'Trust-focused premium design for accountants, solicitors, clinics and consultants.',
-    ctaLabel: 'Claim my slot',
-    ctaLink: '#start',
-    displayOrder: 2,
-    featured: true,
-    price: '£550',
-    timeline: 'Live in 10 days',
-    features: ['Everything in Launch', 'Trust-focused premium design', 'Credentials, reviews & proof sections', 'Professional services page structure', 'Conversion-optimised copy', 'Enhanced SEO + 8 articles'],
-    seo: {
-      title: 'Swift7 Trust | Trust-Focused Website Package',
-      description: 'Swift7 Trust is a premium trust-focused website package for professional services businesses that need credibility and enquiries.',
-    },
-  },
-  {
-    name: 'Swift7 Plus',
-    slug: 'swift7-plus',
-    shortDescription: 'Advanced SEO, booking features, branding and conversion support for growth-focused businesses.',
-    ctaLabel: 'Find out more',
-    ctaLink: '/swift7-plus',
-    displayOrder: 3,
-    featured: false,
-    price: '£995',
-    timeline: 'Live in 10–14 days',
-    features: ['Everything in Trust', 'Advanced SEO foundations', 'Booking & advanced lead features', '10 SEO articles', 'Brand & visual direction', 'Conversion optimisation'],
-    seo: {
-      title: 'Swift7 Plus | Advanced Website and SEO Package',
-      description: 'Swift7 Plus is for businesses that need advanced SEO, booking features, brand direction and conversion-focused website design.',
+      description: 'The Swift7 Launch is a £250 one-time fee website build for UK small businesses, live in 7 days with copy, SEO, hosting and Google Business Profile setup.',
     },
   },
 ];
@@ -200,8 +166,8 @@ export const faqs = [
   ['Do I own the website?', 'Yes. You own the finished website outright. Swift7 handles the launch, setup and first-year hosting so you can get online without the usual faff.'],
   ['How does payment work?', 'The current offer is a £250 one-time fee. It goes up to £500 in September.'],
   ['Will the website work on mobile?', 'Yes. Every site is designed mobile-first, then refined for tablets and desktops so it feels clean and fast everywhere.'],
-  ['Do you set up Google Business Profile?', "Yes. We set up and optimise your Google Business Profile as part of the package. If you already have a profile, we'll optimise what's there."],
-  ['What if I need something more bespoke?', 'If you need stronger SEO, premium design or advanced lead features, Swift7 Plus is built for that. For ecommerce or custom apps, get in touch and we will point you in the right direction.'],
+  ['Do you set up Google Business Profile?', "Yes. We set up and optimise your Google Business Profile as part of the build. If you already have a profile, we'll optimise what's there."],
+  ['What if I need something more bespoke?', 'For now Swift7 is focused on one clear website offer. If you need ecommerce, custom software or a much larger build, get in touch and we will point you in the right direction.'],
 ].map(([question, answer], index) => ({ question, answer, category: 'General', displayOrder: index + 1 }));
 
 export const homepage = {
