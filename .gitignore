@@ -29,3 +29,10 @@ media_*.webp
 # Personal files
 daily-plan.html
 server/.env
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
