@@ -90,6 +90,7 @@ export async function getServices() {
         ...merged,
         shortDescription: '£250 one-time fee website for trades, local businesses and startups needing a credible site fast.',
         price: '£250',
+        features: ['Free website preview', 'Bespoke design for £250', 'Mobile-friendly layout', 'Hosting and domain', 'Google indexing and on-page SEO', 'Service pages', 'Location pages', 'Business email and contact forms', 'Small future changes included'],
         seo: {
           ...(merged.seo || {}),
           title: 'Swift7 Launch | £250 Website Live in 7 Days',

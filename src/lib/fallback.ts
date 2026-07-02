@@ -5,7 +5,7 @@ export const siteSettings = {
   email: 'hello@swift7.co.uk',
   address: 'Hull, East Yorkshire, United Kingdom',
   openingHours: 'Monday to Friday, 9am to 5pm',
-  primaryCtaLabel: 'Claim my slot',
+  primaryCtaLabel: 'Get your free preview',
   primaryCtaLink: '#start',
   footerText: 'Your business website, live in 7 days.',
   copyrightText: '© 2026 Swift7. All rights reserved.',
@@ -34,7 +34,7 @@ export const navigation = {
     { label: 'Our Work', href: '/portfolio' },
     { label: 'About', href: '/about' },
   ],
-  ctaLink: { label: 'Claim my slot', href: '#start' },
+  ctaLink: { label: 'Get your free preview', href: '#start' },
   socialLinks: [{ platform: 'WhatsApp', url: 'https://wa.me/447380218301' }],
 };
 
@@ -43,13 +43,13 @@ export const services = [
     name: 'Swift7 Launch',
     slug: 'swift7-launch',
     shortDescription: '£250 one-time fee website for trades, local businesses and startups needing a credible site fast.',
-    ctaLabel: 'Claim my slot',
+    ctaLabel: 'Get your free preview',
     ctaLink: '#start',
     displayOrder: 1,
     featured: true,
     price: '£250',
     timeline: 'Live in 7 days',
-    features: ['All content written for you', 'Up to 10 pages, mobile-first', 'Basic SEO setup + 5 articles', 'Google Business Profile setup', 'Domain, hosting, SSL + emails', 'Analytics + lead capture forms'],
+    features: ['Free website preview', 'Bespoke design for £250', 'Mobile-friendly layout', 'Hosting and domain', 'Google indexing and on-page SEO', 'Service pages', 'Location pages', 'Business email and contact forms', 'Small future changes included'],
     seo: {
       title: 'Swift7 Launch | £250 Website Live in 7 Days',
       description: 'The Swift7 Launch is a £250 one-time fee website build for UK small businesses, live in 7 days with copy, SEO, hosting and Google Business Profile setup.',
@@ -178,7 +178,7 @@ export const homepage = {
   cta: {
     heading: 'Stop putting it off.',
     text: "You've been meaning to sort this for months. Let's get it done this week.",
-    label: 'Claim my slot',
+    label: 'Get your free preview',
     href: '#start',
   },
   seo: siteSettings.seo,
