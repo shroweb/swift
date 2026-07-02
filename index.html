@@ -109,7 +109,7 @@
     "@type": "FAQPage",
     "mainEntity": [
       {"@type":"Question","name":"Can you really launch my website in 7 days?","acceptedAnswer":{"@type":"Answer","text":"Yes. Once we have your business details, we start immediately and work to a tight 7-day launch process. Day 1 is your brief, days 2–5 we build, day 6 you review, day 7 you go live."}},
-      {"@type":"Question","name":"What do I need to provide?","acceptedAnswer":{"@type":"Answer","text":"Just a short business brief, your logo if you have one, any existing images, and the best way for customers to contact you."}},
+      {"@type":"Question","name":"What do I need to provide?","acceptedAnswer":{"@type":"Answer","text":"Send your current website link. If you do not have one, send a social media profile instead, plus either your email address or phone number. Swift7 will send a free preview link within 48 hours."}},
       {"@type":"Question","name":"Do I have to write the content myself?","acceptedAnswer":{"@type":"Answer","text":"No. We write the website copy for you, including page content, calls to action, SEO titles, descriptions, and five starter articles."}},
       {"@type":"Question","name":"How many pages are included?","acceptedAnswer":{"@type":"Answer","text":"The Swift7 Launch includes up to 10 pages, usually covering home, about, services, service detail pages, blog/articles, and contact."}},
       {"@type":"Question","name":"Is hosting included?","acceptedAnswer":{"@type":"Answer","text":"Yes. Your first year of domain, hosting, and SSL is included. The current offer is a £250 one-time fee and goes up to £500 in September."}},
@@ -2393,6 +2393,11 @@
         letter-spacing: -1px;
       }
     }
+
+    .modal-guarantee a {
+      color: #A8C94A;
+      font-weight: 700;
+    }
   </style>
 </head>
 
@@ -2402,9 +2407,9 @@
   <!-- MOBILE CTA BAR -->
   <div class="mobile-cta-bar" id="mobileCta">
     <div class="mobile-cta-text">
-      <p class="mcta-price">10-page website · £250</p>
+      <p class="mcta-price">Free preview · 48 hours</p>
     </div>
-    <a href="#" class="btn btn-orange" onclick="openModal(event)">Start my website</a>
+    <a href="#" class="btn btn-orange" onclick="openModal(event)">Get preview</a>
   </div>
 
   <!-- MODAL -->
@@ -2413,9 +2418,9 @@
       <button type="button" class="modal-close" id="modalClose" aria-label="Close">✕</button>
 
       <div id="modalForm">
-        <p class="modal-eyebrow">Free website audit</p>
-        <h3 id="modalTitle">Get a free website audit.</h3>
-        <p class="modal-sub">Leave your details and we'll send a written website audit and specific recommendation within 24 hours — no call needed, no commitment.</p>
+        <p class="modal-eyebrow">Free 48-hour preview</p>
+        <h3 id="modalTitle">Get your free website preview.</h3>
+        <p class="modal-sub">Send your current website. If you do not have one, send a social media link instead. We will send a free preview link within 48 hours.</p>
 
         <form id="contactForm" aria-describedby="modalTitle" novalidate>
           <input type="hidden" name="access_key" value="b60f1b0d-3064-49a8-bce4-f12cca5ce919" />
@@ -2424,17 +2429,22 @@
             <input type="text" id="name" name="name" required aria-required="true" placeholder="Jane Smith" autocomplete="name" />
           </div>
           <div class="form-field">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" required aria-required="true" placeholder="jane@yourbusiness.com" autocomplete="email" />
+            <label for="fwebsite">Website or social media link</label>
+            <input type="url" id="fwebsite" name="website_or_social" required aria-required="true" placeholder="https://yourwebsite.co.uk or Instagram/Facebook link" autocomplete="url" />
+          </div>
+          <div class="form-field">
+            <label for="email">Email Address <span
+                style="font-weight:500;color:#C8DACC;text-transform:none;letter-spacing:0">email or phone required</span></label>
+            <input type="email" id="email" name="email" placeholder="jane@yourbusiness.com" autocomplete="email" />
           </div>
           <div class="form-field">
             <label for="fphone">Phone Number <span
-                style="font-weight:500;color:#767370;text-transform:none;letter-spacing:0">optional</span></label>
+                style="font-weight:500;color:#C8DACC;text-transform:none;letter-spacing:0">email or phone required</span></label>
             <input type="tel" id="fphone" name="phone" placeholder="+44 7700 900000" autocomplete="tel" />
           </div>
           <div class="form-field">
             <label for="fbiz">Type of Business <span
-                style="font-weight:400;color:#767370;text-transform:none;letter-spacing:0">optional</span></label>
+                style="font-weight:400;color:#C8DACC;text-transform:none;letter-spacing:0">optional</span></label>
             <select id="fbiz" name="business_type">
               <option value="">Select one...</option>
               <option>Tradesperson (plumber, electrician, builder, etc.)</option>
@@ -2455,16 +2465,16 @@
               <option>Not sure yet</option>
             </select>
           </div>
-          <button type="submit" class="modal-submit" id="submitBtn">Get my free audit →</button>
-          <p class="modal-guarantee">No calls. No commitment. No spam. Prefer WhatsApp? <a href="https://wa.me/447380218301"
+          <button type="submit" class="modal-submit" id="submitBtn">Send my link →</button>
+          <p class="modal-guarantee">Nothing to pay unless you want to use it. Prefer WhatsApp? <a href="https://wa.me/447380218301"
               target="_blank" rel="noopener">Message us here</a>.</p>
         </form>
       </div>
 
       <div class="modal-success" id="modalSuccess" role="status" aria-live="polite">
         <div class="success-icon">✓</div>
-        <h4>You're on the list.</h4>
-        <p>Your free audit is on its way — check your inbox within 24 hours.</p>
+        <h4>Preview request sent.</h4>
+        <p>We will send your free preview link within 48 hours. Nothing to pay unless you want to use it.</p>
       </div>
     </div>
   </div>
@@ -2481,7 +2491,7 @@
         <a href="/pricing" class="nav-link">Pricing</a>
         <a href="/faq" class="nav-link">FAQ</a>
         <a href="/swift7-plus" class="nav-link" style="color:#A8C94A;">Swift7 Plus</a>
-        <a href="#" class="btn btn-nav" onclick="openModal(event)">Start my website</a>
+        <a href="#" class="btn btn-nav" onclick="openModal(event)">Get free preview</a>
       </div>
       <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -2497,7 +2507,7 @@
     <a href="/pricing">Pricing</a>
     <a href="/faq">FAQ</a>
     <a href="/swift7-plus" style="color:#A8C94A;font-weight:700;">Swift7 Plus</a>
-    <a href="#" class="mobile-nav-cta" onclick="openModal(event)">Start my website</a>
+    <a href="#" class="mobile-nav-cta" onclick="openModal(event)">Get free preview</a>
     <a href="https://wa.me/447380218301" class="mobile-nav-wa" target="_blank" rel="noopener">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
         <path
@@ -2523,12 +2533,12 @@
     <section class="hero">
       <div class="hero-inner">
         <div class="hero-left">
-          <p class="hero-eyebrow"><span class="eyebrow-dot"></span> £250 launch offer</p>
+          <p class="hero-eyebrow"><span class="eyebrow-dot"></span> Free preview within 48 hours</p>
           <h1>Get found. <span class="accent">Look ready.</span></h1>
-          <p class="hero-sub">A complete website for local businesses: written, designed and launched in 7 days.</p>
+          <p class="hero-sub">Send your current website or social media link. We will send back a free preview of your new website. Nothing to pay unless you want to use it.</p>
 
           <div class="hero-actions">
-            <a href="#" class="btn btn-orange" onclick="openModal(event)">Start my website</a>
+            <a href="#" class="btn btn-orange" onclick="openModal(event)">Get your free preview</a>
             <a href="/portfolio" class="btn btn-outline">View portfolio</a>
           </div>
         </div>
@@ -2536,16 +2546,16 @@
           <div class="hero-pricing">
             <p class="hero-card-label">The Swift7 Launch</p>
             <div class="hero-price"><sup>£</sup>250</div>
-            <p class="hero-price-note">One-time launch fee. Going up to £500 in September.</p>
+            <p class="hero-price-note">If you like the preview, the launch fee is £250. Going up to £500 in September.</p>
             <div class="hero-checks">
               <div class="hero-check"><span class="check-icon">✓</span>Copy, design and build included</div>
               <div class="hero-check"><span class="check-icon">✓</span>SEO basics and Google setup</div>
               <div class="hero-check"><span class="check-icon">✓</span>Domain, hosting and SSL in year one</div>
             </div>
             <a href="#" class="btn btn-orange" onclick="openModal(event)"
-              style="width:100%;justify-content:center;margin-top:24px;font-size:15px;padding:14px;">Start my website</a>
+              style="width:100%;justify-content:center;margin-top:24px;font-size:15px;padding:14px;">Get your free preview</a>
             <p style="text-align:center;margin-top:14px;font-size:13px;color:var(--mid);">
-              No calls. No commitment. Or <a href="https://wa.me/447380218301" target="_blank" rel="noopener" style="color:#A8C94A;font-weight:600;text-decoration:none;">message Callum on WhatsApp</a>
+              Nothing to pay unless you want to use it. Or <a href="https://wa.me/447380218301" target="_blank" rel="noopener" style="color:#A8C94A;font-weight:600;text-decoration:none;">message Callum on WhatsApp</a>
             </p>
           </div>
         </div>
@@ -2839,7 +2849,7 @@
             </div>
             <p class="price-desc">The simple route for most local businesses: up to 10 pages, copy written for you, basic SEO, hosting, forms and Google setup.</p>
             <div class="price-actions">
-              <a href="#" class="btn btn-outline" onclick="openModal(event)">Start my website</a>
+              <a href="#" class="btn btn-outline" onclick="openModal(event)">Get free preview</a>
               <p class="price-note">£250 one-time fee · going up to £500 in September</p>
             </div>
           </div>
@@ -2852,7 +2862,7 @@
             </div>
             <p class="price-desc">For firms where credibility matters more: deeper trust sections, stronger service pages, proof-led copy and enhanced SEO content.</p>
             <div class="price-actions">
-              <a href="#" class="btn btn-orange" onclick="openModal(event)">Start my website</a>
+              <a href="#" class="btn btn-orange" onclick="openModal(event)">Get free preview</a>
               <p class="price-note">Best for accountants, clinics and professional services</p>
             </div>
           </div>
@@ -3149,7 +3159,7 @@
 		          <h2>Ready to get it sorted?</h2>
 		          <p class="cta-sub">Answer a short brief. Approve the preview. Go live in 7 days.</p>
 	          <div class="cta-buttons">
-	            <a href="#" class="btn btn-orange" onclick="openModal(event)">Start my website</a>
+	            <a href="#" class="btn btn-orange" onclick="openModal(event)">Get your free preview</a>
 	            <p class="cta-email">Or <a href="https://wa.me/447380218301" target="_blank" rel="noopener">message Callum on WhatsApp</a> to chat first.</p>
 	          </div>
         </div>
@@ -3445,20 +3455,51 @@
     })();
 
     // ── FORM SUBMISSION ──
+    ['name', 'fwebsite', 'email', 'fphone'].forEach(id => {
+      const field = document.getElementById(id);
+      if (field) {
+        field.addEventListener('input', () => {
+          field.classList.remove('error');
+          const errorMsg = document.getElementById('modalError');
+          if (errorMsg) errorMsg.remove();
+        });
+      }
+    });
+
     form.addEventListener('submit', async function (e) {
       e.preventDefault();
 
       const name = document.getElementById('name');
+      const website = document.getElementById('fwebsite');
       const email = document.getElementById('email');
       const phone = document.getElementById('fphone');
-      const bizType = document.getElementById('fbiz');
       let valid = true;
 
-      [name, email].forEach(f => f.classList.remove('error'));
+      [name, website, email, phone].forEach(f => f.classList.remove('error'));
       if (!name.value.trim()) { name.classList.add('error'); valid = false; }
-      if (!email.value.trim() || !email.value.includes('@')) { email.classList.add('error'); valid = false; }
+      if (!website.value.trim()) { website.classList.add('error'); valid = false; }
+      const hasEmail = email.value.trim() && email.value.includes('@');
+      const hasPhone = phone.value.trim().length >= 7;
+      if (!hasEmail && !hasPhone) {
+        email.classList.add('error');
+        phone.classList.add('error');
+        valid = false;
+      }
 
-      if (!valid) return;
+      let errorMsg = document.getElementById('modalError');
+      if (!errorMsg) {
+        errorMsg = document.createElement('p');
+        errorMsg.id = 'modalError';
+        errorMsg.className = 'modal-status';
+        errorMsg.setAttribute('role', 'status');
+        errorMsg.setAttribute('aria-live', 'polite');
+        submitBtn.insertAdjacentElement('afterend', errorMsg);
+      }
+      if (!valid) {
+        errorMsg.textContent = 'Please add your name, website or social link, and either an email address or phone number.';
+        return;
+      }
+      errorMsg.remove();
 
       submitBtn.disabled = true;
       form.setAttribute('aria-busy', 'true');
@@ -3467,7 +3508,7 @@
       try {
         const formData = new FormData(form);
         formData.set('access_key', 'b60f1b0d-3064-49a8-bce4-f12cca5ce919');
-        formData.set('subject', 'New Swift7 Enquiry — ' + name.value.trim() + ' — ' + document.title);
+        formData.set('subject', 'New Swift7 Free Preview Request — ' + name.value.trim() + ' — ' + document.title);
         const res = await fetch('https://api.web3forms.com/submit', {
           method: 'POST',
           headers: { 'Accept': 'application/json' },
@@ -3482,7 +3523,7 @@
           throw new Error('Server error');
         }
       } catch {
-        submitBtn.disabled = false; form.setAttribute('aria-busy', 'false'); submitBtn.textContent = 'We\'ll Call You Within 24 Hours';
+        submitBtn.disabled = false; form.setAttribute('aria-busy', 'false'); submitBtn.textContent = 'Send my link →';
         let errorMsg = document.getElementById('modalError'); if (!errorMsg) { errorMsg = document.createElement('p'); errorMsg.id = 'modalError'; errorMsg.className = 'modal-status'; errorMsg.setAttribute('role', 'status'); errorMsg.setAttribute('aria-live', 'polite'); submitBtn.insertAdjacentElement('afterend', errorMsg); } errorMsg.innerHTML = 'Could not send just now. Please <a href="mailto:hello@swift7.co.uk">email hello@swift7.co.uk</a> or use the WhatsApp link below.';
       }
     });
